@@ -1,0 +1,80 @@
+@import '../../styles/variables';
+
+.nav {
+  display: flex;
+  margin-left: auto;
+}
+
+.navButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.burger {
+  cursor: pointer;
+  display: block;
+  width: 40px;
+
+  @media (min-width: $breakpoint-lg) {
+    display: none;
+  }
+
+  div {
+    background-color: #ccc;
+    border-radius: $radius-xl;
+    box-shadow: $element-shadow-4;
+    height: 4px;
+    transition: all 0.25s cubic-bezier(0.6, 0.13, 0.32, 1.46);
+  }
+
+  &One,
+  &Two,
+  &Three {
+    margin-bottom: 8px;
+  }
+
+  /* Burger transform when open */
+  &OneOpen {
+    transform-origin: left;
+    transform: translate(14%, -10px) rotate(45deg);
+    box-shadow: $element-shadow-25;
+  }
+
+  &TwoOpen {
+    background-color: transparent;
+    box-shadow: none;
+    height: 0;
+    margin: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &ThreeOpen {
+    transform-origin: left;
+    transform: translate(14%, 2px) rotate(-45deg);
+    box-shadow: $element-shadow-25;
+  }
+}
+
+.mainNavList {
+  background-color: $transparent-background;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 0.25s cubic-bezier(0.6, 0.13, 0.32, 1.46);
+  padding: 1rem;
+  z-index: 1000;
+
+  @media (min-width: $breakpoint-lg) {
+    display: none;
+  }
+}
+
+.menuOpen {
+  transform: scale(1, 1);
+}

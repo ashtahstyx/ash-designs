@@ -1,0 +1,73 @@
+.nav {
+  display: flex;
+  margin-left: auto;
+}
+
+.navButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.burger {
+  cursor: pointer;
+  display: block;
+  width: 40px;
+  /* Burger transform when open */
+}
+@media (min-width: 1024px) {
+  .burger {
+    display: none;
+  }
+}
+.burger div {
+  background-color: #ccc;
+  border-radius: 25px;
+  box-shadow: 1px 0.4px 10px rgba(0, 0, 0, 0.04);
+  height: 4px;
+  transition: all 0.25s cubic-bezier(0.6, 0.13, 0.32, 1.46);
+}
+.burgerOne, .burgerTwo, .burgerThree {
+  margin-bottom: 8px;
+}
+.burgerOneOpen {
+  transform-origin: left;
+  transform: translate(14%, -10px) rotate(45deg);
+  box-shadow: 1px 0.4px 10px rgba(0, 0, 0, 0.25);
+}
+.burgerTwoOpen {
+  background-color: transparent;
+  box-shadow: none;
+  height: 0;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+.burgerThreeOpen {
+  transform-origin: left;
+  transform: translate(14%, 2px) rotate(-45deg);
+  box-shadow: 1px 0.4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.mainNavList {
+  background-color: rgba(62, 87, 103, 0.9);
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 0.25s cubic-bezier(0.6, 0.13, 0.32, 1.46);
+  padding: 1rem;
+  z-index: 1000;
+}
+@media (min-width: 1024px) {
+  .mainNavList {
+    display: none;
+  }
+}
+
+.menuOpen {
+  transform: scale(1, 1);
+}/*# sourceMappingURL=Nav.module.css.map */
