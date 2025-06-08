@@ -1,0 +1,41 @@
+@import '../../styles/variables';
+
+.home {
+  position: relative;
+  min-height: 80vh;
+  padding: 50px;
+  color: $color-accent-light;
+  background-color: $color-primary;
+  background-image: linear-gradient(rgba(16, 13, 0, 0.7), rgba(16, 13, 0, 1)),
+    url('../../assets/images/wallhaven-bg.jpg');
+  background-size: cover;
+  background-position: center;
+
+  &Wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 20px 0 0;
+  }
+
+  .title {
+    text-align: right;
+
+    &Small {
+      margin-left: 15px;
+      font-size: $font-size-lg;
+    }
+
+    &Large {
+      font-family: $font-family-title;
+      font-weight: 100;
+      font-size: 18vw;
+      line-height: 1;
+      white-space: nowrap;
+      will-change: transform;
+      margin-block-start: 0;
+      margin-block-end: 0;
+    }
+  }
+}

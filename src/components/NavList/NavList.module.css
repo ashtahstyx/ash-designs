@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100;1,100&display=swap");
 .headerList {
   display: block;
   padding-inline-start: 0;
@@ -16,21 +17,21 @@
   list-style: none;
   min-width: 100px;
   text-align: center;
-  color: #fffbeb;
   margin: 1.5rem 0;
 }
+.headerList li a {
+  text-decoration: none;
+  color: #fffbeb;
+}
 @media (min-width: 1024px) {
-  .headerList li {
-    cursor: pointer;
-  }
-  .headerList li:hover {
-    color: #d9ae00;
+  .headerList li a:hover {
+    color: #ffce06;
   }
 }
-.headerList li:last-child {
+.headerList li:last-child a {
   color: #9bde2f;
 }
-.headerList li:last-child:hover {
+.headerList li:last-child a:hover {
   color: #9bde2f;
   font-weight: 700;
 }
@@ -59,18 +60,23 @@
     text-align: center;
   }
 }
+.footerList li a {
+  text-decoration: none;
+  color: #fffbeb;
+}
 @media (min-width: 1024px) {
-  .footerList li {
-    cursor: pointer;
-  }
-  .footerList li:hover {
-    color: #d9ae00;
+  .footerList li a:hover {
+    color: #ffce06;
   }
 }
-.footerList li:last-child {
+.footerList li:last-child a {
   color: #9bde2f;
 }
-.footerList li:last-child:hover {
+.footerList li:last-child a:hover {
   color: #9bde2f;
+  font-weight: 700;
+}
+
+.activeLink {
   font-weight: 700;
 }/*# sourceMappingURL=NavList.module.css.map */

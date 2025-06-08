@@ -1,7 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100;1,100&display=swap");
 .footer {
-  background-color: rgb(16, 13, 0);
+  background-color: #100d00;
   padding: 20px 0 0;
-  position: fixed;
+  margin-top: auto;
   width: 100%;
   justify-items: center;
   bottom: 0;
@@ -21,7 +22,7 @@
   font-size: 1.5em;
 }
 .footerSocial svg:hover {
-  fill: #d9ae00;
+  fill: #ffce06;
 }
 .footerCopyright {
   background-color: #181400;

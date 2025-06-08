@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Nav from '../Nav/Nav';
 import NavList from '../NavList/NavList';
 import { images } from '../../assets/images';
@@ -6,12 +7,16 @@ import styles from './Header.module.scss';
 function Header() {
   return (
     <div className={styles.header}>
-      <img
-        className={styles.headerLogo}
-        src={images.LogoWhite}
-        alt="Ashley Brand"
-      />
-      <h1>Ash Designs</h1>
+      <Link to="/">
+        <img
+          className={styles.headerLogo}
+          src={images.LogoWhite}
+          alt="Ashley Brand"
+        />
+      </Link>
+      <Link to="/" className={styles.headerTitle}>
+        <h1>Graphic Designer, Front-end Developer</h1>
+      </Link>
       <Nav />
       <div className={styles.desktopNav}>
         <NavList />
