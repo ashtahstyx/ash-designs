@@ -1,10 +1,11 @@
 // ==============================
 // Color Palette
 // ==============================
-$color-primary: #100d00;
+$color-primary: rgb(16, 13, 0);
 $color-primary-dark: #e0e0e0;
 $color-accent: #d9ae00;
 $color-accent-light: #fffbeb;
+$color-background-medium: #181400;
 $color-accent-two: #9bde2f;
 
 $color-text: #1e1e1e;
@@ -12,7 +13,7 @@ $color-text-light: #e0e0e0;
 $color-background: #f9f9f9;
 $color-surface: #ffffff;
 $color-border: #e0e0e0;
-$transparent-background: rgba(62, 87, 103, 0.9);
+$transparent-background: rgba(16, 13, 0, 0.8);
 
 // ==============================
 // Shadows
@@ -39,6 +40,7 @@ $spacing-sm: 0.5rem; // 8px
 $spacing-md: 1rem; // 16px
 $spacing-lg: 1.5rem; // 24px
 $spacing-xl: 2rem; // 32px
+$spacing-xxl: 3rem; // 48px
 
 // ==============================
 // Breakpoints

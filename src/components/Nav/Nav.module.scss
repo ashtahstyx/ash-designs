@@ -3,13 +3,30 @@
 .nav {
   display: flex;
   margin-left: auto;
-}
 
-.navButton {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
+  &Button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  &List {
+    background-color: $transparent-background;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 0.25s cubic-bezier(0.6, 0.13, 0.32, 1.46);
+    padding: 1rem;
+    z-index: 1000;
+
+    @media (min-width: $breakpoint-lg) {
+      display: none;
+    }
+  }
 }
 
 .burger {
@@ -22,7 +39,7 @@
   }
 
   div {
-    background-color: #ccc;
+    background-color: $color-accent-light;
     border-radius: $radius-xl;
     box-shadow: $element-shadow-4;
     height: 4px;
@@ -55,23 +72,6 @@
     transform-origin: left;
     transform: translate(14%, 2px) rotate(-45deg);
     box-shadow: $element-shadow-25;
-  }
-}
-
-.mainNavList {
-  background-color: $transparent-background;
-  position: fixed;
-  top: 70px;
-  left: 0;
-  width: 100%;
-  transform: scale(1, 0);
-  transform-origin: top;
-  transition: transform 0.25s cubic-bezier(0.6, 0.13, 0.32, 1.46);
-  padding: 1rem;
-  z-index: 1000;
-
-  @media (min-width: $breakpoint-lg) {
-    display: none;
   }
 }
 

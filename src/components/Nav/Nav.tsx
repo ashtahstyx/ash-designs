@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styles from './Nav.module.scss';
-import HeaderList from '../HeaderList/HeaderList';
+import NavList from '../NavList/NavList';
 
 function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -29,9 +29,8 @@ function Nav() {
         </div>
       </button>
 
-      <div
-        className={`${styles.mainNavList} ${menuOpen ? styles.menuOpen : ''}`}>
-        <HeaderList />
+      <div className={`${styles.navList} ${menuOpen ? styles.menuOpen : ''}`}>
+        <NavList variant="header" />
       </div>
     </nav>
   );

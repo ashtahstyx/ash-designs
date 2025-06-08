@@ -2,12 +2,28 @@
   display: flex;
   margin-left: auto;
 }
-
 .navButton {
   background: none;
   border: none;
   cursor: pointer;
   padding: 0;
+}
+.navList {
+  background-color: rgba(16, 13, 0, 0.8);
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 0.25s cubic-bezier(0.6, 0.13, 0.32, 1.46);
+  padding: 1rem;
+  z-index: 1000;
+}
+@media (min-width: 1024px) {
+  .navList {
+    display: none;
+  }
 }
 
 .burger {
@@ -22,7 +38,7 @@
   }
 }
 .burger div {
-  background-color: #ccc;
+  background-color: #fffbeb;
   border-radius: 25px;
   box-shadow: 1px 0.4px 10px rgba(0, 0, 0, 0.04);
   height: 4px;
@@ -48,24 +64,6 @@
   transform-origin: left;
   transform: translate(14%, 2px) rotate(-45deg);
   box-shadow: 1px 0.4px 10px rgba(0, 0, 0, 0.25);
-}
-
-.mainNavList {
-  background-color: rgba(62, 87, 103, 0.9);
-  position: fixed;
-  top: 70px;
-  left: 0;
-  width: 100%;
-  transform: scale(1, 0);
-  transform-origin: top;
-  transition: transform 0.25s cubic-bezier(0.6, 0.13, 0.32, 1.46);
-  padding: 1rem;
-  z-index: 1000;
-}
-@media (min-width: 1024px) {
-  .mainNavList {
-    display: none;
-  }
 }
 
 .menuOpen {

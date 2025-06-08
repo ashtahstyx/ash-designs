@@ -1,0 +1,76 @@
+.headerList {
+  display: block;
+  padding-inline-start: 0;
+  padding-block-start: 0.5rem;
+  padding-block-end: 0.5rem;
+}
+@media (min-width: 1024px) {
+  .headerList {
+    display: flex;
+    gap: 1.5rem;
+    color: #fffbeb;
+    font-weight: 400;
+  }
+}
+.headerList li {
+  list-style: none;
+  min-width: 100px;
+  text-align: center;
+  color: #fffbeb;
+  margin: 1.5rem 0;
+}
+@media (min-width: 1024px) {
+  .headerList li {
+    cursor: pointer;
+  }
+  .headerList li:hover {
+    color: #d9ae00;
+  }
+}
+.headerList li:last-child {
+  color: #9bde2f;
+}
+.headerList li:last-child:hover {
+  color: #9bde2f;
+  font-weight: 700;
+}
+
+.footerList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  color: #fffbeb;
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  .footerList {
+    flex-wrap: unset;
+  }
+}
+.footerList li {
+  list-style: none;
+  width: 45%;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .footerList li {
+    min-width: 120px;
+    text-align: center;
+  }
+}
+@media (min-width: 1024px) {
+  .footerList li {
+    cursor: pointer;
+  }
+  .footerList li:hover {
+    color: #d9ae00;
+  }
+}
+.footerList li:last-child {
+  color: #9bde2f;
+}
+.footerList li:last-child:hover {
+  color: #9bde2f;
+  font-weight: 700;
+}/*# sourceMappingURL=NavList.module.css.map */
