@@ -15,9 +15,17 @@
   left: 0;
   right: 0;
   margin: 0 20px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
 }
 .home .title {
   text-align: right;
+  justify-content: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
 }
 .home .titleSmall {
   margin-left: 15px;
@@ -32,4 +40,11 @@
   will-change: transform;
   margin-block-start: 0;
   margin-block-end: 0;
+}
+.home .content {
+  width: 30%;
+  margin-left: 20px;
+  font-size: 1.15rem;
+  line-height: 2.25rem;
+  font-weight: 200;
 }/*# sourceMappingURL=Home.module.css.map */

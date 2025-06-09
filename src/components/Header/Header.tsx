@@ -7,14 +7,12 @@ import styles from './Header.module.scss';
 function Header() {
   return (
     <div className={styles.header}>
-      <Link to="/">
+      <Link to="/" className={styles.headerLink}>
         <img
           className={styles.headerLogo}
           src={images.LogoWhite}
           alt="Ashley Brand"
         />
-      </Link>
-      <Link to="/" className={styles.headerTitle}>
         <h1>Graphic Designer, Front-end Developer</h1>
       </Link>
       <Nav />
