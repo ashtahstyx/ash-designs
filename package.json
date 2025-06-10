@@ -2,7 +2,7 @@
   "name": "ash-designs",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://ashtahstyx.github.io/",
+  "homepage": "https://ashtahstyx.github.io/ash-designs",
   "type": "module",
   "scripts": {
     "dev": "vite",

@@ -10,6 +10,7 @@ import Footer from './components/Footer/Footer';
 function App() {
   return (
     <Router
+      basename="/ash-designs"
       future={{
         v7_startTransition: true,
         v7_relativeSplatPath: true,
