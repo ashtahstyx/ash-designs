@@ -29,10 +29,10 @@
   }
 }
 .headerList li:last-child a {
-  color: #9bde2f;
+  color: #dfff00;
 }
 .headerList li:last-child a:hover {
-  color: #9bde2f;
+  color: #dfff00;
   font-weight: 700;
 }
 
@@ -70,10 +70,10 @@
   }
 }
 .footerList li:last-child a {
-  color: #9bde2f;
+  color: #dfff00;
 }
 .footerList li:last-child a:hover {
-  color: #9bde2f;
+  color: #dfff00;
   font-weight: 700;
 }
 

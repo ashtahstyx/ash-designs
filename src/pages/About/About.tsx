@@ -1,46 +1,50 @@
-import React from 'react';
 import styles from './About.module.scss';
-import AshleyImg from '../../../src/assets/images/ash-headshot_full.jpg';
+import ProfileImg from '../../../src/assets/images/ash-headshot_full.jpg';
 
-const About: React.FC = () => {
+const About = () => {
   return (
     <div className={styles.aboutWrapper}>
       <div className={styles.aboutContainer}>
         <div className={styles.imageContainer}>
-          <img src={AshleyImg} className={styles.cardImg} alt="My headshot" />
+          <img
+            src={ProfileImg}
+            className={styles.cardImg}
+            alt="Ashley headshot"
+          />
         </div>
 
         <div className={styles.textContent}>
-          <h2>Full-Stack Web Developer. Designer. Night Owl.</h2>
+          <h2>Front-end Developer. Designer. Corgi Wrangler.</h2>
 
           <p>
-            Hi, I'm Ashley! I am a graphic designer working in the marketing
-            department of a family-owned office furniture company. You can view{' '}
-            <a
-              className={styles.portLink}
-              href="http://designed-by-ash.com/index.html"
-              target="_blank"
-              rel="noreferrer">
-              My Design Portfolio
-            </a>{' '}
-            here.
+            Hi, I’m Ashley! I’m a front-end developer with a background in
+            graphic design, passionate about creating clean, accessible, and
+            user-centered digital experiences. With 8 years of professional
+            experience—including work in corporate, freelance, and non-profit
+            settings—I bring both creative vision and technical precision to
+            every project I take on.
           </p>
 
           <p>
-            While my education and current work revolve around graphic design, I
-            am strongly drawn to web design and development. I enrolled in a
-            6-month bootcamp where I’ve been learning the tools and skills to
-            become a full-stack developer. I enjoy long hours of coding and
-            complex problem-solving—small victories make it all worth it. My
-            goal is to transition into a full-time developer role.
+            I’m known for my strong creative instinct, quick adoption of new
+            technologies, and acute attention to detail. I specialize in
+            building responsive, ADA-compliant, and brand-consistent websites
+            that don’t just look great—they work beautifully.
           </p>
 
           <p>
-            Outside of work, I’m a homebody gamer. I spend time with my Xbox, my
-            boyfriend, and my two corgis, Maverick and Appa. I enjoy FPS and
-            puzzle games that require strategy and problem-solving—let’s be
-            honest, it’s all about the rare loot drops. My dogs sing the
-            soundtrack of my life—mostly at night, when I’m trying to sleep.
+            Whether I’m jumping into a new challenge or refining an existing
+            experience, I approach every project with fresh eyes, empathy for
+            the end user, and a drive to create something better than what came
+            before. I thrive on solving tough problems with code, and I find joy
+            in the little wins that make all the hours worthwhile.
+          </p>
+
+          <p>
+            Outside of work, my life is soundtracked by my two corgis, Maverick
+            and Appa—who prefer performing their barking concerts at 3 a.m. They
+            specialize in guarding the house from people in other yards, snoring
+            through Zoom calls, and creating dazzling tumbleweeds.
           </p>
         </div>
       </div>

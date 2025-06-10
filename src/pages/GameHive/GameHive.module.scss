@@ -1,0 +1,86 @@
+@use '../../styles/variables' as *;
+
+// Color Mode Mixins
+:root {
+  --color-bg: #ffffff;
+  --color-sub-bg: #47424c;
+  --color-text: #020004;
+  --color-accent: #dcdc00;
+}
+
+.dark {
+  --color-bg: #020004;
+  --color-sub-bg: #47424c;
+  --color-text: #f7f7f8;
+  --color-icon: #020005;
+  --color-accent: #dcdc00;
+}
+
+.light {
+  --color-bg: #ffffff;
+  --color-sub-bg: #dcdc00;
+  --color-text: #020004;
+  --color-icon: #f7f7f8;
+  --color-accent: #47424c;
+}
+
+// Game Hive Code
+.gameHive {
+  padding: 50px;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+
+  &Header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &Logo {
+    width: 60px;
+    height: auto;
+    padding: 10px;
+    border-radius: 100%;
+  }
+
+  &Search {
+    display: flex;
+    flex: auto;
+    align-items: center;
+    background-color: var(--color-sub-bg);
+    padding: 0 20px;
+    border-radius: 50px;
+
+    &Icon {
+      margin-right: 10px;
+      color: var(--color-text);
+    }
+
+    &Input {
+      border: 0px transparent;
+      background-color: transparent;
+      height: 50px;
+      flex-grow: 1;
+      color: var(--color-text);
+
+      &::placeholder {
+        color: var(--color-text);
+      }
+    }
+  }
+
+  &Body {
+    margin-top: 50px;
+  }
+}
+
+.colorMode {
+  background-color: var(--color-accent);
+  border-radius: 100%;
+  padding: 15px 17px;
+
+  .lightMode,
+  .darkMode {
+    color: var(--color-icon);
+  }
+}

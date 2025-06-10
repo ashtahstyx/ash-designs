@@ -13,7 +13,7 @@ function Header() {
           src={images.LogoWhite}
           alt="Ashley Brand"
         />
-        <h1>Graphic Designer, Front-end Developer</h1>
+        <h1>Designer, Front-end Developer</h1>
       </Link>
       <Nav />
       <div className={styles.desktopNav}>

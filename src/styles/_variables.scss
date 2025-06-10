@@ -1,22 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100;1,100&display=swap');
 
 // ==============================
-// Color Palette
+// Main Color Palette
 // ==============================
 $color-primary: #100d00;
 $color-primary-dark: #e0e0e0;
 $color-accent: #ffce06;
 $color-accent-light: #fffbeb;
 $color-background-medium: #181400;
-$color-accent-two: #9bde2f;
-
-$color-text: #1e1e1e;
-$color-text-light: #e0e0e0;
-$color-background: #f9f9f9;
-$color-surface: #ffffff;
-$color-border: #e0e0e0;
+$color-accent-two: #dfff00;
 $transparent-background: rgba(16, 13, 0, 0.8);
 $transparent-accent: rgb(217, 174, 0, 0.25);
+
+// ==============================
+// Garden Party Color Palette
+// ==============================
+$color-text: #020005;
+
+$color-neutral-100: #fff;
+$color-neutral-200: #f7f7f8;
+$color-neutral-300: #f8f8f7;
+$color-neutral-400: #afafa3;
+$color-neutral-500: #c1c1b8;
+$color-neutral-600: #414139;
+$color-neutral-800: #22221d;
 
 // ==============================
 // Shadows
