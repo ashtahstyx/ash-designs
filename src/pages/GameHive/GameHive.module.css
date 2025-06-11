@@ -76,6 +76,9 @@
     gap: 10px;
   }
 }
+.gameHiveBody section {
+  margin: 50px 0;
+}
 .gameHiveBody .genre {
   display: none;
 }
@@ -129,20 +132,102 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-.gameHiveBody .gameList .bannerImage {
+.gameHiveBody .gameListTitle {
+  color: var(--color-text);
+  margin-bottom: 20px;
+}
+.gameHiveBody .banner {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.gameHiveBody .banner .overlay {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 5%;
+  background-image: linear-gradient(rgba(16, 13, 0, 0), rgb(16, 13, 0));
+}
+.gameHiveBody .banner .overlayTitle {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.gameHiveBody .banner .overlayButton {
+  border: 0px transparent;
+  padding: 10px;
+  background-color: #dcdc00;
+  color: #020004;
+  border-radius: 4px;
+}
+.gameHiveBody .bannerImage {
   height: 320px;
   width: 100%;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
 }
-.gameHiveBody .gameList .bannerImage img {
+.gameHiveBody .bannerImage img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.gameHiveBody .trending {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .gameHiveBody .trending {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .gameHiveBody .trending {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.gameHiveBody .trendingCard {
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: var(--color-hover);
+}
+@media (min-width: 1024px) {
+  .gameHiveBody .trendingCard {
+    transition: transform 0.3s ease;
+  }
+  .gameHiveBody .trendingCard:hover {
+    transform: scale(1.1);
+  }
+}
+.gameHiveBody .trendingImage {
+  height: 200px;
+  width: auto;
+}
+.gameHiveBody .trendingTitle {
+  padding: 10px;
+  color: var(--color-text);
+  font-weight: 400;
+  font-size: 1rem;
+}
+.gameHiveBody .popular {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .gameHiveBody .popular {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .gameHiveBody .popular {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .colorMode {

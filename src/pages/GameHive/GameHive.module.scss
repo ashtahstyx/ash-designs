@@ -82,6 +82,10 @@
       gap: 10px;
     }
 
+    section {
+      margin: 50px 0;
+    }
+
     .genre {
       display: none;
 
@@ -141,22 +145,111 @@
         object-fit: cover;
       }
 
-      .banner {
-        &Image {
-          height: 320px;
-          width: 100%;
-          overflow: hidden;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border-radius: $radius-md;
+      &Title {
+        color: var(--color-text);
+        margin-bottom: 20px;
+      }
+    }
 
-          img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
+    .banner {
+      position: relative;
+      border-radius: $radius-lg;
+      overflow: hidden;
+
+      .overlay {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        padding: 5%;
+        background-image: linear-gradient(
+          rgba(16, 13, 0, 0),
+          rgba(16, 13, 0, 1)
+        );
+
+        &Title {
+          color: $color-neutral-100;
+          font-size: $font-size-xl;
+          margin-bottom: 10px;
+        }
+
+        &Button {
+          border: 0px transparent;
+          padding: 10px;
+          background-color: #dcdc00;
+          color: #020004;
+          border-radius: $radius-sm;
+        }
+      }
+
+      &Image {
+        height: 320px;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .trending {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+      cursor: pointer;
+
+      @media (min-width: $breakpoint-md) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (min-width: $breakpoint-lg) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      &Card {
+        border-radius: $radius-lg;
+        overflow: hidden;
+        background-color: var(--color-hover);
+
+        @media (min-width: $breakpoint-lg) {
+          transition: transform 0.3s ease;
+
+          &:hover {
+            transform: scale(1.1);
           }
         }
+      }
+
+      &Image {
+        height: 200px;
+        width: auto;
+      }
+
+      &Title {
+        padding: 10px;
+        color: var(--color-text);
+        font-weight: $font-weight-regular;
+        font-size: $font-size-base;
+      }
+    }
+
+    .popular {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+      cursor: pointer;
+
+      @media (min-width: $breakpoint-md) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (min-width: $breakpoint-lg) {
+        grid-template-columns: repeat(3, 1fr);
       }
     }
   }

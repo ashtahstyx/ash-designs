@@ -7,7 +7,7 @@ type Game = {
 };
 
 type GameBannerProps = {
-  game?: Game; // <-- mark as optional
+  game?: Game;
 };
 
 const GameBanner = ({ game }: GameBannerProps) => {
@@ -15,9 +15,9 @@ const GameBanner = ({ game }: GameBannerProps) => {
 
   return (
     <div className={styles.banner}>
-      <div>
-        <h1>{game.name}</h1>
-        <button></button>
+      <div className={styles.overlay}>
+        <h3 className={styles.overlayTitle}>{game.name}</h3>
+        <button className={styles.overlayButton}>Get Now</button>
       </div>
       <div className={styles.bannerImage}>
         <img src={game.background_image} alt={game.name} />
