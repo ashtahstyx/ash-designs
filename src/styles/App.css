@@ -1,6 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Roboto+Condensed:ital,wght@0,100;1,100&display=swap");
 body {
-  font-family: Helvetica, Arial, Sans-Serif;
+  font-family: "Helvetica, Arial, Sans-Serif";
+  color: #020005;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  display: flex;
+  flex: 1;
 }/*# sourceMappingURL=App.css.map */
