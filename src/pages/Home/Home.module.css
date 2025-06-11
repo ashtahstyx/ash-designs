@@ -1,5 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Roboto+Condensed:ital,wght@0,100;1,100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 .home {
+  font-family: "Roboto Condensed", sans-serif;
   position: relative;
   width: 100%;
   height: auto;
@@ -69,6 +70,7 @@
   font-size: 1rem;
   margin-left: 15px;
   text-transform: uppercase;
+  font-weight: 100;
 }
 @media (min-width: 1024px) {
   .home .titleSmall {

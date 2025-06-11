@@ -1,6 +1,7 @@
 @use '../../styles/variables' as *;
 
 .headerList {
+  font-family: $font-family-secondary;
   display: block;
   padding-inline-start: 0;
   padding-block-start: $spacing-sm;
@@ -10,7 +11,7 @@
     display: flex;
     gap: $spacing-lg;
     color: $color-accent-light;
-    font-weight: $font-weight-regular;
+    font-weight: $font-weight-light3;
   }
 
   li {

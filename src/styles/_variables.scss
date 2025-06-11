@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Roboto+Condensed:ital,wght@0,100;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 // ==============================
 // Main Color Palette
@@ -34,14 +34,16 @@ $element-shadow-25: 1px 0.4px 10px rgba(0, 0, 0, 0.25);
 // ==============================
 // Typography
 // ==============================
-$font-family-base: 'Helvetica, Arial, Sans-Serif';
-$font-family-title: 'Roboto Condensed', sans-serif;
+$font-family-base: 'Roboto', sans-serif;
+$font-family-secondary: 'Roboto Condensed', sans-serif;
 $font-family-script: 'Corinthia', cursive;
 $font-size-base: 1rem; // 16px
 $font-size-sm: 0.875rem; // 14px
 $font-size-lg: 1.25rem; // 20px
 $font-size-xl: 1.5rem; // 20px
-$font-weight-light: 200;
+$font-weight-light: 100;
+$font-weight-light2: 200;
+$font-weight-light3: 300;
 $font-weight-regular: 400;
 $font-weight-bold: 700;
 

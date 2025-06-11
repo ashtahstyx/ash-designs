@@ -1,10 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Roboto+Condensed:ital,wght@0,100;1,100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 body {
-  font-family: "Helvetica, Arial, Sans-Serif";
+  font-family: "Roboto", sans-serif;
   color: #020005;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 .layout {
@@ -16,4 +23,7 @@ body {
 .content {
   display: flex;
   flex: 1;
+}
+.content > div {
+  width: 100%;
 }/*# sourceMappingURL=App.css.map */
