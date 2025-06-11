@@ -15,20 +15,35 @@
     padding: 50px;
   }
 
+  &Intro {
+    h2 {
+      font-size: 2rem;
+      font-weight: 100;
+    }
+
+    span {
+      display: block;
+      width: 20%;
+      font-size: 1.25rem;
+      line-height: 2.5rem;
+      font-weight: 100;
+    }
+  }
+
   &Wrapper {
     display: flex;
     flex-direction: column-reverse;
 
     @media (min-width: $breakpoint-lg) {
       position: absolute;
-      bottom: 0;
+      bottom: 5rem;
       left: 0;
       right: 0;
       margin: 0 20px 0 0;
       flex-direction: row;
       flex-wrap: wrap;
       align-items: flex-end;
-      justify-content: space-between;
+      justify-content: end;
     }
   }
 
@@ -50,12 +65,12 @@
       text-transform: uppercase;
 
       @media (min-width: $breakpoint-lg) {
-        font-size: $font-size-lg;
+        font-size: $font-size-xl;
       }
     }
 
     &Large {
-      font-family: $font-family-title;
+      font-family: $font-family-script;
       font-weight: 100;
       font-size: 35vw;
       line-height: 1;
@@ -69,26 +84,39 @@
       }
 
       @media (min-width: $breakpoint-lg) {
-        font-size: 18vw;
+        font-size: 27vw;
+        line-height: 0.6;
       }
     }
-  }
 
-  .content {
-    margin: 20px;
-    font-size: 1.75rem;
-    line-height: 2.5rem;
-    font-weight: $font-weight-light;
+    &LearnMore {
+      font-size: $font-size-lg;
+      color: $color-accent-two;
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 0.5rem;
+      text-decoration: none;
+      cursor: pointer;
+      position: relative;
+      z-index: 2;
 
-    @media (min-width: $breakpoint-md) {
-      width: 75%;
-    }
+      .bounce {
+        display: inline-block;
+        margin-left: 15px;
+        animation: bounceArrow 0.8s infinite;
+        pointer-events: none;
+      }
 
-    @media (min-width: $breakpoint-lg) {
-      width: 30%;
-      margin-left: 20px;
-      font-size: 1.15rem;
-      line-height: 2.25rem;
+      @keyframes bounceArrow {
+        0%,
+        100% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(4px);
+        }
+      }
     }
   }
 }

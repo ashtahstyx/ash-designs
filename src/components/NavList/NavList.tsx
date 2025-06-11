@@ -10,7 +10,7 @@ const navItems = [
   { label: 'Coo Dating App', path: '/coo' },
   { label: 'Loliware', path: '/loliware' },
   { label: 'Garden Party', path: '/garden-party' },
-  { label: 'About Ash', path: '/about' },
+  { label: 'Meet Ash', path: '/about' },
 ];
 
 function NavList({ variant = 'header' }: NavListProps) {

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100;1,100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Roboto+Condensed:ital,wght@0,100;1,100&display=swap");
 .home {
   position: relative;
   min-height: 80vh;
@@ -14,6 +14,17 @@
     padding: 50px;
   }
 }
+.homeIntro h2 {
+  font-size: 2rem;
+  font-weight: 100;
+}
+.homeIntro span {
+  display: block;
+  width: 20%;
+  font-size: 1.25rem;
+  line-height: 2.5rem;
+  font-weight: 100;
+}
 .homeWrapper {
   display: flex;
   flex-direction: column-reverse;
@@ -21,14 +32,14 @@
 @media (min-width: 1024px) {
   .homeWrapper {
     position: absolute;
-    bottom: 0;
+    bottom: 5rem;
     left: 0;
     right: 0;
     margin: 0 20px 0 0;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-end;
-    justify-content: space-between;
+    justify-content: end;
   }
 }
 .home .title {
@@ -51,11 +62,11 @@
 }
 @media (min-width: 1024px) {
   .home .titleSmall {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 }
 .home .titleLarge {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Corinthia", cursive;
   font-weight: 100;
   font-size: 35vw;
   line-height: 1;
@@ -71,25 +82,33 @@
 }
 @media (min-width: 1024px) {
   .home .titleLarge {
-    font-size: 18vw;
+    font-size: 27vw;
+    line-height: 0.6;
   }
 }
-.home .content {
-  margin: 20px;
-  font-size: 1.75rem;
-  line-height: 2.5rem;
-  font-weight: 200;
+.home .titleLearnMore {
+  font-size: 1.25rem;
+  color: #dfff00;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
 }
-@media (min-width: 768px) {
-  .home .content {
-    width: 75%;
+.home .titleLearnMore .bounce {
+  display: inline-block;
+  margin-left: 15px;
+  animation: bounceArrow 0.8s infinite;
+  pointer-events: none;
+}
+@keyframes bounceArrow {
+  0%, 100% {
+    transform: translateX(0);
   }
-}
-@media (min-width: 1024px) {
-  .home .content {
-    width: 30%;
-    margin-left: 20px;
-    font-size: 1.15rem;
-    line-height: 2.25rem;
+  50% {
+    transform: translateX(4px);
   }
 }/*# sourceMappingURL=Home.module.css.map */
