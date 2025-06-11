@@ -58,16 +58,18 @@ const GameHive = () => {
       <div className={styles.gameHiveBody}>
         {/* Genre */}
         <div className={styles.genre}>
+          <h2 className={styles.gameListCategory}>Genre</h2>
           <GenreList />
         </div>
 
         <div className={styles.gameList}>
+          <h1 className={styles.gameListTitle}>Games</h1>
           {/* Game Banner */}
           {gameList.length > 0 && <GameBanner game={gameList[0]} />}
 
           {/* Trending Games */}
           <section className={styles.gameHiveSection}>
-            <h2 className={styles.gameListTitle}>Trending Games</h2>
+            <h2 className={styles.gameListCategory}>Trending Games</h2>
             <div className={styles.trending}>
               {gameList.slice(0, 4).map((game) => (
                 <TrendingGames key={game.id} game={game} />
@@ -77,7 +79,7 @@ const GameHive = () => {
 
           {/* Full List */}
           <section className={styles.gameHiveSection}>
-            <h2 className={styles.gameListTitle}>Popular Games</h2>
+            <h2 className={styles.gameListCategory}>Popular Games</h2>
             <div className={styles.poplar}>
               <GameList gameList={gameList} />
             </div>

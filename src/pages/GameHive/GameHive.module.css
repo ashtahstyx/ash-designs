@@ -135,6 +135,11 @@
 .gameHiveBody .gameListTitle {
   color: var(--color-text);
   margin-bottom: 20px;
+  font-size: 3rem;
+}
+.gameHiveBody .gameListCategory {
+  color: var(--color-text);
+  margin-bottom: 20px;
 }
 .gameHiveBody .banner {
   position: relative;

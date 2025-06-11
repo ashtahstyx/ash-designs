@@ -5,6 +5,8 @@ import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import GameHive from './pages/GameHive/GameHive';
 import GardenParty from './pages/GardenParty/GardenParty';
+import Loliware from './pages/Loliware/Loliware';
+import Coo from './pages/Coo/Coo';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 
@@ -24,6 +26,8 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/gamehive" element={<GameHive />} />
             <Route path="/garden-party" element={<GardenParty />} />
+            <Route path="/loliware" element={<Loliware />} />
+            <Route path="/coo" element={<Coo />} />
           </Routes>
         </main>
         <Footer />

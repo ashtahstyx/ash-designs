@@ -24,7 +24,6 @@ const GenreList = () => {
 
   return (
     <>
-      <h2>Genre</h2>
       {genreList.map((item, index) => (
         <div
           onClick={() => setActiveIndex(index)}
