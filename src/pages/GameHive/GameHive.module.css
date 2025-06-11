@@ -1,17 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Host+Grotesk:wght@300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
   --color-bg: #ffffff;
   --color-sub-bg: #47424c;
   --color-text: #020004;
+  --color-icon: #020004;
   --color-accent: #dcdc00;
+  --color-hover: #dad7dd;
 }
 
 .dark {
   --color-bg: #020004;
   --color-sub-bg: #47424c;
   --color-text: #f7f7f8;
-  --color-icon: #020005;
+  --color-icon: #020004;
   --color-accent: #dcdc00;
+  --color-hover: #645d6b;
 }
 
 .light {
@@ -20,9 +23,11 @@
   --color-text: #020004;
   --color-icon: #f7f7f8;
   --color-accent: #47424c;
+  --color-hover: #dad7dd;
 }
 
 .gameHive {
+  font-family: "Host Grotesk", sans-serif;
   padding: 50px;
   color: var(--color-text);
   background-color: var(--color-bg);
@@ -63,8 +68,81 @@
 .gameHiveSearchInput::placeholder {
   color: var(--color-text);
 }
-.gameHiveBody {
-  margin-top: 50px;
+@media (min-width: 768px) {
+  .gameHiveBody {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+  }
+}
+.gameHiveBody .genre {
+  display: none;
+}
+@media (min-width: 768px) {
+  .gameHiveBody .genre {
+    display: block;
+    padding: 10px;
+  }
+  .gameHiveBody .genreList {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    cursor: pointer;
+  }
+  .gameHiveBody .genreList:hover, .gameHiveBody .genreList.active {
+    background-color: var(--color-hover);
+    border-radius: 8px;
+  }
+  .gameHiveBody .genreList:hover h3, .gameHiveBody .genreList.active h3 {
+    font-weight: 500;
+  }
+  .gameHiveBody .genreImage {
+    height: 30px;
+    width: 30px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+  }
+  .gameHiveBody .genreImage img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .gameHiveBody .genreTitle {
+    font-weight: 400;
+  }
+}
+.gameHiveBody .gameList {
+  padding: 10px;
+}
+.gameHiveBody .gameList img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.gameHiveBody .gameList .bannerImage {
+  height: 320px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+.gameHiveBody .gameList .bannerImage img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .colorMode {

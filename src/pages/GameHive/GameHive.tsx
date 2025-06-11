@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import GenreList from './resources/GenreList';
+import GameBanner from './resources/GameBanner';
+import GameList from './resources/GameList';
 import styles from './GameHive.module.scss';
 import HiveLogo from '../../../src/assets/images/GameHive.png';
 import { FaLightbulb, FaRegLightbulb, FaSearch } from 'react-icons/fa';
@@ -38,8 +41,13 @@ const GameHive = () => {
       </div>
 
       <div className={styles.gameHiveBody}>
-        <div>Genre</div>
-        <div>GameList</div>
+        <div className={styles.genre}>
+          <GenreList />
+        </div>
+        <div className={styles.gameList}>
+          <GameBanner />
+          <GameList />
+        </div>
       </div>
     </div>
   );

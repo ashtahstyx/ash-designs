@@ -5,15 +5,18 @@
   --color-bg: #ffffff;
   --color-sub-bg: #47424c;
   --color-text: #020004;
+  --color-icon: #020004;
   --color-accent: #dcdc00;
+  --color-hover: #dad7dd;
 }
 
 .dark {
   --color-bg: #020004;
   --color-sub-bg: #47424c;
   --color-text: #f7f7f8;
-  --color-icon: #020005;
+  --color-icon: #020004;
   --color-accent: #dcdc00;
+  --color-hover: #645d6b;
 }
 
 .light {
@@ -22,10 +25,12 @@
   --color-text: #020004;
   --color-icon: #f7f7f8;
   --color-accent: #47424c;
+  --color-hover: #dad7dd;
 }
 
 // Game Hive Code
 .gameHive {
+  font-family: $font-family-gamehive;
   padding: 50px;
   color: var(--color-text);
   background-color: var(--color-bg);
@@ -70,7 +75,90 @@
   }
 
   &Body {
-    margin-top: 50px;
+    @media (min-width: $breakpoint-md) {
+      margin-top: 50px;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 10px;
+    }
+
+    .genre {
+      display: none;
+
+      @media (min-width: $breakpoint-md) {
+        display: block;
+        padding: 10px;
+
+        &List {
+          display: flex;
+          gap: 10px;
+          align-items: center;
+          margin: 10px 0;
+          padding: 10px;
+          cursor: pointer;
+
+          &:hover,
+          &.active {
+            background-color: var(--color-hover);
+            border-radius: $radius-md;
+
+            h3 {
+              font-weight: $font-weight-semibold;
+            }
+          }
+        }
+
+        &Image {
+          height: 30px;
+          width: 30px;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: $radius-md;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            max-width: 100%;
+            max-height: 100%;
+          }
+        }
+
+        &Title {
+          font-weight: $font-weight-regular;
+        }
+      }
+    }
+
+    .gameList {
+      padding: 10px;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .banner {
+        &Image {
+          height: 320px;
+          width: 100%;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: $radius-md;
+
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
   }
 }
 

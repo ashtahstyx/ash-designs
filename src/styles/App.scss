@@ -13,6 +13,8 @@ h2,
 h3,
 h4 {
   font-family: $font-family-secondary;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 .layout {
