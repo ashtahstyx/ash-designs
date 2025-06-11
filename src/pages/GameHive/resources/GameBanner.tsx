@@ -1,10 +1,5 @@
 import styles from '../GameHive.module.scss';
-
-type Game = {
-  id: number;
-  name: string;
-  background_image: string;
-};
+import type { Game } from '../src/types';
 
 type GameBannerProps = {
   game?: Game;

@@ -234,6 +234,34 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+.gameHiveBody .popularCard {
+  background-color: var(--color-hover);
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.gameHiveBody .popularList svg {
+  fill: var(--color-text);
+  margin-right: 10px;
+}
+.gameHiveBody .popularImage img {
+  border-radius: 8px;
+  height: 120px;
+}
+.gameHiveBody .popularTitle,
+.gameHiveBody .popular span {
+  color: var(--color-text);
+}
+.gameHiveBody .popularTitle {
+  min-height: 45px;
+}
+.gameHiveBody .popularInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
 
 .colorMode {
   background-color: var(--color-accent);

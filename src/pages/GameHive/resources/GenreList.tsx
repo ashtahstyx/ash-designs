@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import styles from '../GameHive.module.scss';
-import GameHiveAPI from './GameHiveAPI';
+import GameHiveAPI from '../src/GameHiveAPI';
 
 type Genre = {
   id: number;

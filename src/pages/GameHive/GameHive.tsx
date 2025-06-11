@@ -1,18 +1,12 @@
 import { useState, useEffect } from 'react';
+import GameHiveAPI from './src/GameHiveAPI';
 import GenreList from './resources/GenreList';
 import GameList from './resources/GameList';
-import GameHiveAPI from './resources/GameHiveAPI';
 import GameBanner from './resources/GameBanner';
 import TrendingGames from './resources/TrendingGames';
 import styles from './GameHive.module.scss';
 import HiveLogo from '../../../src/assets/images/GameHive.png';
 import { FaLightbulb, FaRegLightbulb, FaSearch } from 'react-icons/fa';
-
-type Game = {
-  id: number;
-  name: string;
-  background_image: string;
-};
 
 const GameHive = () => {
   const [theme, setTheme] = useState<'light' | 'dark'>('light');

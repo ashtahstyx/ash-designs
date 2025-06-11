@@ -257,6 +257,42 @@
       @media (min-width: $breakpoint-lg) {
         grid-template-columns: repeat(3, 1fr);
       }
+
+      &Card {
+        background-color: var(--color-hover);
+        border-radius: $radius-md;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      &List {
+        svg {
+          fill: var(--color-text);
+          margin-right: 10px;
+        }
+      }
+
+      &Image img {
+        border-radius: $radius-md;
+        height: 120px;
+      }
+
+      &Title,
+      span {
+        color: var(--color-text);
+      }
+
+      &Title {
+        min-height: 45px;
+      }
+
+      &Info {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+      }
     }
   }
 }
