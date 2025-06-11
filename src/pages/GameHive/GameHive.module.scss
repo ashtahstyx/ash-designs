@@ -21,7 +21,7 @@
 
 .light {
   --color-bg: #ffffff;
-  --color-sub-bg: #dcdc00;
+  --color-sub-bg: #f7f7f8;
   --color-text: #020004;
   --color-icon: #f7f7f8;
   --color-accent: #47424c;
@@ -42,7 +42,7 @@
   }
 
   &Logo {
-    width: 60px;
+    width: 70px;
     height: auto;
     padding: 10px;
     border-radius: 100%;
@@ -56,9 +56,9 @@
     padding: 0 20px;
     border-radius: 50px;
 
-    &Icon {
+    svg {
       margin-right: 10px;
-      color: var(--color-text);
+      fill: var(--color-text);
     }
 
     &Input {
@@ -100,6 +100,10 @@
           margin: 10px 0;
           padding: 10px;
           cursor: pointer;
+
+          h3 {
+            color: var(--color-text);
+          }
 
           &:hover,
           &.active {
@@ -184,6 +188,8 @@
           background-color: #dcdc00;
           color: #020004;
           border-radius: $radius-sm;
+          font-weight: $font-weight-semibold;
+          cursor: pointer;
         }
       }
 
@@ -220,7 +226,7 @@
       &Card {
         border-radius: $radius-lg;
         overflow: hidden;
-        background-color: var(--color-hover);
+        background-color: #dcdc00;
 
         @media (min-width: $breakpoint-lg) {
           transition: transform 0.3s ease;
@@ -238,7 +244,7 @@
 
       &Title {
         padding: 10px;
-        color: var(--color-text);
+        color: #020004;
         font-weight: $font-weight-regular;
         font-size: $font-size-base;
       }
@@ -259,7 +265,7 @@
       }
 
       &Card {
-        background-color: var(--color-hover);
+        background-color: #645d6b;
         border-radius: $radius-md;
         padding: 10px;
         display: flex;
@@ -269,19 +275,23 @@
 
       &List {
         svg {
-          fill: var(--color-text);
+          fill: #f7f7f8;
           margin-right: 10px;
         }
       }
 
       &Image img {
         border-radius: $radius-md;
-        height: 120px;
+        height: 220px;
+
+        @media (min-width: $breakpoint-md) {
+          height: 120px;
+        }
       }
 
       &Title,
       span {
-        color: var(--color-text);
+        color: #f7f7f8;
       }
 
       &Title {
@@ -291,7 +301,7 @@
       &Info {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 15px;
+        margin-bottom: 5px;
       }
     }
   }
