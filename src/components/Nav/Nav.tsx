@@ -11,14 +11,9 @@ function Nav() {
     <nav className={styles.nav}>
       <button
         onClick={toggleMenu}
-        role="button"
-        onKeyDown={(e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            toggleMenu();
-          }
-        }}
         aria-label="Toggle menu"
+        aria-expanded={menuOpen}
+        aria-controls="primary-navigation"
         className={styles.navButton}>
         <div className={styles.burger}>
           <div
@@ -36,7 +31,10 @@ function Nav() {
         </div>
       </button>
 
-      <div className={`${styles.navList} ${menuOpen ? styles.menuOpen : ''}`}>
+      <div
+        className={`${styles.navList} id="primary-navigation"${
+          menuOpen ? styles.menuOpen : ''
+        }`}>
         <NavList variant="header" />
       </div>
     </nav>
