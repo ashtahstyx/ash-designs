@@ -3,58 +3,103 @@
 // Color Mode Mixins
 :root {
   --color-bg: #ffffff;
-  --color-sub-bg: #47424c;
+  --color-field-bg: #47424c;
+  --color-bg-inv: #020004;
+  --color-bg-secondary: #20003f;
   --color-text: #020004;
   --color-icon: #020004;
-  --color-accent: #dcdc00;
+  --color-change: #dcdc00;
+  --color-accent: #a1a100;
   --color-hover: #dad7dd;
+  --color-hover-text: #f7f7f8;
 }
 
 .dark {
   --color-bg: #020004;
-  --color-sub-bg: #47424c;
+  --color-bg-inv: #f7f7f8;
+  --color-field-bg: #47424c;
+  --color-bg-secondary: #29262c;
   --color-text: #f7f7f8;
   --color-icon: #020004;
-  --color-accent: #dcdc00;
+  --color-change: #a1a100;
+  --color-accent: #a1a100;
   --color-hover: #645d6b;
+  --color-hover-text: #f7f7f8;
 }
 
 .light {
   --color-bg: #ffffff;
-  --color-sub-bg: #f7f7f8;
+  --color-field-bg: #f7f7f8;
+  --color-bg-inv: #020004;
+  --color-bg-secondary: #645d6b;
   --color-text: #020004;
   --color-icon: #f7f7f8;
-  --color-accent: #47424c;
-  --color-hover: #dad7dd;
+  --color-change: #47424c;
+  --color-accent: #dcdc00;
+  --color-hover: #645d6b;
+  --color-hover-text: #f7f7f8;
 }
 
 // Game Hive Code
 .gameHive {
+  position: relative;
   font-family: $font-family-gamehive;
-  padding: 50px;
+  padding: 25px;
   color: var(--color-text);
   background-color: var(--color-bg);
 
+  @media (min-width: $breakpoint-md) {
+    padding: 50px;
+  }
+
+  :focus-visible,
+  :focus {
+    outline: 2px solid #8b18ff;
+    outline-offset: 2px;
+    border-radius: 15px;
+  }
+
   &Header {
     display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+
+    @media (min-width: $breakpoint-md) {
+      flex-direction: row;
+      gap: 20px;
+    }
+  }
+
+  &Brand {
+    display: flex;
     align-items: center;
-    gap: 20px;
+    margin-bottom: 1.5rem;
+    white-space: nowrap;
+
+    @media (min-width: $breakpoint-md) {
+      margin-bottom: unset;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
   }
 
   &Logo {
-    width: 70px;
+    width: 50px;
     height: auto;
-    padding: 10px;
-    border-radius: 100%;
+    margin-right: 10px;
   }
 
   &Search {
+    position: relative;
     display: flex;
     flex: auto;
     align-items: center;
-    background-color: var(--color-sub-bg);
+    background-color: var(--color-field-bg);
     padding: 0 20px;
     border-radius: 50px;
+    width: 100%;
 
     svg {
       margin-right: 10px;
@@ -72,6 +117,30 @@
         color: var(--color-text);
       }
     }
+
+    .suggestionsList {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: var(--color-field-bg);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      z-index: 10;
+      list-style: none;
+      padding: 30px;
+      margin-top: 10px;
+      border-radius: 50px;
+
+      .suggestionItem {
+        color: #29262c;
+        font-size: 1rem;
+        cursor: pointer;
+
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+      }
+    }
   }
 
   &Body {
@@ -87,8 +156,12 @@
     }
 
     .genre {
-      display: none;
-
+      .genreDropdown {
+        padding: 0.5rem;
+        width: 100%;
+        font-size: 1rem;
+        border-radius: 50px;
+      }
       @media (min-width: $breakpoint-md) {
         display: block;
         padding: 10px;
@@ -112,6 +185,7 @@
 
             h3 {
               font-weight: $font-weight-semibold;
+              color: var(--color-hover-text);
             }
           }
         }
@@ -141,7 +215,10 @@
     }
 
     .gameList {
-      padding: 10px;
+      padding: 30px 0 0 0;
+      @media (min-width: $breakpoint-md) {
+        padding: 10px;
+      }
 
       img {
         height: 100%;
@@ -157,6 +234,7 @@
 
       &Category {
         color: var(--color-text);
+        font-size: 1.5rem;
         margin-bottom: 20px;
       }
     }
@@ -194,12 +272,16 @@
       }
 
       &Image {
-        height: 320px;
+        height: 220px;
         width: 100%;
         overflow: hidden;
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @media (min-width: $breakpoint-md) {
+          height: 320px;
+        }
 
         img {
           height: 100%;
@@ -211,22 +293,17 @@
 
     .trending {
       display: grid;
-      grid-template-columns: repeat(1, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 20px;
       cursor: pointer;
-
-      @media (min-width: $breakpoint-md) {
-        grid-template-columns: repeat(2, 1fr);
-      }
 
       @media (min-width: $breakpoint-lg) {
         grid-template-columns: repeat(4, 1fr);
       }
 
       &Card {
+        background-color: var(--color-accent);
         border-radius: $radius-lg;
-        overflow: hidden;
-        background-color: #dcdc00;
 
         @media (min-width: $breakpoint-lg) {
           transition: transform 0.3s ease;
@@ -235,24 +312,58 @@
             transform: scale(1.1);
           }
         }
+
+        .skeletonImage {
+          width: 100%;
+          min-height: 200px;
+          background: #ccc;
+          border-radius: 4px;
+          margin-bottom: 0.5rem;
+          animation: pulse 1.5s infinite;
+        }
+
+        .skeletonTitle {
+          width: 70%;
+          height: 20px;
+          background: var(--color-text);
+          border-radius: 4px;
+          margin: 0.5rem;
+          animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+          0% {
+            opacity: 0.7;
+          }
+          50% {
+            opacity: 0.4;
+          }
+          100% {
+            opacity: 0.7;
+          }
+        }
       }
 
       &Image {
-        height: 200px;
+        height: 180px;
         width: auto;
+
+        @media (min-width: $breakpoint-md) {
+          height: 200px;
+        }
       }
 
       &Title {
         padding: 10px;
         color: #020004;
         font-weight: $font-weight-regular;
-        font-size: $font-size-base;
+        line-height: 1.5rem;
       }
     }
 
     .popular {
       display: grid;
-      grid-template-columns: repeat(1, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 20px;
       cursor: pointer;
 
@@ -265,52 +376,123 @@
       }
 
       &Card {
-        background-color: #645d6b;
+        background-color: var(--color-bg-secondary);
         border-radius: $radius-md;
         padding: 10px;
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-      }
 
-      &List {
-        svg {
-          fill: #f7f7f8;
-          margin-right: 10px;
+        @media (min-width: $breakpoint-lg) {
+          transition: transform 0.3s ease;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+        .skeletonImage {
+          width: 100%;
+          height: 180px;
+          background: #ccc;
+          border-radius: 8px;
+        }
+
+        .skeletonTitle {
+          width: 80%;
+          height: 20px;
+          margin-top: 8px;
+          background: #ddd;
+          border-radius: 4px;
+        }
+
+        .skeletonIcon {
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          margin-right: 8px;
+          background: #ddd;
+          border-radius: 50%;
+        }
+
+        @keyframes pulse {
+          0% {
+            opacity: 0.7;
+          }
+          50% {
+            opacity: 0.4;
+          }
+          100% {
+            opacity: 0.7;
+          }
         }
       }
 
       &Image img {
         border-radius: $radius-md;
-        height: 220px;
+        margin-bottom: 10px;
+        height: 150px;
 
         @media (min-width: $breakpoint-md) {
           height: 120px;
         }
       }
 
-      &Title,
-      span {
-        color: #f7f7f8;
-      }
-
-      &Title {
-        min-height: 45px;
-      }
-
       &Info {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        display: flex;
+        gap: 10px;
+
+        &Title,
+        span {
+          color: #f7f7f8;
+        }
+
+        &Title {
+          min-height: 67px;
+          line-height: 1.5rem;
+        }
+      }
+
+      &Meta {
         display: flex;
         justify-content: space-between;
         margin-bottom: 5px;
+
+        span {
+          display: flex;
+          align-items: flex-start;
+
+          svg {
+            fill: #f7f7f8;
+            margin-right: 10px;
+          }
+        }
+      }
+
+      &Platform {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5px;
+
+        span {
+          display: flex;
+          align-items: flex-start;
+          gap: 10px;
+        }
       }
     }
   }
 }
 
 .colorMode {
-  background-color: var(--color-accent);
+  background-color: var(--color-change);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   border-radius: 100%;
   padding: 15px 17px;
+  width: 50px;
+  position: fixed;
+  z-index: 15;
+  bottom: 1em;
+  right: 1em;
 
   .lightMode,
   .darkMode {

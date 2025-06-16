@@ -1,19 +1,15 @@
 import styles from '../GameHive.module.scss';
+import GameCardSkeleton from './GameCardSkeleton';
 import { FaStar, FaXbox, FaWindows, FaClock } from 'react-icons/fa';
 import { SiPlaystation } from 'react-icons/si';
 import type { Game } from '../src/types';
-import { useEffect } from 'react';
 
 type GameListProps = {
   gameList: Game[];
+  loading?: boolean; // 👈 add this
 };
 
-const GameList = ({ gameList }: GameListProps) => {
-  useEffect(() => {
-    console.log('Game list received in GameList component:', gameList);
-  }, [gameList]);
-
-  // Map a full platform name to a category key
+const GameList = ({ gameList, loading }: GameListProps) => {
   const getPlatformCategory = (name: string): string | null => {
     const lower = name.toLowerCase();
     if (lower.includes('xbox')) return 'xbox';
@@ -37,36 +33,42 @@ const GameList = ({ gameList }: GameListProps) => {
 
   return (
     <div className={styles.popular}>
-      {gameList.map((item) => {
-        const platformKeys = item.platforms
-          ?.map((p) => getPlatformCategory(p.platform.name))
-          .filter((p): p is string => p !== null);
+      {loading
+        ? [...Array(9)].map((_, index) => (
+            <GameCardSkeleton key={index} variant="popular" />
+          ))
+        : gameList.map((game) => {
+            const platformKeys = game.platforms
+              ?.map((p) => getPlatformCategory(p.platform.name))
+              .filter((p): p is string => p !== null);
 
-        const uniquePlatformKeys = Array.from(new Set(platformKeys));
+            const uniquePlatformKeys = Array.from(new Set(platformKeys));
 
-        return (
-          <div key={item.id} className={styles.popularList}>
-            <div className={styles.popularCard}>
-              <div className={styles.popularImage}>
-                <img src={item.background_image} alt={item.name} />
+            return (
+              <div tabIndex={0} key={game.id} className={styles.popularCard}>
+                <div className={styles.popularImage}>
+                  <img src={game.background_image} alt={game.name} />
+                </div>
+
+                <div className={styles.popularInfo}>
+                  <h3 className={styles.popularInfoTitle}>{game.name}</h3>
+                  <div className={styles.popularMeta}>
+                    <span className={styles.popularIcon}>
+                      <FaStar /> {game.rating}
+                    </span>
+                    <span className={styles.popularIcon}>
+                      <FaClock /> {game.playtime} hrs
+                    </span>
+                  </div>
+                  <div className={styles.popularPlatform}>
+                    <span className={styles.popularIcon}>
+                      {uniquePlatformKeys.map((key) => renderPlatformIcon(key))}
+                    </span>
+                  </div>
+                </div>
               </div>
-              <h3 className={styles.popularTitle}>{item.name}</h3>
-              <div className={styles.popularInfo}>
-                <span className={styles.popularIcon}>
-                  <FaStar /> {item.rating}
-                </span>
-                <span className={styles.popularIcon}>
-                  <FaClock />
-                  {item.playtime}
-                </span>
-              </div>
-              <span className={styles.popularIcon}>
-                {uniquePlatformKeys.map((key) => renderPlatformIcon(key))}
-              </span>
-            </div>
-          </div>
-        );
-      })}
+            );
+          })}
     </div>
   );
 };

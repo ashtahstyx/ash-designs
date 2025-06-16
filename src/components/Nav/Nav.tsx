@@ -11,6 +11,13 @@ function Nav() {
     <nav className={styles.nav}>
       <button
         onClick={toggleMenu}
+        role="button"
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleMenu();
+          }
+        }}
         aria-label="Toggle menu"
         className={styles.navButton}>
         <div className={styles.burger}>

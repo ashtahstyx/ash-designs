@@ -9,12 +9,12 @@ const TrendingGames = ({ game }: TrendingGamesProps) => {
   if (!game) return null;
 
   return (
-    <div className={styles.trendingCard}>
+    <div className={styles.trendingCard} tabIndex={0}>
       <div className={styles.trendingImage}>
         <img src={game.background_image} alt={game.name} />
       </div>
       <div className={styles.trendingInfo}>
-        <h4 className={styles.trendingTitle}>{game.name}</h4>
+        <h3 className={styles.trendingTitle}>{game.name}</h3>
       </div>
     </div>
   );

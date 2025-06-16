@@ -6,7 +6,7 @@ import styles from './Header.module.scss';
 
 function Header() {
   return (
-    <div className={styles.header}>
+    <header className={styles.header}>
       <Link to="/" className={styles.headerLink}>
         <img
           className={styles.headerLogo}
@@ -19,7 +19,7 @@ function Header() {
       <div className={styles.desktopNav}>
         <NavList />
       </div>
-    </div>
+    </header>
   );
 }
 
