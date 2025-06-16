@@ -1,52 +1,55 @@
 import styles from './About.module.scss';
-import ProfileImg from '../../../src/assets/images/ash-headshot_full.jpg';
+import { images } from '../../assets/images';
 
 const About = () => {
+  const heading = 'Front-end Developer. Designer. Corgi Wrangler.';
+
   return (
-    <div className={styles.aboutWrapper}>
-      <div className={styles.aboutContainer}>
-        <div className={styles.imageContainer}>
-          <img
-            src={ProfileImg}
-            className={styles.cardImg}
-            alt="Ashley headshot"
-          />
-        </div>
+    <div className={styles.about}>
+      <div className={styles.aboutBGText}>
+        <span>Meet</span>
+        <span>Ash</span>
+      </div>
+      <div className={styles.aboutImage}>
+        <img src={images.HeadshotPng} alt="Ashley headshot" />
+      </div>
 
-        <div className={styles.textContent}>
-          <h2>Front-end Developer. Designer. Corgi Wrangler.</h2>
+      <div className={styles.aboutContent}>
+        <h2>
+          {heading.split('.').map(
+            (part, index) =>
+              part.trim() && (
+                <span key={index}>
+                  {part.trim()}
+                  <br />
+                </span>
+              )
+          )}
+        </h2>
 
-          <p>
-            Hi, I’m Ashley! I’m a front-end developer with a background in
-            graphic design, passionate about creating clean, accessible, and
-            user-centered digital experiences. With 8 years of professional
-            experience—including work in corporate, freelance, and non-profit
-            settings—I bring both creative vision and technical precision to
-            every project I take on.
-          </p>
+        <p>
+          Hi, I’m Ashley! I’m a front-end developer with a background in graphic
+          design and passionate about creating clean, accessible, user-centered
+          digital experiences. With 8 years of experience across corporate,
+          freelance, and non-profit work, I bring creative vision and technical
+          precision to every project.
+        </p>
 
-          <p>
-            I’m known for my strong creative instinct, quick adoption of new
-            technologies, and acute attention to detail. I specialize in
-            building responsive, ADA-compliant, and brand-consistent websites
-            that don’t just look great—they work beautifully.
-          </p>
+        <p>
+          I’m known for my creative instinct, quick adoption of new
+          technologies, and attention to detail. I specialize in building
+          responsive, ADA-compliant, brand-consistent websites that don’t just
+          look great—they work beautifully. From fresh ideas to fine-tuning what
+          exists, I bring empathy and a commitment to better solutions. I love
+          solving tough problems with code and celebrating the little wins that
+          make it all worthwhile.
+        </p>
 
-          <p>
-            Whether I’m jumping into a new challenge or refining an existing
-            experience, I approach every project with fresh eyes, empathy for
-            the end user, and a drive to create something better than what came
-            before. I thrive on solving tough problems with code, and I find joy
-            in the little wins that make all the hours worthwhile.
-          </p>
-
-          <p>
-            Outside of work, my life is soundtracked by my two corgis, Maverick
-            and Appa—who prefer performing their barking concerts at 3 a.m. They
-            specialize in guarding the house from people in other yards, snoring
-            through Zoom calls, and creating dazzling tumbleweeds.
-          </p>
-        </div>
+        <p>
+          Outside of work, life revolves around my two corgis, Maverick and
+          Appa. They excel at late-night barking concerts, snoring through Zoom
+          calls, and producing impressive fur tumbleweeds.
+        </p>
       </div>
     </div>
   );

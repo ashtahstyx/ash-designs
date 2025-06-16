@@ -1,1 +1,64 @@
 @use '../../styles/variables' as *;
+
+.about {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 30% 70%;
+  gap: 5%;
+
+  &BGText {
+    position: absolute;
+    z-index: -10;
+    justify-self: end;
+    bottom: -3rem;
+
+    span {
+      font-family: $font-family-script;
+      color: $transparent-accent;
+      font-size: 65vh;
+      line-height: 0.75;
+      text-align: right;
+      display: block;
+    }
+  }
+
+  &Image {
+    position: relative;
+    display: flex;
+    align-self: end;
+    height: 450px;
+    width: 450px;
+
+    img {
+      height: auto;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: -10;
+      height: 100%;
+      width: 100%;
+      left: -5rem;
+      background-color: $color-accent;
+      border-radius: 100%;
+    }
+  }
+  &Content {
+    margin-right: 20vw;
+    padding: 50px 0;
+
+    h2 {
+      font-size: 3rem;
+      margin: 2rem 0;
+      color: $color-primary-title;
+    }
+    p {
+      margin: 1rem 0;
+      color: $color-primary-text;
+      line-height: 1.5rem;
+    }
+  }
+}
