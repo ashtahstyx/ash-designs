@@ -44,8 +44,17 @@
 }
 @media (min-width: 768px) {
   .loliwareIntro div {
-    margin: 5rem;
+    margin: 5rem 5rem 1rem 5rem;
   }
+}
+.loliwareIntro div button {
+  border: 0 transparent;
+  background-color: #f7a02a;
+  color: #151f02;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  margin-top: 1rem;
 }
 .loliwareIntro img {
   position: absolute;
@@ -60,6 +69,46 @@
     width: 90%;
     height: auto;
   }
+}
+.loliwareBrand .loliLogos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.loliwareBrand .loliLogos img:nth-child(1) {
+  width: auto;
+  height: 100px;
+}
+.loliwareBrand .loliLogos img:nth-child(2) {
+  width: 300px;
+  height: auto;
+}
+.loliwareBrand .loliLogos img:nth-child(3) {
+  width: 250px;
+  height: auto;
+}
+.loliwareBrandMock {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .loliwareBrandExample {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.loliwareBrandExample div {
+  margin-bottom: 2rem;
+}
+.loliwareBrandExample div button {
+  border: 0 transparent;
+  background-color: #72b332;
+  color: #151f02;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  margin-top: 1rem;
 }
 .loliwareWeb {
   background: linear-gradient(135deg, #ed335f, #cf2d52);
@@ -90,4 +139,16 @@
   padding: 0.5rem 1rem;
   border-radius: 20px;
   margin-top: 1rem;
+}
+.loliware .fullWidth {
+  display: block;
+  width: 100vw;
+  margin: 0 -1rem;
+  overflow: hidden;
+  height: auto;
+}
+@media (min-width: 768px) {
+  .loliware .fullWidth {
+    margin: 2rem -3rem;
+  }
 }/*# sourceMappingURL=Loliware.module.css.map */

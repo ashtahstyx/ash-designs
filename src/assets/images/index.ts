@@ -25,7 +25,10 @@ import Process from './coo/coo_process-hearder.jpg'
 import Popup from './coo/coo_user-flow.jpg'
 
 import LogoLoli from './loliware/loli-logo.jpg'
+import LogoLoli2 from './loliware/lw_logo.png'
+import LogoLoli3 from './loliware/lw_logo.jpg'
 import LoliWeb from './loliware/lw_web-mockup.png'
+import LoliBrand from './loliware/lw_paper2.jpg'
 
 export const images = {
   LogoWhite,
@@ -52,5 +55,8 @@ export const images = {
   Process,
   Popup,
   LogoLoli,
+  LogoLoli2,
+  LogoLoli3,
   LoliWeb,
+  LoliBrand,
 };

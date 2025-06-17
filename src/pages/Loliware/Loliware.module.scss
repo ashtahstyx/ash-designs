@@ -47,7 +47,17 @@
       margin: 1.5rem;
 
       @media (min-width: $breakpoint-md) {
-        margin: 5rem;
+        margin: 5rem 5rem 1rem 5rem;
+      }
+
+      button {
+        border: 0 transparent;
+        background-color: $loli-yuzu;
+        color: $loli-forest;
+        font-weight: 600;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        margin-top: 1rem;
       }
     }
 
@@ -62,6 +72,58 @@
       @media (min-width: $breakpoint-md) {
         width: 90%;
         height: auto;
+      }
+    }
+  }
+
+  &Brand {
+    .loliLogos {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: center;
+      margin-bottom: 2rem;
+
+      img {
+        &:nth-child(1) {
+          width: auto;
+          height: 100px;
+        }
+
+        &:nth-child(2) {
+          width: 300px;
+          height: auto;
+        }
+
+        &:nth-child(3) {
+          width: 250px;
+          height: auto;
+        }
+      }
+    }
+
+    &Mock {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+
+    &Example {
+      @media (min-width: $breakpoint-md) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      div {
+        margin-bottom: 2rem;
+
+        button {
+          border: 0 transparent;
+          background-color: $loli-lime;
+          color: $loli-forest;
+          font-weight: 500;
+          padding: 0.5rem 1rem;
+          border-radius: 20px;
+          margin-top: 1rem;
+        }
       }
     }
   }
@@ -99,6 +161,18 @@
           margin-top: 1rem;
         }
       }
+    }
+  }
+
+  .fullWidth {
+    display: block;
+    width: 100vw;
+    margin: 0 -1rem;
+    overflow: hidden;
+    height: auto;
+
+    @media (min-width: $breakpoint-md) {
+      margin: 2rem -3rem;
     }
   }
 }

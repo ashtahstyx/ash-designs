@@ -30,12 +30,59 @@ const Loliware = () => {
               branding and products were inspired by their current bright color
               palette with variations in intensity and shade.
             </p>
+
+            <a href="https://invis.io/XQGG585GEZ4" target="_blank">
+              <button>Check out the real company!</button>
+            </a>
           </div>
           <img
             className={styles.loliwareLogo}
             src={images.LogoLoli}
             alt="Rebrand for LOLIWARE"
           />
+        </section>
+        <section className={styles.loliwareBrand}>
+          <img
+            className={styles.fullWidth}
+            src={images.LoliBrand}
+            alt="Rebrand for LOLIWARE"
+          />
+
+          <h2>LoliWare Brand</h2>
+          <div className={styles.loliLogos}>
+            <img src={images.LogoLoli2} alt="Rebrand for LOLIWARE Logo One" />
+            <img src={images.LogoLoli} alt="Rebrand for LOLIWARE Logo Two" />
+
+            <img src={images.LogoLoli3} alt="Rebrand for LOLIWARE Logo Three" />
+          </div>
+
+          <div className={styles.loliwareWebExample}>
+            <div>
+              <h3>Website Example</h3>
+              <p>
+                Currently the web presence lacks the same character as the
+                product, so large type and bold colors are used to accent each
+                cup in its own unique color. Product pages and recipe pages will
+                be color coded to mimic each cup flavor.
+              </p>
+              <a href="lw-website/index.html" target="_blank">
+                <button>Check it out!</button>
+              </a>
+            </div>
+            <div>
+              <h3>Mobile Mockup</h3>
+
+              <p>
+                All main e-commerce pages have been designed and put into an
+                invision prototype so that you can get a real time feel for the
+                LOLIWARE site.{' '}
+              </p>
+
+              <a href="https://invis.io/XQGG585GEZ4" target="_blank">
+                <button>Explore the Design</button>
+              </a>
+            </div>
+          </div>
         </section>
         <section className={styles.loliwareWeb}>
           <img
