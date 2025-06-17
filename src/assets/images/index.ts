@@ -24,6 +24,9 @@ import Timer from './coo/coo_24-hour.png'
 import Process from './coo/coo_process-hearder.jpg'
 import Popup from './coo/coo_user-flow.jpg'
 
+import LogoLoli from './loliware/loli-logo.jpg'
+import LoliWeb from './loliware/lw_web-mockup.png'
+
 export const images = {
   LogoWhite,
   LogoBlack,
@@ -48,4 +51,6 @@ export const images = {
   Timer,
   Process,
   Popup,
+  LogoLoli,
+  LoliWeb,
 };
