@@ -1,1 +1,179 @@
-@import url("https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Host+Grotesk:wght@300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");/*# sourceMappingURL=Coo.module.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Host+Grotesk:wght@300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* .coo {
+  position: relative;
+  overflow: hidden;
+}
+* .coo h1,
+* .coo h2,
+* .coo h3,
+* .coo p {
+  color: #323232;
+}
+* .coo h2,
+* .coo h3 {
+  margin-bottom: 1rem;
+}
+* .coo p {
+  max-width: 75%;
+  line-height: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+* .coo section {
+  padding: 3rem;
+}
+* .cooLogo {
+  position: absolute;
+  width: 200px;
+  top: 3rem;
+  left: 3rem;
+  filter: brightness(0) invert(1);
+}
+* .cooHeader {
+  background-color: #323232;
+  width: 100%;
+  height: 300px;
+  display: block;
+  overflow: hidden;
+}
+* .cooHeader .cooHero {
+  width: 70%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: bottom;
+     object-position: bottom;
+  display: flex;
+  justify-self: end;
+}
+* .cooShapedDrk {
+  -webkit-clip-path: polygon(0 0%, 100% 0%, 100% 70%, 0 100%);
+  clip-path: polygon(0 0, 100% 0%, 100% 70%, 0 100%);
+  background-color: #323232;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5%;
+}
+* .cooIntro h2,
+* .cooIntro p {
+  color: #f8f8f8;
+}
+* .cooBrand h2 {
+  margin-bottom: 2rem;
+}
+* .cooBrandType {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 3rem;
+}
+* .cooBrandType div {
+  align-content: end;
+  text-align: center;
+}
+* .cooBrandColor {
+  position: relative;
+  padding: 0;
+  width: 100%;
+}
+* .cooBrandColor::before {
+  content: "";
+  position: absolute;
+  top: -2rem;
+  right: -3rem;
+  bottom: 0;
+  left: -3rem;
+  background: url("../../assets/images/coo/coo_map-background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  z-index: -1;
+}
+* .cooBrandColor .colorSlant {
+  position: absolute;
+  top: 1em;
+}
+* .cooBrandColor img {
+  width: calc(100% + 6rem);
+  margin: 0 0 0 -3rem;
+}
+* .cooBrandIcons {
+  background-color: #323232;
+  padding: 3rem;
+  margin-right: -3rem;
+  margin-left: -3rem;
+}
+* .cooBrandIcons h3,
+* .cooBrandIcons p {
+  color: #f8f8f8;
+}
+* .cooBrandIcons .cooIcons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 1rem;
+}
+* .cooBrandIcons .cooIcons img {
+  width: 100%;
+}
+* .cooBrand .cooABTests {
+  position: absolute;
+  z-index: 1;
+  width: 100vw;
+  margin: -3rem;
+  overflow: hidden;
+}
+* .cooBrand .cooABTests::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, transparent, #323232);
+  z-index: -1;
+  height: 100%;
+}
+* .cooBrand .cooABTests img {
+  display: block;
+  width: 100%;
+  height: auto;
+  z-index: 0;
+}
+* .cooApp h2 {
+  margin-bottom: 2rem;
+}
+* .cooApp .largeBanner {
+  width: calc(100% + 6rem);
+  margin: -3rem -3rem 2rem -3rem;
+}
+* .cooAppDesign {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 2rem;
+}
+* .cooAppDesign img {
+  width: 100%;
+  margin-top: 2rem;
+}
+* .cooAppDesign h2 {
+  margin-bottom: 1rem;
+}
+* .cooAppDesign .shakeIt {
+  position: relative;
+}
+* .cooAppDesign .shakeItTimer {
+  width: 180px;
+  height: auto;
+  position: absolute;
+  z-index: 1;
+  right: 2rem;
+  bottom: 0;
+}
+* .cooAppDetails {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+* .cooAppFull img {
+  width: 100%;
+}
+* .cooApp .fullWidth {
+  display: block;
+  width: 100vw;
+  margin: 2rem -3rem;
+  overflow: hidden;
+  height: auto;
+}/*# sourceMappingURL=Coo.module.css.map */
