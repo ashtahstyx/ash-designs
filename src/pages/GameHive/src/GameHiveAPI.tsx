@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const key = '19dc3f8016b340ce963c6e828f749d15';
+const key = import.meta.env.VITE_RAWG_API_KEY;
 
 const axiosInstance = axios.create({
   baseURL: 'https://api.rawg.io/api',
