@@ -14,7 +14,7 @@
   h2,
   h3,
   p {
-    color: $primary-dark;
+    color: $coo-dark;
   }
 
   h2,
@@ -54,7 +54,7 @@
   }
 
   &Header {
-    background-color: $primary-dark;
+    background-color: $coo-dark;
     width: 100%;
     height: 300px;
     display: block;
@@ -76,7 +76,7 @@
 
   &ShapedDrk {
     clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 100%);
-    background-color: $primary-dark;
+    background-color: $coo-dark;
 
     @media (min-width: $breakpoint-md) {
       clip-path: polygon(0 0, 100% 0%, 100% 70%, 0 100%);
@@ -95,7 +95,7 @@
 
     h2,
     p {
-      color: $primary-light;
+      color: $coo-light;
     }
   }
 
@@ -159,14 +159,14 @@
     }
 
     &Icons {
-      background-color: $primary-dark;
+      background-color: $coo-dark;
       padding: 3rem;
       margin-right: -3rem;
       margin-left: -3rem;
 
       h3,
       p {
-        color: $primary-light;
+        color: $coo-light;
       }
 
       .cooIcons {
@@ -198,7 +198,7 @@
           content: '';
           position: absolute;
           inset: 0;
-          background: linear-gradient(to top, transparent, $primary-dark);
+          background: linear-gradient(to top, transparent, $coo-dark);
           z-index: -1;
           height: 100%;
         }

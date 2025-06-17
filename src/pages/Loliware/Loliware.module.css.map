@@ -1,1 +1,1 @@
-{"version":3,"sources":["../../styles/_variables.scss"],"names":[],"mappings":"AAAQ,mOAAA","file":"Loliware.module.css"}
+{"version":3,"sources":["../../styles/_variables.scss","Loliware.module.scss","Loliware.module.css"],"names":[],"mappings":"AAAQ,mOAAA;ACER;EACE,gBAAA;ACAF;ADEE;;EAEE,0BAAA;EACA,mBAAA;ACAJ","file":"Loliware.module.css"}

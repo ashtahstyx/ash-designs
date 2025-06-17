@@ -1,1 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Host+Grotesk:wght@300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");/*# sourceMappingURL=Loliware.module.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Host+Grotesk:wght@300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+.loliware {
+  overflow: hidden;
+}
+.loliware a:focus,
+.loliware button:focus {
+  outline: 2px solid #822f1b;
+  outline-offset: 2px;
+}/*# sourceMappingURL=Loliware.module.css.map */
