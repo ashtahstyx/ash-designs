@@ -3,6 +3,11 @@
   position: relative;
   overflow: hidden;
 }
+* .coo a:focus,
+* .coo button:focus {
+  outline: 2px solid #822f1b;
+  outline-offset: 2px;
+}
 * .coo h1,
 * .coo h2,
 * .coo h3,
@@ -14,20 +19,35 @@
   margin-bottom: 1rem;
 }
 * .coo p {
-  max-width: 75%;
   line-height: 1.5rem;
   font-weight: 400;
   margin-bottom: 0.5rem;
 }
+@media (min-width: 768px) {
+  * .coo p {
+    max-width: 75%;
+  }
+}
 * .coo section {
-  padding: 3rem;
+  padding: 1rem;
+}
+@media (min-width: 768px) {
+  * .coo section {
+    padding: 3rem;
+  }
 }
 * .cooLogo {
   position: absolute;
   width: 200px;
-  top: 3rem;
-  left: 3rem;
+  top: 12rem;
+  left: 1rem;
   filter: brightness(0) invert(1);
+}
+@media (min-width: 768px) {
+  * .cooLogo {
+    top: 3rem;
+    left: 3rem;
+  }
 }
 * .cooHeader {
   background-color: #323232;
@@ -37,7 +57,7 @@
   overflow: hidden;
 }
 * .cooHeader .cooHero {
-  width: 70%;
+  width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -46,13 +66,32 @@
   display: flex;
   justify-self: end;
 }
+@media (min-width: 768px) {
+  * .cooHeader .cooHero {
+    width: 70%;
+  }
+}
 * .cooShapedDrk {
-  -webkit-clip-path: polygon(0 0%, 100% 0%, 100% 70%, 0 100%);
-  clip-path: polygon(0 0, 100% 0%, 100% 70%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 100%);
+          clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 100%);
   background-color: #323232;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 5%;
+}
+@media (min-width: 768px) {
+  * .cooShapedDrk {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 70%, 0 100%);
+            clip-path: polygon(0 0, 100% 0%, 100% 70%, 0 100%);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5%;
+  }
+}
+* .cooIntro {
+  padding-bottom: 3rem;
+}
+@media (min-width: 768px) {
+  * .cooIntro {
+    padding-bottom: unset;
+  }
 }
 * .cooIntro h2,
 * .cooIntro p {
@@ -62,13 +101,20 @@
   margin-bottom: 2rem;
 }
 * .cooBrandType {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   margin-bottom: 3rem;
+}
+@media (min-width: 768px) {
+  * .cooBrandType {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 * .cooBrandType div {
   align-content: end;
   text-align: center;
+}
+* .cooBrandType div img {
+  width: 100%;
 }
 * .cooBrandColor {
   position: relative;
@@ -86,13 +132,21 @@
   background-size: cover;
   z-index: -1;
 }
-* .cooBrandColor .colorSlant {
-  position: absolute;
-  top: 1em;
+@media (min-width: 768px) {
+  * .cooBrandColor .colorSlant {
+    position: absolute;
+    top: 1em;
+  }
 }
 * .cooBrandColor img {
-  width: calc(100% + 6rem);
-  margin: 0 0 0 -3rem;
+  width: calc(100% + 2rem);
+  margin: 0 0 0 -1rem;
+}
+@media (min-width: 768px) {
+  * .cooBrandColor img {
+    width: calc(100% + 6rem);
+    margin: 0 0 0 -3rem;
+  }
 }
 * .cooBrandIcons {
   background-color: #323232;
@@ -105,45 +159,70 @@
   color: #f8f8f8;
 }
 * .cooBrandIcons .cooIcons {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   margin-top: 1rem;
+}
+@media (min-width: 768px) {
+  * .cooBrandIcons .cooIcons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 * .cooBrandIcons .cooIcons img {
   width: 100%;
 }
 * .cooBrand .cooABTests {
-  position: absolute;
-  z-index: 1;
-  width: 100vw;
-  margin: -3rem;
-  overflow: hidden;
+  display: none;
 }
-* .cooBrand .cooABTests::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, transparent, #323232);
-  z-index: -1;
-  height: 100%;
-}
-* .cooBrand .cooABTests img {
-  display: block;
-  width: 100%;
-  height: auto;
-  z-index: 0;
+@media (min-width: 768px) {
+  * .cooBrand .cooABTests {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 100vw;
+    margin: -3rem;
+    overflow: hidden;
+  }
+  * .cooBrand .cooABTests::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, transparent, #323232);
+    z-index: -1;
+    height: 100%;
+  }
+  * .cooBrand .cooABTests img {
+    display: block;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+  }
 }
 * .cooApp h2 {
   margin-bottom: 2rem;
 }
 * .cooApp .largeBanner {
-  width: calc(100% + 6rem);
-  margin: -3rem -3rem 2rem -3rem;
+  width: calc(100% + 2rem);
+  margin: -3rem -1rem 2rem -1rem;
+}
+@media (min-width: 768px) {
+  * .cooApp .largeBanner {
+    width: calc(100% + 6rem);
+    margin: -5rem -3rem 2rem -3rem;
+  }
+}
+@media (min-width: 1024px) {
+  * .cooApp .largeBanner {
+    margin: -3rem -3rem 2rem -3rem;
+  }
 }
 * .cooAppDesign {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  * .cooAppDesign {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 * .cooAppDesign img {
   width: 100%;
@@ -163,17 +242,36 @@
   right: 2rem;
   bottom: 0;
 }
-* .cooAppDetails {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+@media (min-width: 768px) {
+  * .cooAppDetails {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 * .cooAppFull img {
   width: 100%;
 }
-* .cooApp .fullWidth {
+* .coo .fullWidth:first-of-type {
+  display: none;
+}
+@media (min-width: 768px) {
+  * .coo .fullWidth:first-of-type {
+    display: block;
+    width: 100vw;
+    margin: 2rem -3rem;
+    overflow: hidden;
+    height: auto;
+  }
+}
+* .coo .fullWidth {
   display: block;
   width: 100vw;
-  margin: 2rem -3rem;
+  margin: 2rem -1rem;
   overflow: hidden;
   height: auto;
+}
+@media (min-width: 768px) {
+  * .coo .fullWidth {
+    margin: 2rem -3rem;
+  }
 }/*# sourceMappingURL=Coo.module.css.map */

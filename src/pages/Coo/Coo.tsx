@@ -5,7 +5,7 @@ import styles from './Coo.module.scss';
 const Coo = () => {
   return (
     <>
-      <div className={styles.coo}>
+      <main className={styles.coo}>
         <div className={styles.cooHeader}>
           <img
             className={styles.cooLogo}
@@ -205,7 +205,7 @@ const Coo = () => {
           <img
             className={styles.fullWidth}
             src={images.Process}
-            alt="A/B Test: user prefer to see icons"
+            alt="Diagram showing the Coo app design process"
           />
 
           <div className={styles.cooAppFull}>
@@ -215,11 +215,15 @@ const Coo = () => {
             <p>Click below to see a larger view of the entire web flow.</p>
 
             <a href={UserFlow} target="_blank" className={styles.popup}>
-              <img src={images.Popup} alt="coo app user flow" />
+              <img
+                src={images.Popup}
+                rel="noopener noreferrer"
+                alt="coo app user flow"
+              />
             </a>
           </div>
         </section>
-      </div>
+      </main>
     </>
   );
 };
