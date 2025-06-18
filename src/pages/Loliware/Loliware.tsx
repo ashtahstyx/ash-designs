@@ -31,7 +31,7 @@ const Loliware = () => {
               palette with variations in intensity and shade.
             </p>
 
-            <a href="https://invis.io/XQGG585GEZ4" target="_blank">
+            <a href="https://www.loliware.com/seaweed" target="_blank">
               <button>Check out the real company!</button>
             </a>
           </div>
@@ -78,7 +78,7 @@ const Loliware = () => {
                 LOLIWARE site.{' '}
               </p>
 
-              <a href="https://invis.io/XQGG585GEZ4" target="_blank">
+              <a href="#" target="_blank">
                 <button>Explore the Design</button>
               </a>
             </div>

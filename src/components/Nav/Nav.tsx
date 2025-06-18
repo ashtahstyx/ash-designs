@@ -32,9 +32,8 @@ function Nav() {
       </button>
 
       <div
-        className={`${styles.navList} id="primary-navigation"${
-          menuOpen ? styles.menuOpen : ''
-        }`}>
+        id="primary-navigation"
+        className={`${styles.navList} ${menuOpen ? styles.menuOpen : ''}`}>
         <NavList variant="header" />
       </div>
     </nav>
