@@ -29,6 +29,7 @@ import LogoLoli2 from './loliware/lw_logo.png'
 import LogoLoli3 from './loliware/lw_logo.jpg'
 import LoliWeb from './loliware/lw_web-mockup.png'
 import LoliBrand from './loliware/lw_paper2.jpg'
+import LoliBrandM from './loliware/lw_paper.jpg'
 
 export const images = {
   LogoWhite,
@@ -59,4 +60,5 @@ export const images = {
   LogoLoli3,
   LoliWeb,
   LoliBrand,
+  LoliBrandM
 };

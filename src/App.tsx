@@ -8,7 +8,7 @@ import GardenParty from './pages/GardenParty/GardenParty';
 import Loliware from './pages/Loliware/Loliware';
 import Coo from './pages/Coo/Coo';
 import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
+import Footer from './components/Footer/GlobalFooter/Footer';
 
 function App() {
   return (

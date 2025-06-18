@@ -1,4 +1,4 @@
-import NavList from '../NavList/NavList';
+import NavList from '../../NavList/NavList';
 import {
   FaGithub,
   FaLinkedin,

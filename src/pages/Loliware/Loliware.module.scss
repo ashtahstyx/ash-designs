@@ -47,7 +47,7 @@
       margin: 1.5rem;
 
       @media (min-width: $breakpoint-md) {
-        margin: 5rem 5rem 1rem 5rem;
+        margin: 5rem 5rem 0 5rem;
       }
 
       button {
@@ -78,10 +78,16 @@
 
   &Brand {
     .loliLogos {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      display: flex;
+      flex-direction: column;
       align-items: center;
       margin-bottom: 2rem;
+      gap: 2rem;
+
+      @media (min-width: $breakpoint-md) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
 
       img {
         &:nth-child(1) {
@@ -90,12 +96,12 @@
         }
 
         &:nth-child(2) {
-          width: 300px;
+          width: 250px;
           height: auto;
         }
 
         &:nth-child(3) {
-          width: 250px;
+          width: 300px;
           height: auto;
         }
       }
@@ -107,23 +113,16 @@
     }
 
     &Example {
-      @media (min-width: $breakpoint-md) {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-      }
+      margin-bottom: 2rem;
 
-      div {
-        margin-bottom: 2rem;
-
-        button {
-          border: 0 transparent;
-          background-color: $loli-lime;
-          color: $loli-forest;
-          font-weight: 500;
-          padding: 0.5rem 1rem;
-          border-radius: 20px;
-          margin-top: 1rem;
-        }
+      button {
+        border: 0 transparent;
+        background-color: $loli-lime;
+        color: $loli-forest;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        margin-top: 1rem;
       }
     }
   }
@@ -143,23 +142,16 @@
     }
 
     &Example {
-      @media (min-width: $breakpoint-md) {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-      }
+      margin-bottom: 2rem;
 
-      div {
-        margin-bottom: 2rem;
-
-        button {
-          border: 0 transparent;
-          background-color: $loli-lime;
-          color: $loli-forest;
-          font-weight: 500;
-          padding: 0.5rem 1rem;
-          border-radius: 20px;
-          margin-top: 1rem;
-        }
+      button {
+        border: 0 transparent;
+        background-color: $loli-lime;
+        color: $loli-forest;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        margin-top: 1rem;
       }
     }
   }
@@ -167,7 +159,7 @@
   .fullWidth {
     display: block;
     width: 100vw;
-    margin: 0 -1rem;
+    margin: 0 -1rem 2rem;
     overflow: hidden;
     height: auto;
 
