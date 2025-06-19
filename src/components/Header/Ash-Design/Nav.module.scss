@@ -1,4 +1,4 @@
-@use '../../styles/variables' as *;
+@use '../../../styles/variables' as *;
 
 .nav {
   display: flex;
@@ -11,15 +11,13 @@
     padding: 0;
   }
 
-  &List {
+  .navList {
     background-color: $transparent-background;
     position: absolute;
     top: 50px;
     left: 0;
     width: 100%;
-    transform: scale(1, 0);
-    transform-origin: top;
-    transition: transform 0.25s cubic-bezier(0.6, 0.13, 0.32, 1.46);
+    height: auto;
     padding: 1rem;
     z-index: 1000;
 
@@ -77,4 +75,46 @@
 
 .menuOpen {
   transform: scale(1, 1);
+}
+
+.navItems {
+  font-family: $font-family-secondary;
+  display: block;
+  padding-inline-start: 0;
+  padding-block-start: $spacing-sm;
+  padding-block-end: $spacing-sm;
+
+  @media (min-width: $breakpoint-lg) {
+    display: flex;
+    gap: $spacing-lg;
+    color: $color-accent-light;
+    font-weight: $font-weight-light3;
+  }
+
+  li {
+    list-style: none;
+    min-width: 100px;
+    text-align: center;
+    margin: $spacing-lg 0;
+
+    a {
+      text-decoration: none;
+      color: $color-accent-light;
+
+      @media (min-width: $breakpoint-lg) {
+        &:hover {
+          color: $color-accent;
+        }
+      }
+    }
+
+    &:last-child a {
+      color: $color-accent-two;
+
+      &:hover {
+        color: $color-accent-two;
+        font-weight: $font-weight-bold;
+      }
+    }
+  }
 }

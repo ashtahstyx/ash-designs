@@ -1,8 +1,13 @@
 import { useState } from 'react';
+import NavList from '../../NavList/NavList';
 import styles from './Nav.module.scss';
-import NavList from '../NavList/NavList';
 
-function Nav() {
+type NavProps = {
+  basePath: string;
+  navItems: readonly { label: string; path: string }[];
+};
+
+function Nav({ basePath, navItems }: NavProps) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
@@ -31,11 +36,17 @@ function Nav() {
         </div>
       </button>
 
-      <div
-        id="primary-navigation"
-        className={`${styles.navList} ${menuOpen ? styles.menuOpen : ''}`}>
-        <NavList variant="header" />
-      </div>
+      {menuOpen && (
+        <div
+          id="primary-navigation"
+          className={`${styles.navList} ${menuOpen ? styles.menuOpen : ''}`}>
+          <NavList
+            basePath={basePath}
+            navItems={navItems}
+            className={styles.navItems}
+          />
+        </div>
+      )}
     </nav>
   );
 }

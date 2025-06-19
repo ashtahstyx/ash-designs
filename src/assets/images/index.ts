@@ -6,6 +6,7 @@ import HeadshotPng from './ash-headshot.png';
 import Background from './wallhaven-bg.jpg';
 
 import LogoGameHive from './GameHive.png';
+import LogoGameHiveDrk from './GameHive-drk.png';
 
 import LogoCoo from './coo/coo_logo.png'
 import CooHeader from './coo/coo_header.jpg'
@@ -35,6 +36,7 @@ export const images = {
   LogoWhite,
   LogoBlack,
   LogoGameHive,
+  LogoGameHiveDrk,
   LogoCoo,
   Headshot,
   HeadshotFull,

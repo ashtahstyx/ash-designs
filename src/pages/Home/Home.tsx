@@ -10,7 +10,7 @@ const Home = () => {
           <div className={styles.titleTop}>
             <span className={styles.titleSmall}>developer, designer,</span>
             <h2 className={styles.titleLarge}>Creator</h2>
-            <Link to="/about" className={styles.titleLearnMore}>
+            <Link to="/ah/about" className={styles.titleLearnMore}>
               Meet Ash <FaArrowRight className={styles.bounce} />
             </Link>
           </div>

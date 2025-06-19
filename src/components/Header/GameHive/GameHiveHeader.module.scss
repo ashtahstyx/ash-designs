@@ -1,0 +1,32 @@
+@use '../../../styles/variables' as *;
+
+header {
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem;
+  background-color: $gamehive-dark;
+  color: $gamehive-light;
+}
+
+.gameHive {
+  &Brand {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    white-space: nowrap;
+
+    @media (min-width: $breakpoint-md) {
+      margin-bottom: unset;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+  }
+
+  &Logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+  }
+}

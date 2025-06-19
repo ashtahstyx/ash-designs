@@ -1,35 +1,31 @@
+import React from 'react';
 import { NavLink } from 'react-router-dom';
-import styles from './Navlist.module.scss';
 
-type NavListProps = {
-  variant?: 'header' | 'footer';
+type NavItem = {
+  label: string;
+  path: string;
 };
 
-const navItems = [
-  { label: 'GameHive', path: '/gamehive' },
-  { label: 'Coo Dating App', path: '/coo' },
-  { label: 'Loliware', path: '/loliware' },
-  { label: 'Garden Party', path: '/garden-party' },
-  { label: 'Meet Ash', path: '/about' },
-];
+type NavListProps = {
+  basePath: string;
+  navItems: readonly NavItem[];
+  className?: string;
+};
 
-function NavList({ variant = 'header' }: NavListProps) {
+const NavList: React.FC<NavListProps> = ({
+  basePath,
+  navItems,
+  className = '',
+}) => {
   return (
-    <ul
-      className={variant === 'footer' ? styles.footerList : styles.headerList}>
+    <ul className={`${className}`}>
       {navItems.map(({ label, path }) => (
-        <li key={label}>
-          <NavLink
-            to={path}
-            className={({ isActive }) =>
-              isActive ? styles.activeLink : undefined
-            }>
-            {label}
-          </NavLink>
+        <li key={path}>
+          <NavLink to={`${basePath}/${path}`}>{label}</NavLink>
         </li>
       ))}
     </ul>
   );
-}
+};
 
 export default NavList;

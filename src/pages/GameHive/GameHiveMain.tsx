@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { FaLightbulb, FaRegLightbulb, FaSearch } from 'react-icons/fa';
 
 import GameHiveAPI from './src/GameHiveAPI';
 import type { Game } from './src/types';
@@ -10,17 +11,14 @@ import TrendingGames from './resources/TrendingGames';
 import GameCardSkeleton from './resources/GameCardSkeleton';
 import styles from './GameHive.module.scss';
 
-import HiveLogo from '../../../src/assets/images/GameHive.png';
-import HiveLogoDrk from '../../../src/assets/images/GameHive-drk.png';
-import { FaLightbulb, FaRegLightbulb, FaSearch } from 'react-icons/fa';
-
-const GameHive = () => {
-  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+const GameHiveMain = () => {
   const [gameList, setGameList] = useState<Game[]>([]);
   const [selectedGenreId, setSelectedGenreId] = useState<number | null>(null);
   const [selectedGenre, setSelectedGenre] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
+
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
 
   const toggleTheme = () => {
     setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
@@ -68,53 +66,42 @@ const GameHive = () => {
           <FaRegLightbulb className={styles.darkMode} />
         )}
       </div>
+      <div className={styles.gameHiveSearch}>
+        <FaSearch className={styles.gameHiveSearchIcon} />
+        <input
+          type="search"
+          aria-label="Search games in Game Hive"
+          name="search"
+          id="site-search"
+          placeholder="Search the Hive"
+          className={styles.gameHiveSearchInput}
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
 
-      <div className={styles.gameHiveHeader}>
-        <div className={styles.gameHiveBrand} tabIndex={0}>
-          <img
-            src={theme === 'dark' ? HiveLogoDrk : HiveLogo}
-            className={styles.gameHiveLogo}
-            alt="Game Hive Logo"
-          />
-          <h2>Game Hive</h2>
-        </div>
-        <div className={styles.gameHiveSearch}>
-          <FaSearch className={styles.gameHiveSearchIcon} />
-          <input
-            type="search"
-            aria-label="Search games in Game Hive"
-            name="search"
-            id="site-search"
-            placeholder="Search the Hive"
-            className={styles.gameHiveSearchInput}
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-
-          {searchTerm && suggestions.length > 0 && (
-            <ul
-              className={styles.suggestionsList}
-              role="listbox"
-              aria-live="polite">
-              {suggestions.map((game) => (
-                <li
-                  key={game.id}
-                  className={styles.suggestionItem}
-                  role="button"
-                  tabIndex={0} // ✅ number, not string
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                      e.preventDefault();
-                      setSearchTerm(game.name);
-                    }
-                  }}
-                  onClick={() => setSearchTerm(game.name)}>
-                  {game.name}
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>
+        {searchTerm && suggestions.length > 0 && (
+          <ul
+            className={styles.suggestionsList}
+            role="listbox"
+            aria-live="polite">
+            {suggestions.map((game) => (
+              <li
+                key={game.id}
+                className={styles.suggestionItem}
+                role="button"
+                tabIndex={0} // ✅ number, not string
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    setSearchTerm(game.name);
+                  }
+                }}
+                onClick={() => setSearchTerm(game.name)}>
+                {game.name}
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
 
       <div className={styles.gameHiveBody}>
@@ -180,4 +167,4 @@ const GameHive = () => {
   );
 };
 
-export default GameHive;
+export default GameHiveMain;

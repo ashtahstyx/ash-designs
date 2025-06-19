@@ -44,12 +44,12 @@
 .gameHive {
   position: relative;
   font-family: $font-family-gamehive;
-  padding: 25px;
+  padding: 2rem;
   color: var(--color-text);
   background-color: var(--color-bg);
 
   @media (min-width: $breakpoint-md) {
-    padding: 50px;
+    padding: 3rem;
   }
 
   :focus-visible,
@@ -59,45 +59,12 @@
     border-radius: 15px;
   }
 
-  &Header {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 2rem;
-
-    @media (min-width: $breakpoint-md) {
-      flex-direction: row;
-      gap: 20px;
-    }
-  }
-
-  &Brand {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1.5rem;
-    white-space: nowrap;
-
-    @media (min-width: $breakpoint-md) {
-      margin-bottom: unset;
-    }
-
-    h2 {
-      font-size: 2rem;
-    }
-  }
-
-  &Logo {
-    width: 50px;
-    height: auto;
-    margin-right: 10px;
-  }
-
   &Search {
     position: relative;
-    display: flex;
-    flex: auto;
     align-items: center;
     background-color: var(--color-field-bg);
     padding: 0 20px;
+    margin: 1rem 0;
     border-radius: 50px;
     width: 100%;
 
