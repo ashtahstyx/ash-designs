@@ -466,4 +466,11 @@
   .darkMode {
     color: var(--color-icon);
   }
+
+  &:focus-visible,
+  &:focus {
+    outline: 2px solid #8b18ff;
+    outline-offset: 2px;
+    border-radius: 100%;
+  }
 }

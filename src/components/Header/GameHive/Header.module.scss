@@ -2,18 +2,22 @@
 
 header {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding: 0.5rem;
   background-color: $gamehive-dark;
   color: $gamehive-light;
-  justify-content: center;
+  align-items: center;
+
+  @media (min-width: $breakpoint-md) {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
 .gameHive {
   &Brand {
     display: flex;
     align-items: center;
-    margin-bottom: 1.5rem;
     white-space: nowrap;
 
     @media (min-width: $breakpoint-md) {
@@ -34,15 +38,17 @@ header {
 
 .headerList {
   font-family: $font-family-secondary;
-  display: block;
+  display: flex;
+  gap: $spacing-md;
   padding-inline-start: 0;
   padding-block-start: $spacing-sm;
   padding-block-end: $spacing-sm;
-  margin-left: 7rem;
 
-  @media (min-width: $breakpoint-lg) {
+  @media (min-width: $breakpoint-md) {
+    display: block;
+    margin-left: 7rem;
     display: flex;
-    gap: $spacing-md;
+
     color: $gamehive-accent;
     font-weight: $font-weight-regular;
   }
