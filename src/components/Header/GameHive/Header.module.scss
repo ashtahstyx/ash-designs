@@ -1,0 +1,78 @@
+@use '../../../styles/variables' as *;
+
+header {
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem;
+  background-color: $gamehive-dark;
+  color: $gamehive-light;
+  justify-content: center;
+}
+
+.gameHive {
+  &Brand {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    white-space: nowrap;
+
+    @media (min-width: $breakpoint-md) {
+      margin-bottom: unset;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+  }
+
+  &Logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+  }
+}
+
+.headerList {
+  font-family: $font-family-secondary;
+  display: block;
+  padding-inline-start: 0;
+  padding-block-start: $spacing-sm;
+  padding-block-end: $spacing-sm;
+  margin-left: 7rem;
+
+  @media (min-width: $breakpoint-lg) {
+    display: flex;
+    gap: $spacing-md;
+    color: $gamehive-accent;
+    font-weight: $font-weight-regular;
+  }
+
+  li {
+    list-style: none;
+    margin: $spacing-lg 0;
+
+    a {
+      text-decoration: none;
+      color: $gamehive-accent;
+
+      @media (min-width: $breakpoint-lg) {
+        &:hover {
+          color: $gamehive-accent2;
+        }
+      }
+    }
+
+    &:last-child {
+      a {
+        color: $gamehive-drak-gray;
+      }
+      &::before {
+        content: '\279C';
+        color: $gamehive-drak-gray;
+        display: inline-block;
+        transform: rotate(180deg);
+        margin-right: $spacing-xs;
+      }
+    }
+  }
+}

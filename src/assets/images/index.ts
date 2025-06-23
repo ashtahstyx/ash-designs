@@ -5,32 +5,32 @@ import HeadshotFull from './ash-headshot_full.jpg';
 import HeadshotPng from './ash-headshot.png';
 import Background from './wallhaven-bg.jpg';
 
-import LogoGameHive from './GameHive.png';
-import LogoGameHiveDrk from './GameHive-drk.png';
+import LogoGameHive from './gamehive/GameHive.png';
+import LogoGameHiveDrk from './gamehive/GameHive-drk.png';
 
-import LogoCoo from './coo/coo_logo.png'
-import CooHeader from './coo/coo_header.jpg'
-import CooTypeMain from './coo/coo_font1.jpg'
-import CooTypeSecondary from './coo/coo_font2.jpg'
-import CooTypeAB from './coo/coo_font3.jpg'
-import CooPalette from './coo/coo_color-palette.png'
-import CooIcons1 from './coo/coo_icons1.png'
-import CooIcons2 from './coo/coo_icons2.png'
-import CooAB1 from './coo/coo_ab-test3.png'
-import CooAB2 from './coo/coo_ab-test4.png'
-import CooMultiLayout from './coo/coo_multi-layout.jpg'
-import Tilt from './coo/coo_iphone-tilt.png'
-import ShakeIt from './coo/coo_shake2.png'
-import Timer from './coo/coo_24-hour.png'
-import Process from './coo/coo_process-hearder.jpg'
-import Popup from './coo/coo_user-flow.jpg'
+import LogoCoo from './coo/coo_logo.png';
+import CooHeader from './coo/coo_header.jpg';
+import CooTypeMain from './coo/coo_font1.jpg';
+import CooTypeSecondary from './coo/coo_font2.jpg';
+import CooTypeAB from './coo/coo_font3.jpg';
+import CooPalette from './coo/coo_color-palette.png';
+import CooIcons1 from './coo/coo_icons1.png';
+import CooIcons2 from './coo/coo_icons2.png';
+import CooAB1 from './coo/coo_ab-test3.png';
+import CooAB2 from './coo/coo_ab-test4.png';
+import CooMultiLayout from './coo/coo_multi-layout.jpg';
+import Tilt from './coo/coo_iphone-tilt.png';
+import ShakeIt from './coo/coo_shake2.png';
+import Timer from './coo/coo_24-hour.png';
+import Process from './coo/coo_process-hearder.jpg';
+import Popup from './coo/coo_user-flow.jpg';
 
-import LogoLoli from './loliware/loli-logo.jpg'
-import LogoLoli2 from './loliware/lw_logo.png'
-import LogoLoli3 from './loliware/lw_logo.jpg'
-import LoliWeb from './loliware/lw_web-mockup.png'
-import LoliBrand from './loliware/lw_paper2.jpg'
-import LoliBrandM from './loliware/lw_paper.jpg'
+import LogoLoli from './loliware/loli-logo.jpg';
+import LogoLoli2 from './loliware/lw_logo.png';
+import LogoLoli3 from './loliware/lw_logo.jpg';
+import LoliWeb from './loliware/lw_web-mockup.png';
+import LoliBrand from './loliware/lw_paper2.jpg';
+import LoliBrandM from './loliware/lw_paper.jpg';
 
 export const images = {
   LogoWhite,
@@ -62,5 +62,5 @@ export const images = {
   LogoLoli3,
   LoliWeb,
   LoliBrand,
-  LoliBrandM
+  LoliBrandM,
 };

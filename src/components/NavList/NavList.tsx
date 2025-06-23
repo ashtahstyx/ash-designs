@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import styles from './NavList.module.scss';
 
 type NavItem = {
   label: string;
@@ -12,16 +13,14 @@ type NavListProps = {
   className?: string;
 };
 
-const NavList: React.FC<NavListProps> = ({
-  basePath,
-  navItems,
-  className = '',
-}) => {
+const NavList: React.FC<NavListProps> = ({ basePath, navItems, className }) => {
   return (
-    <ul className={`${className}`}>
+    <ul className={`${styles.navList} ${className ?? ''}`}>
       {navItems.map(({ label, path }) => (
         <li key={path}>
-          <NavLink to={`${basePath}/${path}`}>{label}</NavLink>
+          <NavLink to={path.startsWith('/') ? path : `${basePath}/${path}`}>
+            {label}
+          </NavLink>
         </li>
       ))}
     </ul>

@@ -3,18 +3,19 @@ export const subbrandConfigs = {
     name: 'Ash Designs',
     navItems: [
       { label: 'Home', path: '' },
-      { label: 'About', path: 'about' },
       { label: 'Garden Party', path: 'gardenparty' },
       { label: 'Loliware', path: 'loliware' },
-      { label: 'Coo Dating App', path: 'coo' },
-      { label: 'Game Hive', path: 'gamehive' },
+      { label: 'Coo App', path: 'coo' },
+      { label: 'Game Hive', path: '/gamehive/app' },
+      { label: 'Meet Ash', path: 'about' },
     ],
   },
   gamehive: {
     name: 'Game Hive',
     navItems: [
-      { label: 'The App', path: 'gamehive' },
-      { label: 'The Info', path: 'info' },
+      { label: 'App', path: 'app' },
+      { label: 'Learn More', path: 'info' },
+      { label: 'Back', path: '/ah' },
     ],
   },
 } as const;

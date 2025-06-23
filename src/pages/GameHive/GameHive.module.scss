@@ -61,6 +61,7 @@
 
   &Search {
     position: relative;
+    display: flex;
     align-items: center;
     background-color: var(--color-field-bg);
     padding: 0 20px;

@@ -1,25 +1,34 @@
 import React from 'react';
-import { useParams, Outlet, Navigate } from 'react-router-dom';
+import { Outlet, Navigate, useParams } from 'react-router-dom';
 import {
   subbrandConfigs,
   type SubbrandKey,
 } from '../../config/subbrandConfigs';
 
-import Header from '../Header/Ash-Design/Header';
-import Footer from '../Footer/Ash-Designs/Footer';
+import AshHeader from '../Header/AshDesign/Header';
+import AshFooter from '../Footer/AshDesign/Footer';
+import GameHiveHeader from '../Header/GameHive/Header';
+import GameHiveFooter from '../Footer/GameHive/Footer';
 
 const BrandLayout: React.FC = () => {
-  const { subbrand } = useParams<{ subbrand: SubbrandKey }>();
+  const { subbrand } = useParams<{ subbrand: string }>();
 
+  console.log('BrandLayout param:', subbrand);
+
+  // Fallback if subbrand is missing or unknown
   if (!subbrand || !(subbrand in subbrandConfigs)) {
-    return <Navigate to="/ash-designs" replace />;
+    return <Navigate to="/ah" replace />;
   }
 
-  const config = subbrandConfigs[subbrand];
+  const config = subbrandConfigs[subbrand as SubbrandKey];
+
+  // Choose brand-specific header/footer
+  const HeaderComponent = subbrand === 'gamehive' ? GameHiveHeader : AshHeader;
+  const FooterComponent = subbrand === 'gamehive' ? GameHiveFooter : AshFooter;
 
   return (
     <div className="layout">
-      <Header
+      <HeaderComponent
         brandName={config.name}
         basePath={`/${subbrand}`}
         navItems={config.navItems}
@@ -29,7 +38,7 @@ const BrandLayout: React.FC = () => {
         <Outlet />
       </main>
 
-      <Footer />
+      <FooterComponent />
     </div>
   );
 };

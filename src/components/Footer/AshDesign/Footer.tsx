@@ -15,7 +15,6 @@ import styles from './Footer.module.scss';
 function Footer() {
   const { subbrand } = useParams<{ subbrand: string }>();
 
-  // Type guard function (optional, helps readability)
   function isSubbrandKey(key: string): key is SubbrandKey {
     return key in subbrandConfigs;
   }

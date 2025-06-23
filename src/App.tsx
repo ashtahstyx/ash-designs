@@ -13,35 +13,32 @@ import About from './pages/About/About';
 import GardenParty from './pages/GardenParty/GardenParty';
 import Loliware from './pages/Loliware/Loliware';
 import Coo from './pages/Coo/Coo';
-import GameHive from './pages/GameHive/GameHiveMain';
-
-// Pages for gamehive subbrand
+import GameHiveMain from './pages/GameHive/GameHiveMain';
 import GameHiveInfo from './pages/GameHive/GameHiveInfo';
 
 const App: React.FC = () => {
   return (
-    <Router
-      basename="/ash-designs"
-      future={{
-        v7_startTransition: true,
-        v7_relativeSplatPath: true,
-      }}>
-      <main>
-        <Routes>
-          <Route path="/:subbrand/*" element={<BrandLayout />}>
-            <Route index element={<Home />} />
-            <Route path="about" element={<About />} />
-            <Route path="gardenparty" element={<GardenParty />} />
-            <Route path="loliware" element={<Loliware />} />
-            <Route path="coo" element={<Coo />} />
-            <Route path="gamehive" element={<GameHive />} />
-            <Route path="info" element={<GameHiveInfo />} />
-          </Route>
+    <Router>
+      <Routes>
+        <Route path=":subbrand/*" element={<BrandLayout />}>
+          {/* Ash subpages */}
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="gardenparty" element={<GardenParty />} />
+          <Route path="loliware" element={<Loliware />} />
+          <Route path="coo" element={<Coo />} />
 
-          {/* Redirect invalid URLs to default subbrand */}
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-      </main>
+          {/* GameHive subpages */}
+          <Route path="app" element={<GameHiveMain />} />
+          <Route path="info" element={<GameHiveInfo />} />
+
+          {/* Fallback for bad page under valid brand */}
+          <Route path="*" element={<Navigate to="." replace />} />
+        </Route>
+
+        {/* Fallback for bad brand */}
+        <Route path="*" element={<Navigate to="/ah" replace />} />
+      </Routes>
     </Router>
   );
 };
