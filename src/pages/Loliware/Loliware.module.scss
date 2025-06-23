@@ -2,10 +2,11 @@
 
 .loliware {
   overflow: hidden;
+  font-family: $font-family-loliware;
 
   a:focus,
   button:focus {
-    outline: 2px solid $loli-accent;
+    outline: 2px solid $loli-yuzu;
     outline-offset: 2px;
   }
 
@@ -19,16 +20,6 @@
   h2,
   h3 {
     margin-bottom: 1rem;
-  }
-
-  p {
-    line-height: 1.5rem;
-    font-weight: 400;
-    margin-bottom: 0.5rem;
-
-    @media (min-width: $breakpoint-md) {
-      max-width: 75%;
-    }
   }
 
   section {
@@ -166,5 +157,114 @@
     @media (min-width: $breakpoint-md) {
       margin: 2rem -3rem;
     }
+  }
+}
+
+.loliware {
+  &Site {
+    font-family: $font-family-loliware;
+    color: $loli-dark;
+  }
+
+  &Nav {
+    margin: 2rem;
+
+    .navControls {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    button {
+      font-family: $font-family-loliware;
+      font-weight: $font-weight-bold;
+      border: 0 transparent;
+      background-color: transparent;
+      font-size: $font-size-lg;
+      color: $loli-dark;
+
+      span {
+        margin: 0 1rem;
+      }
+    }
+  }
+
+  &Head {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 30rem;
+
+    &Img {
+      height: 600px;
+      position: absolute;
+      top: 2rem;
+      z-index: 2;
+      opacity: 0.95;
+    }
+
+    h2 {
+      position: absolute;
+      z-index: 1;
+      color: $loli-light;
+      font-size: 15rem;
+      line-height: 1;
+      text-transform: uppercase;
+      text-align: center;
+    }
+  }
+
+  &Product {
+    margin: 5rem 2rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 5rem;
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      &Title {
+        font-size: $font-size-xxl;
+      }
+
+      &Description {
+        font-size: $font-size-lg;
+      }
+
+      &Ingredients {
+        font-size: $font-size-sm;
+      }
+    }
+    .cartSection {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: end;
+
+      .sizeButtons {
+        display: flex;
+        gap: 1rem;
+
+        button {
+          border: 0 transparent;
+          background-color: $loli-lime;
+          border-radius: 10rem;
+          font-size: $font-size-lg;
+          padding: 0.5rem;
+        }
+      }
+
+      .quantityInput {
+        input {
+          width: auto;
+        }
+      }
+    }
+  }
+
+  &Recipe {
+    margin: 5rem 2rem;
   }
 }

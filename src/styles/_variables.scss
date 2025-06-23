@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Host+Grotesk:wght@300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Host+Grotesk:wght@300..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quicksand:wght@300..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 // ==============================
 // Main Color Palette
@@ -21,7 +21,8 @@ $gamehive-dark: #020004;
 $gamehive-light: #f7f7f8;
 $gamehive-accent: #dcdc00;
 $gamehive-accent2: #a1a100;
-$gamehive-drak-gray: #645d6b;
+$gamehive-dark-gray: #29262c;
+$gamehive-gray: #645d6b;
 
 // ==============================
 // Coo Color Palette
@@ -73,6 +74,8 @@ $font-family-base: 'Roboto', sans-serif;
 $font-family-secondary: 'Roboto Condensed', sans-serif;
 $font-family-script: 'Corinthia', cursive;
 $font-family-gamehive: 'Host Grotesk', sans-serif;
+$font-family-loliware: 'Quicksand', sans-serif;
+$font-family-coo: 'Lato', sans-serif;
 $font-size-base: 1rem; // 16px
 $font-size-sm: 0.875rem; // 14px
 $font-size-lg: 1.25rem; // 20px

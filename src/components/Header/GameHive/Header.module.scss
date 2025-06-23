@@ -1,16 +1,15 @@
 @use '../../../styles/variables' as *;
 
 header {
+  font-family: $font-family-gamehive;
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 0.5rem;
   background-color: $gamehive-dark;
   color: $gamehive-light;
-  align-items: center;
 
   @media (min-width: $breakpoint-md) {
-    flex-direction: row;
-    justify-content: center;
   }
 }
 
@@ -39,14 +38,13 @@ header {
 .headerList {
   font-family: $font-family-secondary;
   display: flex;
-  gap: $spacing-md;
+  gap: $spacing-lg;
   padding-inline-start: 0;
   padding-block-start: $spacing-sm;
   padding-block-end: $spacing-sm;
 
   @media (min-width: $breakpoint-md) {
     display: block;
-    margin-left: 7rem;
     display: flex;
 
     color: $gamehive-accent;
@@ -70,11 +68,11 @@ header {
 
     &:last-child {
       a {
-        color: $gamehive-drak-gray;
+        color: $gamehive-gray;
       }
       &::before {
         content: '\279C';
-        color: $gamehive-drak-gray;
+        color: $gamehive-gray;
         display: inline-block;
         transform: rotate(180deg);
         margin-right: $spacing-xs;

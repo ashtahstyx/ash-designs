@@ -26,11 +26,16 @@ import Process from './coo/coo_process-hearder.jpg';
 import Popup from './coo/coo_user-flow.jpg';
 
 import LogoLoli from './loliware/loli-logo.jpg';
+import LogoLoliPNG from './loliware/loli-logo.png';
 import LogoLoli2 from './loliware/lw_logo.png';
 import LogoLoli3 from './loliware/lw_logo.jpg';
 import LoliWeb from './loliware/lw_web-mockup.png';
 import LoliBrand from './loliware/lw_paper2.jpg';
 import LoliBrandM from './loliware/lw_paper.jpg';
+import LoliCherry from './loliware/lw_cherry-cup.png';
+import LoliCitrus from './loliware/lw_citrus-cup.png';
+import LoliMacha from './loliware/lw_macha-cup.png';
+import LoliVanilla from './loliware/lw_vanilla-cup.png';
 
 export const images = {
   LogoWhite,
@@ -57,10 +62,15 @@ export const images = {
   Timer,
   Process,
   Popup,
+  LogoLoliPNG,
   LogoLoli,
   LogoLoli2,
   LogoLoli3,
   LoliWeb,
   LoliBrand,
   LoliBrandM,
+  LoliCherry,
+  LoliCitrus,
+  LoliMacha,
+  LoliVanilla,
 };

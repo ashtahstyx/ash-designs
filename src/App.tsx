@@ -11,8 +11,21 @@ import BrandLayout from './components/Layout/BrandLayout';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import GardenParty from './pages/GardenParty/GardenParty';
+
+{
+  /* Loliware */
+}
 import Loliware from './pages/Loliware/Loliware';
+import LoliwareBrand from './pages/Loliware/LoliwareBrand';
+
+{
+  /* Coo */
+}
 import Coo from './pages/Coo/Coo';
+
+{
+  /* GameHive */
+}
 import GameHiveMain from './pages/GameHive/GameHiveMain';
 import GameHiveInfo from './pages/GameHive/GameHiveInfo';
 
@@ -24,9 +37,12 @@ const App: React.FC = () => {
           {/* Ash subpages */}
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
-          <Route path="gardenparty" element={<GardenParty />} />
-          <Route path="loliware" element={<Loliware />} />
           <Route path="coo" element={<Coo />} />
+          {/* <Route path="gardenparty" element={<GardenParty />} /> */}
+
+          {/* Loliware subpages */}
+          <Route path="web" element={<Loliware />} />
+          <Route path="brand" element={<LoliwareBrand />} />
 
           {/* GameHive subpages */}
           <Route path="app" element={<GameHiveMain />} />

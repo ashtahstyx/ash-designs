@@ -1,8 +1,8 @@
 @use '../../../styles/variables' as *;
 
 .footer {
-  background-color: $gamehive-dark;
-  font-family: $font-family-gamehive;
+  font-family: $font-family-loliware;
+  background-color: $loli-raspberry;
   padding: 20px 0 0;
   margin-top: auto;
   width: 100%;
@@ -19,7 +19,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: $spacing-lg;
-    color: $color-accent-light;
+    color: $loli-light;
     font-weight: $font-weight-regular;
     margin: 2rem;
 
@@ -28,7 +28,6 @@
     }
 
     li {
-      font-family: $font-family-gamehive;
       list-style: none;
       text-align: center;
 
@@ -39,22 +38,22 @@
 
       a {
         text-decoration: none;
-        color: $gamehive-accent;
+        color: $loli-light;
 
         @media (min-width: $breakpoint-lg) {
           &:hover {
-            color: $gamehive-accent2;
+            color: $loli-lime;
           }
         }
       }
 
       &:last-child {
         a {
-          color: $gamehive-gray;
+          color: $loli-dark;
         }
         &::before {
           content: '\279C';
-          color: $gamehive-gray;
+          color: $loli-dark;
           display: inline-block;
           transform: rotate(180deg);
           margin-right: $spacing-xs;
@@ -80,7 +79,7 @@
   }
 
   &Copyright {
-    background-color: $gamehive-dark-gray;
+    background-color: $loli-dark;
     width: 100%;
     text-align: center;
     padding: 5px 0;

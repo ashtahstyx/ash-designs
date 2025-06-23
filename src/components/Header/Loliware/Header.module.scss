@@ -1,0 +1,73 @@
+@use '../../../styles/variables' as *;
+
+.loliWare {
+  &Header {
+    font-family: $font-family-loliware;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    background-color: $loli-accent;
+    color: $loli-light;
+    align-items: center;
+
+    @media (min-width: $breakpoint-md) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .headerList {
+      font-family: $font-family-secondary;
+      display: flex;
+      gap: $spacing-xxl;
+      padding-inline-start: 0;
+      padding-block-start: $spacing-sm;
+      padding-block-end: $spacing-sm;
+
+      @media (min-width: $breakpoint-md) {
+        display: block;
+        display: flex;
+        font-weight: $font-weight-regular;
+      }
+
+      li {
+        list-style: none;
+        margin: $spacing-lg 0;
+
+        a {
+          text-decoration: none;
+          color: $loli-light;
+
+          @media (min-width: $breakpoint-lg) {
+            &:hover {
+              color: $loli-lime;
+            }
+          }
+        }
+
+        &:last-child {
+          a {
+            color: $loli-raspberry;
+          }
+          &::before {
+            content: '\279C';
+            color: $loli-raspberry;
+            display: inline-block;
+            transform: rotate(180deg);
+            margin-right: $spacing-xs;
+          }
+        }
+      }
+    }
+  }
+
+  &Brand {
+    display: flex;
+  }
+
+  &Logo {
+    filter: brightness(0) invert(1);
+    width: 250px;
+    height: auto;
+    margin-right: 10px;
+  }
+}

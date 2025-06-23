@@ -1,6 +1,7 @@
 @use '../../styles/variables' as *;
 
 * .coo {
+  font-family: $font-family-coo;
   position: relative;
   overflow: hidden;
 

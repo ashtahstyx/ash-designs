@@ -1,6 +1,7 @@
 @use '../../styles/variables' as *;
 
 .about {
+  font-family: $font-family-base;
   position: relative;
   display: flex;
   flex-flow: wrap-reverse;
@@ -82,6 +83,7 @@
       font-size: 1.5rem;
       margin: 2rem 0;
       color: $color-primary-title;
+      font-family: $font-family-secondary;
 
       @media (min-width: $breakpoint-md) {
         font-size: 2rem;

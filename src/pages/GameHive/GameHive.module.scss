@@ -43,7 +43,7 @@
 // Game Hive Code
 .gameHive {
   position: relative;
-  font-family: $font-family-gamehive;
+  font-family: $font-family-gamehive !important;
   padding: 2rem;
   color: var(--color-text);
   background-color: var(--color-bg);

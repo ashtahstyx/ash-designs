@@ -2,11 +2,10 @@ export const subbrandConfigs = {
   ah: {
     name: 'Ash Designs',
     navItems: [
-      { label: 'Home', path: '' },
-      { label: 'Garden Party', path: 'gardenparty' },
-      { label: 'Loliware', path: 'loliware' },
-      { label: 'Coo App', path: 'coo' },
+      // { label: 'Garden Party', path: 'gardenparty' },
+      { label: 'Loliware', path: '/loliware/web' },
       { label: 'Game Hive', path: '/gamehive/app' },
+      { label: 'Coo App', path: 'coo' },
       { label: 'Meet Ash', path: 'about' },
     ],
   },
@@ -15,6 +14,15 @@ export const subbrandConfigs = {
     navItems: [
       { label: 'App', path: 'app' },
       { label: 'Learn More', path: 'info' },
+      { label: 'Back', path: '/ah' },
+    ],
+  },
+  loliware: {
+    name: 'LoliWare',
+    navItems: [
+      { label: 'Website', path: 'web' },
+      { label: 'Branding', path: 'brand' },
+      { label: 'Process', path: 'process' },
       { label: 'Back', path: '/ah' },
     ],
   },

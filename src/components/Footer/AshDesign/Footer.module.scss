@@ -1,6 +1,7 @@
 @use '../../../styles/variables' as *;
 
 .footer {
+  font-family: $font-family-secondary;
   background-color: $color-primary;
   padding: 20px 0 0;
   margin-top: auto;
