@@ -33,9 +33,26 @@ import LoliWeb from './loliware/lw_web-mockup.png';
 import LoliBrand from './loliware/lw_paper2.jpg';
 import LoliBrandM from './loliware/lw_paper.jpg';
 import LoliCherry from './loliware/lw_cherry-cup.png';
+import LoliCherryRecipe1 from './loliware/lw_cherry-recipe-1.png';
+import LoliCherryRecipe2 from './loliware/lw_cherry-recipe-2.png';
 import LoliCitrus from './loliware/lw_citrus-cup.png';
+import LoliCitrusRecipe1 from './loliware/lw_citrus-recipe-1.png';
+import LoliCitrusRecipe2 from './loliware/lw_citrus-recipe-2.png';
+import LoliCitrusRecipe3 from './loliware/lw_citrus-recipe-3.png';
 import LoliMacha from './loliware/lw_macha-cup.png';
+import LoliMachaRecipe1 from './loliware/lw_macha-recipe-1.png';
+import LoliMachaRecipe2 from './loliware/lw_macha-recipe-2.png';
 import LoliVanilla from './loliware/lw_vanilla-cup.png';
+import LoliVanillaRecipe1 from './loliware/lw_vanilla-recipe-1.png';
+import LoliVanillaRecipe2 from './loliware/lw_vanilla-recipe-2.png';
+import LoliVanillaRecipe3 from './loliware/lw_vanilla-recipe-3.png';
+import LoliGallery1 from './loliware/lw_gallery-1.jpg';
+import LoliGallery2 from './loliware/lw_gallery-2.png';
+import LoliGallery3 from './loliware/lw_gallery-3.jpg';
+import LoliGallery4 from './loliware/lw_gallery-4.jpg';
+import LoliGallery5 from './loliware/lw_gallery-5.jpg';
+import LoliGallery6 from './loliware/lw_gallery-6.jpg';
+import LoliGallery7 from './loliware/lw_gallery-7.jpg';
 
 export const images = {
   LogoWhite,
@@ -70,7 +87,24 @@ export const images = {
   LoliBrand,
   LoliBrandM,
   LoliCherry,
+  LoliCherryRecipe1,
+  LoliCherryRecipe2,
   LoliCitrus,
+  LoliCitrusRecipe1,
+  LoliCitrusRecipe2,
+  LoliCitrusRecipe3,
   LoliMacha,
+  LoliMachaRecipe1,
+  LoliMachaRecipe2,
   LoliVanilla,
+  LoliVanillaRecipe1,
+  LoliVanillaRecipe2,
+  LoliVanillaRecipe3,
+  LoliGallery1,
+  LoliGallery2,
+  LoliGallery3,
+  LoliGallery4,
+  LoliGallery5,
+  LoliGallery6,
+  LoliGallery7,
 };

@@ -5,8 +5,17 @@ export const loliwareFlavors = [
     id: 'tart-cherry',
     label: 'Tart Cherry',
     image: images.LoliCherry,
-    accent1: '#cf2d52',
-    accent2: '#ed335f',
+    gallery: [
+      images.LoliGallery1,
+      images.LoliGallery2,
+      images.LoliGallery3,
+      images.LoliGallery4,
+      images.LoliGallery5,
+      images.LoliGallery6,
+      images.LoliGallery7,
+    ],
+    accent1: '#ed335f',
+    accent2: '#cf033b',
     description:
       'A sophisticated and unobtrusive sweet aroma that is derived from real cherries. Pair with your favorite fruity cocktail, Tiki drink, juice or shaved ice.',
     ingredients:
@@ -18,7 +27,7 @@ export const loliwareFlavors = [
     recipes: [
       {
         title: 'Tart Cherry Mule',
-        image: images.LoliCup,
+        image: images.LoliCherryRecipe1,
         ingredients: [
           '2 oz vodka',
           '1 oz tart cherry juice',
@@ -26,14 +35,14 @@ export const loliwareFlavors = [
           'Ginger beer',
         ],
         instructions: [
-          'Fill a mule mug with ice.',
+          'Fill a Tart Cherry cup with ice.',
           'Add vodka, cherry juice, and lime juice.',
           'Top with ginger beer.',
         ],
       },
       {
         title: 'Fig and Hazelnut Sundae',
-        image: images.LoliCup,
+        image: images.LoliCherryRecipe2,
         ingredients: [
           '12 dried figs',
           '1/2 cup brown sugar',
@@ -51,14 +60,13 @@ export const loliwareFlavors = [
       },
       {
         title: 'Cherry Basil Smash',
-        image: images.LoliCup,
+        image: images.LoliCherryRecipe1,
         ingredients: [
           '2 oz gin (or vodka)',
           '1 oz tart cherry juice',
           '1/2 oz fresh lemon juice',
           '1/2 oz simple syrup',
           '3-4 fresh basil leaves',
-          'Tart Cherry LOLIWARE cup garnish',
           'Ice cubes',
         ],
         instructions: [
@@ -66,7 +74,7 @@ export const loliwareFlavors = [
           'Add gin, tart cherry juice, and lemon juice.',
           'Fill with ice and shake well.',
           'Strain into a glass filled with fresh ice.',
-          'Garnish with a basil sprig and serve in a Tart Cherry LOLIWARE cup.',
+          'Garnish with a basil sprig and serve.',
         ],
       },
     ],
@@ -75,6 +83,15 @@ export const loliwareFlavors = [
     id: 'yuzu-citrus',
     label: 'Yuzu Citrus',
     image: images.LoliCitrus,
+    gallery: [
+      images.LoliGallery1,
+      images.LoliGallery2,
+      images.LoliGallery3,
+      images.LoliGallery4,
+      images.LoliGallery5,
+      images.LoliGallery6,
+      images.LoliGallery7,
+    ],
     accent1: '#f7a02a',
     accent2: '#9c5912',
     description:
@@ -88,7 +105,7 @@ export const loliwareFlavors = [
     recipes: [
       {
         title: 'Yuzu Citrus Spritz',
-        image: images.LoliCup,
+        image: images.LoliCitrusRecipe1,
         ingredients: [
           '1 oz yuzu juice',
           '3 oz sparkling water',
@@ -101,7 +118,7 @@ export const loliwareFlavors = [
       },
       {
         title: 'Sparkling Mulled Sangria',
-        image: images.LoliCup,
+        image: images.LoliCitrusRecipe2,
         ingredients: [
           '2 Chai tea bags',
           '2 Cinnamon Sticks',
@@ -117,7 +134,7 @@ export const loliwareFlavors = [
       },
       {
         title: 'Yuzu Citrus Sorbet Fizz',
-        image: images.LoliCup, // reuse your placeholder image
+        image: images.LoliCitrusRecipe3,
         ingredients: [
           '1 scoop yuzu sorbet (or lemon sorbet)',
           '1 oz yuzu juice (or yuzu concentrate)',
@@ -138,6 +155,15 @@ export const loliwareFlavors = [
     id: 'matcha-green-tea',
     label: 'Matcha Tea',
     image: images.LoliMacha,
+    gallery: [
+      images.LoliGallery1,
+      images.LoliGallery2,
+      images.LoliGallery3,
+      images.LoliGallery4,
+      images.LoliGallery5,
+      images.LoliGallery6,
+      images.LoliGallery7,
+    ],
     accent1: '#72b332',
     accent2: '#54613a',
     description:
@@ -151,7 +177,7 @@ export const loliwareFlavors = [
     recipes: [
       {
         title: 'Matcha Latte Float',
-        image: images.LoliCup,
+        image: images.LoliMachaRecipe1,
         ingredients: [
           '1 cup milk (dairy or plant-based)',
           '1 tsp matcha powder',
@@ -165,7 +191,7 @@ export const loliwareFlavors = [
       },
       {
         title: 'Iced Matcha Mojito',
-        image: images.LoliCup,
+        image: images.LoliMachaRecipe2,
         ingredients: [
           '1 tsp matcha powder',
           '1 oz simple syrup',
@@ -182,7 +208,7 @@ export const loliwareFlavors = [
       },
       {
         title: 'Macha Chip Ice Cream',
-        image: images.LoliCup,
+        image: images.LoliMachaRecipe1,
         ingredients: [
           '3.5 oz Bittersweet Chocolate',
           '1 1/2 tbl Macha Powder',
@@ -204,6 +230,15 @@ export const loliwareFlavors = [
     id: 'vanilla-bean',
     label: 'Vanilla Bean',
     image: images.LoliVanilla,
+    gallery: [
+      images.LoliGallery1,
+      images.LoliGallery2,
+      images.LoliGallery3,
+      images.LoliGallery4,
+      images.LoliGallery5,
+      images.LoliGallery6,
+      images.LoliGallery7,
+    ],
     accent1: '#ddb06d',
     accent2: '#512a16',
     description:
@@ -217,7 +252,7 @@ export const loliwareFlavors = [
     recipes: [
       {
         title: 'Vanilla Bean Affogato',
-        image: images.LoliCup,
+        image: images.LoliVanillaRecipe1,
         ingredients: ['1 scoop vanilla ice cream', '1 shot hot espresso'],
         instructions: [
           'Place scoop of vanilla ice cream in a small glass.',
@@ -226,7 +261,7 @@ export const loliwareFlavors = [
       },
       {
         title: 'Vanilla Old Fashioned',
-        image: images.LoliCup,
+        image: images.LoliVanillaRecipe2,
         ingredients: [
           '2 oz bourbon',
           '1/4 oz vanilla syrup',
@@ -241,7 +276,7 @@ export const loliwareFlavors = [
       },
       {
         title: 'Vanilla Old Fashioned',
-        image: images.LoliCup,
+        image: images.LoliVanillaRecipe3,
         ingredients: [
           '12 marshmellows',
           '1 pint chocolate ice cream',

@@ -36,9 +36,10 @@ $coo-accent: #822f1b;
 // ==============================
 $loli-dark: #2e0a12;
 $loli-light: #f6f1f2;
-$loli-accent: #cf2d52;
-$loli-accent2: #ed335f;
-$loli-cherry: #cf033b;
+$loli-shadow: rgba(0, 0, 0, 0.5);
+$loli-cherry: #ed335f;
+$loli-drk-cherry: #cf033b;
+$loli-strawberry: #cf2d52;
 $loli-raspberry: #633541;
 $loli-lime: #72b332;
 $loli-olive: #54613a;
@@ -76,9 +77,9 @@ $font-family-script: 'Corinthia', cursive;
 $font-family-gamehive: 'Host Grotesk', sans-serif;
 $font-family-loliware: 'Quicksand', sans-serif;
 $font-family-coo: 'Lato', sans-serif;
-$font-size-base: 1rem; // 16px
-$font-size-sm: 0.875rem; // 14px
-$font-size-lg: 1.25rem; // 20px
+$font-size-base: 1rem;
+$font-size-sm: 0.875rem;
+$font-size-lg: 1.25rem;
 $font-size-xl: 1.5rem;
 $font-size-xxl: 2.5rem;
 $font-weight-light: 100;

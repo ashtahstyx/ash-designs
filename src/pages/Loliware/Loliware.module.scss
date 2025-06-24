@@ -1,189 +1,42 @@
 @use '../../styles/variables' as *;
 
-.loliware {
-  overflow: hidden;
-  font-family: $font-family-loliware;
-
-  a:focus,
-  button:focus {
-    outline: 2px solid $loli-yuzu;
-    outline-offset: 2px;
-  }
-
-  h1,
-  h2,
-  h3,
-  p {
-    color: $loli-dark;
-  }
-
-  h2,
-  h3 {
-    margin-bottom: 1rem;
-  }
-
-  section {
-    padding: 1rem;
-
-    @media (min-width: $breakpoint-md) {
-      padding: 3rem;
-    }
-  }
-
-  &Intro {
-    position: relative;
-    overflow: hidden;
-
-    div {
-      margin: 1.5rem;
-
-      @media (min-width: $breakpoint-md) {
-        margin: 5rem 5rem 0 5rem;
-      }
-
-      button {
-        border: 0 transparent;
-        background-color: $loli-yuzu;
-        color: $loli-forest;
-        font-weight: 600;
-        padding: 0.5rem 1rem;
-        border-radius: 20px;
-        margin-top: 1rem;
-      }
-    }
-
-    img {
-      position: absolute;
-      top: -1rem;
-      left: 0;
-      width: auto;
-      height: 700px;
-      opacity: 0.05;
-
-      @media (min-width: $breakpoint-md) {
-        width: 90%;
-        height: auto;
-      }
-    }
-  }
-
-  &Brand {
-    .loliLogos {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 2rem;
-      gap: 2rem;
-
-      @media (min-width: $breakpoint-md) {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-      }
-
-      img {
-        &:nth-child(1) {
-          width: auto;
-          height: 100px;
-        }
-
-        &:nth-child(2) {
-          width: 250px;
-          height: auto;
-        }
-
-        &:nth-child(3) {
-          width: 300px;
-          height: auto;
-        }
-      }
-    }
-
-    &Mock {
-      width: 100%;
-      margin-bottom: 2rem;
-    }
-
-    &Example {
-      margin-bottom: 2rem;
-
-      button {
-        border: 0 transparent;
-        background-color: $loli-lime;
-        color: $loli-forest;
-        font-weight: 500;
-        padding: 0.5rem 1rem;
-        border-radius: 20px;
-        margin-top: 1rem;
-      }
-    }
-  }
-
-  &Web {
-    background: linear-gradient(135deg, $loli-accent2, $loli-accent);
-
-    h2,
-    h3,
-    p {
-      color: $loli-light;
-    }
-
-    &Mock {
-      width: 100%;
-      margin-bottom: 2rem;
-    }
-
-    &Example {
-      margin-bottom: 2rem;
-
-      button {
-        border: 0 transparent;
-        background-color: $loli-lime;
-        color: $loli-forest;
-        font-weight: 500;
-        padding: 0.5rem 1rem;
-        border-radius: 20px;
-        margin-top: 1rem;
-      }
-    }
-  }
-
-  .fullWidth {
-    display: block;
-    width: 100vw;
-    margin: 0 -1rem 2rem;
-    overflow: hidden;
-    height: auto;
-
-    @media (min-width: $breakpoint-md) {
-      margin: 2rem -3rem;
-    }
-  }
+:root {
+  --loli-dark: #{$loli-dark};
+  --loli-light: #{$loli-light};
+  --loli-accent: #{$loli-cherry};
+  --loli-accent2: #{$loli-drk-cherry};
+  --loli-shadow: #{$loli-shadow};
 }
 
 .loliware {
   &Site {
     font-family: $font-family-loliware;
-    color: $loli-dark;
+    color: var(--loli-dark);
+    overflow: hidden;
   }
 
   &Nav {
     margin: 2rem;
 
-    .navControls {
+    &Controls {
       display: flex;
       justify-content: space-between;
-    }
 
-    button {
-      font-family: $font-family-loliware;
-      font-weight: $font-weight-bold;
-      border: 0 transparent;
-      background-color: transparent;
-      font-size: $font-size-lg;
-      color: $loli-dark;
+      button {
+        font-family: $font-family-loliware;
+        font-weight: $font-weight-bold;
+        border: 0 transparent;
+        background-color: transparent;
+        font-size: $font-size-base;
+        color: var(--loli-dark);
 
-      span {
-        margin: 0 1rem;
+        @media (min-width: $breakpoint-md) {
+          font-size: $font-size-lg;
+        }
+
+        span {
+          margin: 0 1rem;
+        }
       }
     }
   }
@@ -193,32 +46,80 @@
     display: flex;
     justify-content: center;
     width: 100vw;
-    height: 30rem;
+    height: 15rem;
+    background: linear-gradient(
+      135deg,
+      var(--loli-accent2),
+      var(--loli-accent)
+    );
+
+    @media (min-width: $breakpoint-sm) {
+      height: 20rem;
+    }
+
+    @media (min-width: $breakpoint-md) {
+      height: 25rem;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+      height: 30rem;
+    }
 
     &Img {
-      height: 600px;
+      height: 300px;
       position: absolute;
-      top: 2rem;
+      top: 0;
       z-index: 2;
-      opacity: 0.95;
+      opacity: 0.9;
+
+      @media (min-width: $breakpoint-sm) {
+        height: 400px;
+        top: 1rem;
+      }
+
+      @media (min-width: $breakpoint-md) {
+        height: 500px;
+        top: 1rem;
+      }
+
+      @media (min-width: $breakpoint-lg) {
+        height: 600px;
+        top: 2rem;
+      }
     }
 
     h2 {
       position: absolute;
       z-index: 1;
-      color: $loli-light;
-      font-size: 15rem;
+      color: var(--loli-light);
+      font-size: 7rem;
       line-height: 1;
       text-transform: uppercase;
       text-align: center;
+
+      @media (min-width: $breakpoint-sm) {
+        font-size: 9rem;
+      }
+
+      @media (min-width: $breakpoint-md) {
+        font-size: 12rem;
+      }
+
+      @media (min-width: $breakpoint-lg) {
+        font-size: 15rem;
+      }
     }
   }
 
   &Product {
     margin: 5rem 2rem;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+
     gap: 5rem;
+
+    @media (min-width: $breakpoint-md) {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+    }
 
     .info {
       display: flex;
@@ -237,34 +138,271 @@
         font-size: $font-size-sm;
       }
     }
-    .cartSection {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: end;
 
-      .sizeButtons {
+    .cart {
+      &Section {
         display: flex;
-        gap: 1rem;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 3rem;
+        align-items: center;
 
-        button {
-          border: 0 transparent;
-          background-color: $loli-lime;
-          border-radius: 10rem;
-          font-size: $font-size-lg;
-          padding: 0.5rem;
+        @media (min-width: $breakpoint-md) {
+          align-items: end;
+          margin-top: unset;
         }
       }
 
-      .quantityInput {
-        input {
+      &Buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        width: 100%;
+
+        @media (min-width: $breakpoint-md) {
+          flex-direction: column;
+        }
+
+        @media (min-width: $breakpoint-lg) {
+          flex-direction: row;
+          justify-content: end;
+        }
+
+        button {
+          flex: 1;
+          border: 0 transparent;
+          background-color: var(--loli-accent);
+          color: var(--loli-light);
+          border-radius: 10rem;
+          font-size: $font-size-lg;
+          padding: 0.5rem 1rem;
+
+          &.active {
+            background-color: var(--loli-accent2);
+            box-shadow: inset 0px 0px 5px var(--loli-shadow);
+          }
+        }
+      }
+
+      &Input {
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        @media (min-width: $breakpoint-sm) {
           width: auto;
         }
+
+        input[type='number'] {
+          flex-grow: 1;
+          padding: 0.75rem 0 0.75rem 1rem;
+          margin: 0 1rem;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          text-align: center;
+
+          @media (min-width: $breakpoint-md) {
+            width: 3rem;
+            flex-grow: unset;
+          }
+        }
+      }
+
+      &Subtotal {
+        span {
+          position: relative;
+          background: #fff;
+          color: var(--loli-accent2);
+          font-size: $font-size-xl;
+
+          &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            border-radius: 100%;
+            border: 0.5px solid var(--loli-accent2);
+            height: 4rem;
+            width: 4rem;
+            top: -0.8rem;
+            right: -1rem;
+            z-index: -1;
+          }
+        }
+      }
+    }
+  }
+
+  &Gallery {
+    overflow-x: auto;
+    margin: 0 3rem;
+    padding-right: 3rem;
+    width: fill;
+
+    &Grid {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 1rem;
+      justify-content: flex-start;
+
+      @media (min-width: $breakpoint-lg) {
+        justify-content: center;
+      }
+    }
+
+    .thumbnail {
+      cursor: pointer;
+      flex: 0 0 auto;
+      width: 6rem;
+      height: 6rem;
+      object-fit: cover;
+      border-radius: 1rem;
+
+      &:hover {
+        border-color: var(--loli-accent2);
+      }
+    }
+
+    .modal {
+      &Overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--loli-shadow);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+      }
+
+      &Content {
+        position: relative;
+        background: var(--loli-light);
+        padding: 0;
+        border-radius: 5px;
+        max-width: 90vw;
+        max-height: 90vh;
+        overflow: auto;
+      }
+
+      &Image {
+        max-width: 100%;
+        max-height: 80vh;
+        display: block;
+        margin: 0 auto;
+      }
+
+      &Close {
+        position: absolute;
+        top: 10px;
+        right: 12px;
+        background: transparent;
+        border: none;
+        font-size: 28px;
+        cursor: pointer;
+        line-height: 1;
       }
     }
   }
 
   &Recipe {
     margin: 5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .recipe {
+      &Accordion {
+        background-color: #fff;
+        border-radius: 8px;
+      }
+
+      &Items {
+        position: relative;
+        border: 0px transparent;
+        border-bottom: 1px solid var(--loli-accent2);
+
+        h3 {
+          display: flex;
+        }
+
+        button {
+          display: flex;
+          flex: auto;
+          border: 0px transparent;
+          background-color: #fff;
+        }
+      }
+
+      &Header {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 1;
+        align-items: center;
+        width: 100%;
+        padding: 2rem 1rem 1rem 0;
+        font-weight: bold;
+        color: var(--loli-accent2);
+        font-size: $font-size-lg;
+        font-family: $font-family-loliware;
+        flex-wrap: wrap;
+        text-align: left;
+
+        .rotate {
+          transform: rotate(180deg);
+        }
+
+        &Icon {
+          position: absolute;
+          right: 0;
+        }
+      }
+
+      &Img {
+        display: grid;
+        place-items: center;
+        height: 100%;
+
+        img {
+          max-width: 100%;
+          height: 15rem;
+        }
+      }
+
+      &Content {
+        margin: 0 1rem 2rem;
+        font-size: 0.85rem;
+        color: $loli-chocolate;
+
+        @media (min-width: $breakpoint-md) {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        @media (min-width: $breakpoint-lg) {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
+        h4 {
+          font-size: $font-size-base;
+          margin-bottom: 0.5rem;
+          margin-top: 2rem;
+        }
+
+        ul,
+        ol {
+          padding-inline-start: 1rem;
+
+          li {
+            margin-bottom: 0.5rem;
+          }
+        }
+      }
+    }
   }
 }

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Accordion, AccordionItem } from '@szhsin/react-accordion';
 import { images } from '../../assets/images';
-import styles from './Loliware.module.scss';
+import styles from './LoliwareBrand.module.scss';
 import { FaChevronDown } from 'react-icons/fa6';
 
 const Loliware = () => {
