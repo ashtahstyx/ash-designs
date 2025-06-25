@@ -13,7 +13,6 @@ export const subbrandConfigs = {
     name: 'Game Hive',
     navItems: [
       { label: 'App', path: 'app' },
-      { label: 'Learn More', path: 'info' },
       { label: 'Back', path: '/ah' },
     ],
   },
@@ -22,7 +21,6 @@ export const subbrandConfigs = {
     navItems: [
       { label: 'Website', path: 'web' },
       { label: 'Branding', path: 'brand' },
-      { label: 'Process', path: 'process' },
       { label: 'Back', path: '/ah' },
     ],
   },

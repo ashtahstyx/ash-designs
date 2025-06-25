@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import LoliwareGallery from './LoliwareGallery';
 import { Accordion, AccordionItem } from '@szhsin/react-accordion';
 import { images } from '../../assets/images';
 import styles from './styles/LoliwareProcess.module.scss';
@@ -10,6 +11,12 @@ const LoliwareProcess = () => {
   const handleToggle = () => {
     setIsOpen((prev) => !prev);
   };
+
+  const truckImages = [
+    images.LoliTruckMain1,
+    images.LoliTruckMain2,
+    images.LoliTruckMain3,
+  ];
 
   return (
     <>
@@ -36,15 +43,9 @@ const LoliwareProcess = () => {
           />
         </section>
         <section className={styles.loliwareBrand}>
-          <picture>
-            <source srcSet={images.LoliBrandM} media="(max-width: 767px)" />
-            <source srcSet={images.LoliBrand} media="(min-width: 768px)" />
-            <img
-              className={styles.fullWidth}
-              src={images.LoliBrand}
-              alt="Rebrand for LOLIWARE"
-            />
-          </picture>
+          <div className={styles.loliwareTruckGallery}>
+            <LoliwareGallery images={truckImages} viewMode="featured" />
+          </div>
 
           <h2>LoliWare Brand</h2>
           <div className={styles.loliLogos}>

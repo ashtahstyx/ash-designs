@@ -17,7 +17,7 @@ import About from './pages/About/About';
 }
 import Loliware from './pages/Loliware/Loliware';
 import LoliwareBrand from './pages/Loliware/LoliwareBrand';
-import LoliwareProcess from './pages/Loliware/LoliwareProcess';
+// import LoliwareProcess from './pages/Loliware/LoliwareProcess';
 
 {
   /* Coo */
@@ -28,7 +28,7 @@ import Coo from './pages/Coo/Coo';
   /* GameHive */
 }
 import GameHiveMain from './pages/GameHive/GameHiveMain';
-import GameHiveInfo from './pages/GameHive/GameHiveInfo';
+// import GameHiveInfo from './pages/GameHive/GameHiveInfo';
 
 const App: React.FC = () => {
   return (
@@ -44,11 +44,11 @@ const App: React.FC = () => {
           {/* Loliware subpages */}
           <Route path="web" element={<Loliware />} />
           <Route path="brand" element={<LoliwareBrand />} />
-          <Route path="process" element={<LoliwareProcess />} />
+          {/* <Route path="process" element={<LoliwareProcess />} /> */}
 
           {/* GameHive subpages */}
           <Route path="app" element={<GameHiveMain />} />
-          <Route path="info" element={<GameHiveInfo />} />
+          {/* <Route path="info" element={<GameHiveInfo />} /> */}
 
           {/* Fallback for bad page under valid brand */}
           <Route path="*" element={<Navigate to="." replace />} />
