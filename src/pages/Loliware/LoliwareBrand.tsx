@@ -1,15 +1,23 @@
-import { useState } from 'react';
-import { Accordion, AccordionItem } from '@szhsin/react-accordion';
+import LoliwareGallery from './LoliwareGallery';
+import { Link } from 'react-router-dom';
 import { images } from '../../assets/images';
-import styles from './LoliwareBrand.module.scss';
-import { FaChevronDown } from 'react-icons/fa6';
+import styles from './styles/LoliwareBrand.module.scss';
 
-const Loliware = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const LoliwareBrand = () => {
+  const packImages = [images.LoliPack1, images.LoliPack2, images.LoliPack3];
+  const recipeImages = [
+    images.LoliRecipe,
+    images.LoliRecipe1,
+    images.LoliRecipe2,
+    images.LoliRecipe3,
+    images.LoliRecipe4,
+  ];
 
-  const handleToggle = () => {
-    setIsOpen((prev) => !prev);
-  };
+  const truckImages = [
+    images.LoliTruckMain1,
+    images.LoliTruckMain2,
+    images.LoliTruckMain3,
+  ];
 
   return (
     <>
@@ -61,9 +69,78 @@ const Loliware = () => {
               branding and products were inspired by their current bright color
               palette with variations in intensity and shade.
             </p>
-            <a href="lw-website/index.html" target="_blank">
-              <button>Check it out!</button>
-            </a>
+          </div>
+        </section>
+        <section className={styles.loliwareIcon}>
+          <img src={images.LoliIcons} alt="LOLIWARE icon system" />
+          <h3>Icon System</h3>
+          <p>
+            A small set of icons for organizing similar content and
+            distinguishing small differences in recipes. Also cart and recipe
+            icons for navigation.
+          </p>
+        </section>
+        <section className={styles.loliwarePack}>
+          <div>
+            <h2>Sales Material</h2>
+            <h3>Box</h3>
+            <p>
+              Box The packaging will consist of completely biodegradable
+              materials and transform into covers or coasters for each cup. All
+              you have to do it tear along the perforated edges, fold and stick
+              together. The "Party Pack" includes two of each cup flavor plus
+              four signature LOLIWARE recipe cards.
+            </p>
+          </div>
+          <div className={styles.loliwarePackGallery}>
+            <LoliwareGallery images={packImages} viewMode="featured" />
+          </div>
+        </section>
+        <section className={styles.loliwareRecipe}>
+          <h3>Recipe Cards</h3>
+          <p>
+            There is an option to buy a larger set which will include a set of
+            recipe cards. These cards will match the flavor of your cup and are
+            a fun collectable so that you can make a signature LOLIWARE drink
+            even when you are out of your favorite cup.
+          </p>
+          <div className={styles.loliwareRecipeGallery}>
+            <LoliwareGallery images={recipeImages} viewMode="thumbnails" />
+          </div>
+        </section>
+        <section className={styles.loliwareTruck}>
+          <div className={`${styles.loliwareTruckImgs} ${styles.fullWidth}`}>
+            <img
+              src={images.LoliTruck1}
+              alt="LOLIWARE food truck quarter view front"
+            />
+            <img
+              src={images.LoliTruck2}
+              alt="LOLIWARE food truck quarter view back"
+            />
+            <img
+              src={images.LoliTruck3}
+              alt="LOLIWARE food truck quarter view back"
+            />
+            <img
+              src={images.LoliTruck4}
+              alt="LOLIWARE food truck quarter view front"
+            />
+          </div>
+          <div className={styles.loliwareTruckInfo}>
+            <h3>Food Truck</h3>
+            <p>
+              A new take on an ice cream truck is used to bring something
+              familiar to this inventive product. All drinks, both alcoholic and
+              non-alcoholic, desserts, and other custom treats will be served
+              inside of LOLIWARE rather than the normal cone or single-use
+              disposable ware you are used to. This truck will be utilized at
+              public events such as SXSW, food truck parks or just popping up
+              unexpectedly outside parks or work.
+            </p>
+          </div>
+          <div className={styles.loliwareTruckGallery}>
+            <LoliwareGallery images={truckImages} viewMode="thumbnails" />
           </div>
         </section>
         <section className={styles.loliwareWeb}>
@@ -81,35 +158,26 @@ const Loliware = () => {
               in its own unique color. Product pages and recipe pages will be
               color coded to mimic each cup flavor.
             </p>
-            <a href="lw-website/index.html" target="_blank">
-              <button>Check it out!</button>
-            </a>
+            <div className={styles.webButtons}>
+              <a
+                href="https://web.archive.org/web/20180812234402/https://www.loliware.com/"
+                target="_blank">
+                <button>Original Inspiration</button>
+              </a>
+              <a
+                href="https://ashtahstyx.github.io/ah-design-portfolio/portfolio/lw-website/p-cherry.html#"
+                target="_blank">
+                <button>Initial Design</button>
+              </a>
+              <Link to="/loliware/web" target="_blank">
+                <button>Current Design</button>
+              </Link>
+            </div>
           </div>
-        </section>
-        <section>
-          <Accordion className={styles.accordion}>
-            <AccordionItem
-              className={styles.accordionItem}
-              header={
-                <div className={styles.accordionHeader} onClick={handleToggle}>
-                  <span>What is Game Hive?</span>
-                  <FaChevronDown
-                    className={`${styles.accordionHeaderIcon} ${
-                      isOpen ? styles.rotate : ''
-                    }`}
-                  />
-                </div>
-              }>
-              <div className={styles.accordionContent}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </div>
-            </AccordionItem>
-          </Accordion>
         </section>
       </main>
     </>
   );
 };
 
-export default Loliware;
+export default LoliwareBrand;

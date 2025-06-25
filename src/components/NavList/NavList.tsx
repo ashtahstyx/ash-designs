@@ -11,18 +11,30 @@ type NavListProps = {
   basePath: string;
   navItems: readonly NavItem[];
   className?: string;
+  getLinkClassName?: (isActive: boolean) => string;
 };
 
-const NavList: React.FC<NavListProps> = ({ basePath, navItems, className }) => {
+const NavList: React.FC<NavListProps> = ({
+  basePath,
+  navItems,
+  className,
+  getLinkClassName = (isActive) =>
+    `${styles.navLink} ${isActive ? styles.active : ''}`,
+}) => {
   return (
     <ul className={`${styles.navList} ${className ?? ''}`}>
-      {navItems.map(({ label, path }) => (
-        <li key={path}>
-          <NavLink to={path.startsWith('/') ? path : `${basePath}/${path}`}>
-            {label}
-          </NavLink>
-        </li>
-      ))}
+      {navItems.map(({ label, path }) => {
+        const to = path.startsWith('/') ? path : `${basePath}/${path}`;
+        return (
+          <li key={path}>
+            <NavLink
+              to={to}
+              className={({ isActive }) => getLinkClassName(isActive)}>
+              {label}
+            </NavLink>
+          </li>
+        );
+      })}
     </ul>
   );
 };

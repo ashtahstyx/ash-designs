@@ -24,6 +24,9 @@ function Header({ basePath, navItems }: HeaderProps) {
           basePath={basePath}
           navItems={navItems}
           className={styles.headerList}
+          getLinkClassName={(isActive) =>
+            `${styles.myCustomLink} ${isActive ? styles.myActiveClass : ''}`
+          }
         />
       </header>
     </>

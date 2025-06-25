@@ -33,6 +33,10 @@
         list-style: none;
         margin: $spacing-lg 0;
 
+        .isActive {
+          border-bottom: 2px solid $loli-light;
+        }
+
         a {
           text-decoration: none;
           color: $loli-light;

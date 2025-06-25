@@ -10,13 +10,14 @@ import BrandLayout from './components/Layout/BrandLayout';
 
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
-import GardenParty from './pages/GardenParty/GardenParty';
+// import GardenParty from './pages/GardenParty/GardenParty';
 
 {
   /* Loliware */
 }
 import Loliware from './pages/Loliware/Loliware';
 import LoliwareBrand from './pages/Loliware/LoliwareBrand';
+import LoliwareProcess from './pages/Loliware/LoliwareProcess';
 
 {
   /* Coo */
@@ -43,6 +44,7 @@ const App: React.FC = () => {
           {/* Loliware subpages */}
           <Route path="web" element={<Loliware />} />
           <Route path="brand" element={<LoliwareBrand />} />
+          <Route path="process" element={<LoliwareProcess />} />
 
           {/* GameHive subpages */}
           <Route path="app" element={<GameHiveMain />} />

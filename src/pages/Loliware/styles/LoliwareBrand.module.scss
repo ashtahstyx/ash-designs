@@ -1,0 +1,224 @@
+@use '../../../styles/variables' as *;
+
+*:focus {
+  outline: 1px solid $loli-lime !important;
+  outline-offset: 2px;
+}
+
+.loliware {
+  overflow: hidden;
+  font-family: $font-family-loliware;
+
+  h1,
+  h2,
+  h3,
+  p {
+    color: $loli-dark;
+  }
+
+  h2,
+  h3 {
+    margin-bottom: 1rem;
+  }
+
+  p {
+    width: 100%;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+
+    @media (min-width: $breakpoint-lg) {
+      width: 65%;
+    }
+  }
+
+  section {
+    padding: 1rem;
+
+    @media (min-width: $breakpoint-md) {
+      padding: 3rem;
+    }
+  }
+
+  &Intro {
+    position: relative;
+    overflow: hidden;
+
+    div {
+      margin: 1.5rem;
+
+      @media (min-width: $breakpoint-md) {
+        margin: 5rem 2rem 0 2rem;
+      }
+
+      button {
+        border: 0 transparent;
+        font-family: $font-family-loliware;
+        background-color: $loli-yuzu;
+        color: $loli-forest;
+        font-weight: 700;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        margin-top: 1rem;
+      }
+    }
+
+    img {
+      position: absolute;
+      top: -1rem;
+      left: 0;
+      width: auto;
+      height: 700px;
+      opacity: 0.05;
+
+      @media (min-width: $breakpoint-md) {
+        width: 90%;
+        height: auto;
+      }
+    }
+  }
+
+  &Brand {
+    .loliLogos {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2rem;
+      gap: 2rem;
+
+      @media (min-width: $breakpoint-md) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      img {
+        &:nth-child(1) {
+          width: auto;
+          height: 100px;
+        }
+
+        &:nth-child(2) {
+          width: 250px;
+          height: auto;
+        }
+
+        &:nth-child(3) {
+          width: 300px;
+          height: auto;
+        }
+      }
+    }
+
+    &Mock {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+
+    &Example {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &Icon {
+    background-color: $loli-dark;
+
+    h3,
+    p {
+      color: $loli-light;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &Pack {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+
+    p {
+      width: 100%;
+    }
+  }
+
+  &Recipe {
+    background-color: $loli-light;
+
+    &Gallery {
+      display: flex;
+      overflow-x: auto;
+      padding-right: 3rem;
+      width: fill;
+    }
+  }
+
+  &Truck {
+    &Imgs {
+      img {
+        width: 50%;
+
+        @media (min-width: $breakpoint-md) {
+          width: 25%;
+        }
+      }
+    }
+
+    &Info {
+      margin-top: 2rem;
+    }
+
+    &Gallery {
+      display: flex;
+      overflow-x: auto;
+      padding-right: 3rem;
+      width: fill;
+    }
+  }
+
+  &Web {
+    background: linear-gradient(135deg, $loli-cherry, $loli-drk-cherry);
+
+    h2,
+    h3,
+    p {
+      color: $loli-light;
+    }
+
+    &Mock {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+
+    &Example {
+      margin-bottom: 2rem;
+
+      .webButtons {
+        display: flex;
+        gap: 2rem;
+
+        button {
+          border: 0 transparent;
+          font-family: $font-family-loliware;
+          background-color: $loli-lime;
+          color: $loli-forest;
+          font-weight: 700;
+          padding: 0.5rem 1rem;
+          border-radius: 20px;
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+
+  .fullWidth {
+    display: block;
+    width: 100vw;
+    margin: 0 -1rem 2rem;
+    overflow: hidden;
+    height: auto;
+
+    @media (min-width: $breakpoint-md) {
+      margin: 0 -3rem;
+    }
+  }
+}

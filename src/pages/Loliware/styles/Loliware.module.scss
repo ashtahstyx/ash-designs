@@ -1,4 +1,4 @@
-@use '../../styles/variables' as *;
+@use '../../../styles/variables' as *;
 
 :root {
   --loli-dark: #{$loli-dark};
@@ -62,7 +62,7 @@
     }
 
     @media (min-width: $breakpoint-lg) {
-      height: 30rem;
+      height: 34rem;
     }
 
     &Img {
@@ -106,7 +106,7 @@
       }
 
       @media (min-width: $breakpoint-lg) {
-        font-size: 15rem;
+        font-size: 17rem;
       }
     }
   }
@@ -222,7 +222,7 @@
             display: block;
             position: absolute;
             border-radius: 100%;
-            border: 0.5px solid var(--loli-accent2);
+            border: 0.5px solid var(--loli-accent);
             height: 4rem;
             width: 4rem;
             top: -0.8rem;
@@ -239,73 +239,6 @@
     margin: 0 3rem;
     padding-right: 3rem;
     width: fill;
-
-    &Grid {
-      display: flex;
-      flex-wrap: nowrap;
-      gap: 1rem;
-      justify-content: flex-start;
-
-      @media (min-width: $breakpoint-lg) {
-        justify-content: center;
-      }
-    }
-
-    .thumbnail {
-      cursor: pointer;
-      flex: 0 0 auto;
-      width: 6rem;
-      height: 6rem;
-      object-fit: cover;
-      border-radius: 1rem;
-
-      &:hover {
-        border-color: var(--loli-accent2);
-      }
-    }
-
-    .modal {
-      &Overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: var(--loli-shadow);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 10;
-      }
-
-      &Content {
-        position: relative;
-        background: var(--loli-light);
-        padding: 0;
-        border-radius: 5px;
-        max-width: 90vw;
-        max-height: 90vh;
-        overflow: auto;
-      }
-
-      &Image {
-        max-width: 100%;
-        max-height: 80vh;
-        display: block;
-        margin: 0 auto;
-      }
-
-      &Close {
-        position: absolute;
-        top: 10px;
-        right: 12px;
-        background: transparent;
-        border: none;
-        font-size: 28px;
-        cursor: pointer;
-        line-height: 1;
-      }
-    }
   }
 
   &Recipe {

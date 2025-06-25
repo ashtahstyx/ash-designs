@@ -29,6 +29,23 @@ import LogoLoli from './loliware/loli-logo.jpg';
 import LogoLoliPNG from './loliware/loli-logo.png';
 import LogoLoli2 from './loliware/lw_logo.png';
 import LogoLoli3 from './loliware/lw_logo.jpg';
+import LoliIcons from './loliware/lw_icon_system.png';
+import LoliPack1 from './loliware/lw_package-sm.jpg';
+import LoliPack2 from './loliware/lw_package-lg1.jpg';
+import LoliPack3 from './loliware/lw_package-lg2.jpg';
+import LoliRecipe from './loliware/lw_recipe-cards.jpg';
+import LoliRecipe1 from './loliware/lw_recipe1.jpg';
+import LoliRecipe2 from './loliware/lw_recipe2.jpg';
+import LoliRecipe3 from './loliware/lw_recipe3.jpg';
+import LoliRecipe4 from './loliware/lw_recipe4.jpg';
+import LoliTruck1 from './loliware/lw_truck_one.jpg';
+import LoliTruck2 from './loliware/lw_truck_two.jpg';
+import LoliTruck3 from './loliware/lw_truck_three.jpg';
+import LoliTruck4 from './loliware/lw_truck_four.jpg';
+import LoliTruckMain1 from './loliware/lw_truck_main.jpg';
+import LoliTruckMain2 from './loliware/lw_menu1.jpg';
+import LoliTruckMain3 from './loliware/lw_menu2.jpg';
+
 import LoliWeb from './loliware/lw_web-mockup.png';
 import LoliBrand from './loliware/lw_paper2.jpg';
 import LoliBrandM from './loliware/lw_paper.jpg';
@@ -83,7 +100,23 @@ export const images = {
   LogoLoli,
   LogoLoli2,
   LogoLoli3,
+  LoliIcons,
   LoliWeb,
+  LoliPack1,
+  LoliPack2,
+  LoliPack3,
+  LoliRecipe,
+  LoliRecipe1,
+  LoliRecipe2,
+  LoliRecipe3,
+  LoliRecipe4,
+  LoliTruck1,
+  LoliTruck2,
+  LoliTruck3,
+  LoliTruck4,
+  LoliTruckMain1,
+  LoliTruckMain2,
+  LoliTruckMain3,
   LoliBrand,
   LoliBrandM,
   LoliCherry,

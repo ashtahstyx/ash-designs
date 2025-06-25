@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Accordion, AccordionItem } from '@szhsin/react-accordion';
-import styles from './Loliware.module.scss';
-import LoliwareGallery from './LoliwareGallery';
+import styles from './styles/Loliware.module.scss';
+import ThumbnailGallery from './LoliwareGallery';
 import { loliwareFlavors } from './resources/flavors';
 import { FaChevronDown } from 'react-icons/fa6';
 
@@ -102,8 +102,9 @@ const Loliware = () => {
       </section>
 
       <section className={styles.loliwareGallery}>
-        <LoliwareGallery
+        <ThumbnailGallery
           images={selectedFlavor.gallery as unknown as string[]}
+          viewMode="thumbnails"
         />
       </section>
 

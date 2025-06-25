@@ -1,28 +1,61 @@
 import { useState } from 'react';
-import styles from './Loliware.module.scss';
+import styles from './styles/LoliwareGallery.module.scss';
+
+type ViewMode = 'thumbnails' | 'featured';
 
 interface ThumbnailGalleryProps {
   images: readonly string[];
+  viewMode?: ViewMode;
+  className?: string;
 }
 
-const ThumbnailGallery = ({ images }: ThumbnailGalleryProps) => {
+const ThumbnailGallery = ({
+  images,
+  viewMode = 'thumbnails',
+  className,
+}: ThumbnailGalleryProps) => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  const featuredImage = selectedImage ?? images[0];
 
   return (
     <>
-      <div className={styles.loliwareGalleryGrid}>
-        {images.map((img, i) => (
-          <img
-            key={i}
-            src={img}
-            alt={`Thumbnail ${i}`}
-            className={styles.thumbnail}
-            onClick={() => setSelectedImage(img)}
-          />
-        ))}
-      </div>
+      {viewMode === 'featured' ? (
+        <div className={styles.featuredLayout}>
+          <div className={styles.featuredView}>
+            <img
+              src={featuredImage}
+              alt="Featured preview"
+              className={styles.featuredImage}
+            />
+          </div>
+          <div className={`${styles.loliwareGalleryGrid} ${className ?? ''}`}>
+            {images.map((img, i) => (
+              <img
+                key={i}
+                src={img}
+                alt={`Thumbnail ${i}`}
+                className={styles.thumbnail}
+                onClick={() => setSelectedImage(img)}
+              />
+            ))}
+          </div>
+        </div>
+      ) : (
+        <div className={`${styles.loliwareGalleryGrid} ${className ?? ''}`}>
+          {images.map((img, i) => (
+            <img
+              key={i}
+              src={img}
+              alt={`Thumbnail ${i}`}
+              className={styles.thumbnail}
+              onClick={() => setSelectedImage(img)}
+            />
+          ))}
+        </div>
+      )}
 
-      {selectedImage && (
+      {viewMode === 'thumbnails' && selectedImage && (
         <div
           className={styles.modalOverlay}
           onClick={() => setSelectedImage(null)}>
