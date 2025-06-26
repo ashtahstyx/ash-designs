@@ -16,6 +16,7 @@ import About from './pages/About/About';
   /* Loliware */
 }
 import Loliware from './pages/Loliware/Loliware';
+import LoliwareWeb from './pages/Loliware/LoliwareWeb';
 import LoliwareBrand from './pages/Loliware/LoliwareBrand';
 // import LoliwareProcess from './pages/Loliware/LoliwareProcess';
 
@@ -42,7 +43,8 @@ const App: React.FC = () => {
           {/* <Route path="gardenparty" element={<GardenParty />} /> */}
 
           {/* Loliware subpages */}
-          <Route path="web" element={<Loliware />} />
+          <Route path="info" element={<Loliware />} />
+          <Route path="web" element={<LoliwareWeb />} />
           <Route path="brand" element={<LoliwareBrand />} />
           {/* <Route path="process" element={<LoliwareProcess />} /> */}
 

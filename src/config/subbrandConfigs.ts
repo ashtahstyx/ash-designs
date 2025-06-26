@@ -19,6 +19,7 @@ export const subbrandConfigs = {
   loliware: {
     name: 'LoliWare',
     navItems: [
+      { label: 'Info', path: 'info' },
       { label: 'Website', path: 'web' },
       { label: 'Branding', path: 'brand' },
       { label: 'Back', path: '/ah' },

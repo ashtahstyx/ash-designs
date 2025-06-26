@@ -22,27 +22,6 @@ const LoliwareBrand = () => {
   return (
     <>
       <main className={styles.loliware}>
-        <section className={styles.loliwareIntro}>
-          <div>
-            <h2> LOLIWARE - Biodegr&#40;edible&#41; Cups and Straws</h2>
-            <p>
-              Created by two Industrial Designers, LOLIWARE is considered “the
-              cup of the future” because it is the first fully edible and
-              biodegradable disposable cup and straws that are made primarily of
-              seaweed. LOLIWARE aims to rid the world of plastic waste by
-              replacing one-use cups and straws.
-            </p>
-
-            <a href="https://www.loliware.com/" target="_blank">
-              <button>Check out the real company!</button>
-            </a>
-          </div>
-          <img
-            className={styles.loliwareLogo}
-            src={images.LogoLoli}
-            alt="Rebrand for LOLIWARE"
-          />
-        </section>
         <section className={styles.loliwareBrand}>
           <picture>
             <source srcSet={images.LoliBrandM} media="(max-width: 767px)" />
