@@ -14,9 +14,22 @@ const ThumbnailGallery = ({
   viewMode = 'thumbnails',
   className,
 }: ThumbnailGalleryProps) => {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
-  const featuredImage = selectedImage ?? images[0];
+  const featuredImage =
+    selectedIndex !== null ? images[selectedIndex] : images[0];
+
+  // Next image (wrap around)
+  const goNext = () => {
+    if (selectedIndex === null) return;
+    setSelectedIndex((selectedIndex + 1) % images.length);
+  };
+
+  // Previous image (wrap around)
+  const goPrev = () => {
+    if (selectedIndex === null) return;
+    setSelectedIndex((selectedIndex - 1 + images.length) % images.length);
+  };
 
   return (
     <>
@@ -36,7 +49,7 @@ const ThumbnailGallery = ({
                 src={img}
                 alt={`Thumbnail ${i}`}
                 className={styles.thumbnail}
-                onClick={() => setSelectedImage(img)}
+                onClick={() => setSelectedIndex(i)}
               />
             ))}
           </div>
@@ -49,30 +62,50 @@ const ThumbnailGallery = ({
               src={img}
               alt={`Thumbnail ${i}`}
               className={styles.thumbnail}
-              onClick={() => setSelectedImage(img)}
+              onClick={() => setSelectedIndex(i)}
             />
           ))}
         </div>
       )}
 
-      {viewMode === 'thumbnails' && selectedImage && (
+      {/* Modal with arrows */}
+      {viewMode === 'thumbnails' && selectedIndex !== null && (
         <div
           className={styles.modalOverlay}
-          onClick={() => setSelectedImage(null)}>
+          onClick={() => setSelectedIndex(null)}>
           <div
             className={styles.modalContent}
             onClick={(e) => e.stopPropagation()}>
+            {/* Close Button */}
             <button
               className={styles.modalClose}
-              onClick={() => setSelectedImage(null)}
+              onClick={() => setSelectedIndex(null)}
               aria-label="Close">
               ×
             </button>
+
+            {/* Prev Arrow */}
+            <button
+              className={styles.modalPrev}
+              onClick={goPrev}
+              aria-label="Previous">
+              ‹
+            </button>
+
+            {/* Main Image */}
             <img
-              src={selectedImage}
-              alt="Large preview"
+              src={images[selectedIndex]}
+              alt={`Large preview ${selectedIndex + 1}`}
               className={styles.modalImage}
             />
+
+            {/* Next Arrow */}
+            <button
+              className={styles.modalNext}
+              onClick={goNext}
+              aria-label="Next">
+              ›
+            </button>
           </div>
         </div>
       )}

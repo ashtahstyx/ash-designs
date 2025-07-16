@@ -1,0 +1,107 @@
+@use '../../../styles/variables' as *;
+
+.cooGalleryGrid {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+
+.featuredLayout {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+
+  .featuredView {
+    align-self: center;
+  }
+  .featuredImage {
+    width: auto;
+    @media (min-width: $breakpoint-lg) {
+      height: 40rem;
+    }
+  }
+  .cooGalleryGrid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 2rem;
+  }
+}
+
+.thumbnail {
+  cursor: pointer;
+  flex: 0 0 auto;
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+
+  &:hover {
+    border-color: $coo-accent2;
+  }
+}
+
+.modal {
+  &Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $transparent-background;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+  }
+
+  &Content {
+    position: relative;
+    background: $coo-light;
+    padding: 3rem;
+    max-width: 90vw;
+    min-width: 50rem;
+    max-height: 90vh;
+    overflow: auto;
+
+    .modalPrev,
+    .modalNext {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      color: white;
+      background: rgba(0, 0, 0, 0.3);
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .modalPrev {
+      left: 0;
+    }
+    .modalNext {
+      right: 0;
+    }
+  }
+
+  &Image {
+    max-width: 100%;
+    max-height: 80vh;
+    display: block;
+    margin: 0 auto;
+  }
+
+  &Close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    line-height: 1;
+  }
+}

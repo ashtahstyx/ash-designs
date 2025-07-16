@@ -1,0 +1,87 @@
+@use '../../../styles/variables' as *;
+
+header {
+  font-family: $font-family-coo;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 2rem;
+  background-color: $coo-accent2;
+  color: $coo-light;
+
+  @media (min-width: $breakpoint-md) {
+    flex-direction: row;
+  }
+}
+
+.coo {
+  &Brand {
+    display: block;
+
+    @media (min-width: $breakpoint-md) {
+      margin-bottom: unset;
+    }
+
+    h2 {
+      font-size: 1rem;
+    }
+  }
+
+  &Logo {
+    width: 90px;
+    top: 12rem;
+    left: 1rem;
+    filter: brightness(0) invert(1);
+  }
+}
+
+.headerList {
+  font-family: $font-family-secondary;
+  display: flex;
+  gap: $spacing-lg;
+  padding-inline-start: 0;
+  padding-block-start: $spacing-sm;
+  padding-block-end: $spacing-sm;
+
+  @media (min-width: $breakpoint-md) {
+    display: block;
+    display: flex;
+
+    color: $coo-light;
+    font-weight: $font-weight-regular;
+  }
+
+  li {
+    list-style: none;
+    margin: $spacing-lg 0;
+
+    .isActive {
+      color: $coo-light;
+    }
+
+    a {
+      text-decoration: none;
+      color: $coo-accent;
+
+      @media (min-width: $breakpoint-lg) {
+        &:hover {
+          color: $coo-light;
+        }
+      }
+    }
+
+    &:last-child {
+      a {
+        color: $coo-dark;
+      }
+      &::before {
+        content: '\279C';
+        color: $coo-dark;
+        display: inline-block;
+        transform: rotate(180deg);
+        margin-right: $spacing-xs;
+      }
+    }
+  }
+}

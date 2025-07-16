@@ -16,9 +16,32 @@ import CooTypeAB from './coo/coo_font3.jpg';
 import CooPalette from './coo/coo_color-palette.png';
 import CooIcons1 from './coo/coo_icons1.png';
 import CooIcons2 from './coo/coo_icons2.png';
+import CooMap1 from './coo/coo-map-1.png';
+import CooMap2 from './coo/coo-map-2.png';
+import CooMap3 from './coo/coo-map-3.png';
+
 import CooAB1 from './coo/coo_ab-test3.png';
 import CooAB2 from './coo/coo_ab-test4.png';
+import CooAB3 from './coo/coo_ab-test1.jpg';
+import CooAB4 from './coo/coo_ab-test2.jpg';
+import CooTest from './coo/coo-test.mp4';
 import CooMultiLayout from './coo/coo_multi-layout.jpg';
+import CooIconProcess1 from './coo/coo-icon-process-1.jpeg';
+import CooIconProcess2 from './coo/coo-icon-process-2.jpeg';
+import CooIconProcess3 from './coo/coo-icon-process-3.jpeg';
+import CooIconProcess4 from './coo/coo-icon-process-4.jpeg';
+import CooIconProcess5 from './coo/coo-icon-process-5.jpeg';
+import CooAppProcess1 from './coo/coo-app-process-1.jpeg';
+import CooAppProcess2 from './coo/coo-app-process-2.jpeg';
+import CooAppProcess3 from './coo/coo-app-process-3.jpeg';
+import CooAppProcess4 from './coo/coo-app-process-4.jpeg';
+import CooAppProcess5 from './coo/coo-app-process-5.jpeg';
+import CooAppProcess6 from './coo/coo-app-process-6.jpeg';
+import CooAppProcess7 from './coo/coo-app-process-7.jpeg';
+import CooAppProcess8 from './coo/coo-app-process-8.jpeg';
+import CooAppProcess9 from './coo/coo-app-process-9.jpeg';
+import CooAppProcess10 from './coo/coo-app-process-10.jpeg';
+
 import Tilt from './coo/coo_iphone-tilt.png';
 import ShakeIt from './coo/coo_shake2.png';
 import Timer from './coo/coo_24-hour.png';
@@ -110,12 +133,33 @@ export const images = {
   CooIcons2,
   CooAB1,
   CooAB2,
+  CooAB3,
+  CooAB4,
   CooMultiLayout,
   Tilt,
   ShakeIt,
   Timer,
   Process,
   Popup,
+  CooTest,
+  CooMap1,
+  CooMap2,
+  CooMap3,
+  CooIconProcess1,
+  CooIconProcess2,
+  CooIconProcess3,
+  CooIconProcess4,
+  CooIconProcess5,
+  CooAppProcess1,
+  CooAppProcess2,
+  CooAppProcess3,
+  CooAppProcess4,
+  CooAppProcess5,
+  CooAppProcess6,
+  CooAppProcess7,
+  CooAppProcess8,
+  CooAppProcess9,
+  CooAppProcess10,
   LogoLoliPNG,
   LogoLoli,
   LogoLoli2,

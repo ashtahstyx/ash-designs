@@ -1,6 +1,6 @@
 import UserFlow from '../../assets/images/coo/coo_user-flow.jpg';
 import { images } from '../../assets/images';
-import styles from './Coo.module.scss';
+import styles from './styles/Coo.module.scss';
 
 const Coo = () => {
   return (
@@ -48,78 +48,54 @@ const Coo = () => {
             </p>
           </div>
         </section>
-        <section className={styles.cooBrand}>
-          <h2>The Brand</h2>
-
-          <h3>Typography</h3>
-          <p>
-            A swash display type is used for the logo and on specific headers
-            throughout the app. This typeface brings a playful and sing-song
-            feel to the design. All of typography is styled in the humanist
-            sans, Seravek, which was chosen for ease of readability and its hand
-            written qualities.
-          </p>
-
-          <div className={styles.cooBrandType}>
+        <section className={styles.cooApp}>
+          <div className={styles.cooAppDetails}>
             <div>
-              <img src={images.CooTypeAB} alt="coo typeface choice" />
+              <h3>Design Process</h3>
+
               <p>
-                A/B testers preferred Oleo Script Swash Caps over another type
-                choice.
+                When designing Coo, I drew inspiration from birds and the
+                different ways that they attract and find a mate. Mating calls
+                were chosen because they are loud and destinct, so keep in mind
+                that this app is not for the easily embarrassed.
+              </p>
+              <p>
+                This app pushes your comfort zone in many ways, in that you will
+                hear the "coo" of your potential mate as well as only knowing
+                you will be meeting up with a match who suits similar interests.
               </p>
             </div>
             <div>
-              <img src={images.CooTypeMain} alt="coo typeface choice" />
-              <p>Oleo Script Swash Caps</p>
-            </div>
-            <div>
-              <img src={images.CooTypeSecondary} alt="coo typeface choice" />
-              <p>Seravek</p>
-            </div>
-          </div>
+              <h3>How It Works</h3>
 
-          <div className={styles.cooBrandColor}>
-            <div className={styles.colorPalette}>
-              <div className={styles.colorSlant}>
-                <h3>Color Palette</h3>
-                <p>
-                  Coo takes its visual inspiration straight from the Love Bird.
-                  Each color is pulled from their feathers or a tinted variation
-                  of one of those colors. Neutral tones were used for the
-                  background and text so that they would not distract from the
-                  overall design.
-                </p>
-              </div>
-            </div>
-
-            <img src={images.CooPalette} alt="coo color choices" />
-          </div>
-
-          <div className={styles.cooBrandIcons}>
-            <h3>Icon Sets</h3>
-            <p>
-              Two seperate sets of icons are used throughout the app. The grey
-              icons assist in distinguishing the types of establishments located
-              on the map. Bright orange icons are used in the user profiles to
-              show interests or hobbies.
-            </p>
-
-            <div className={styles.cooIcons}>
-              <img src={images.CooIcons1} alt="Coo App building icons" />
-
-              <img src={images.CooIcons2} alt="Coo App interst icons" />
+              <p>
+                A location-based dating app where the user is given a selection
+                of possible matches (maxed at 5). When browsing for matching
+                close by, you can move over the map to spot a local match.
+                Choose who you would like to meet, our algorythm has already
+                matched you based on some likes and dislikes you input into your
+                profile.
+              </p>
+              <p>
+                Once you have selected the other user will have to opportunity
+                to accept a meetup in which options will appear for you to
+                select a meeting place, out map will assist you in directions,
+                don't worry.
+              </p>
+              <p>
+                You will be able to then see a picture of your match, a small
+                description and icons for likes and interests. The "Coo" will
+                emmit and the sound will be the same as your potential match.
+                Once you have met, the chat option will become available so you
+                can continue talking or track who you have met.
+              </p>
             </div>
           </div>
 
-          <div className={styles.cooABTests}>
-            <img src={images.CooAB1} alt="A/B Test: user prefer to see icons" />
-          </div>
-        </section>
-        <section className={styles.cooApp}>
           <img
             className={styles.largeBanner}
             src={images.CooMultiLayout}
-            alt="A/B Test: user prefer to see icons"
+            alt="large banner showing multiple screens"
           />
 
           <h2>The App</h2>
@@ -130,8 +106,10 @@ const Coo = () => {
 
               <p>
                 Mating call will come from a variety of birds and will be loud
-                and distinct enough to hear above any crowd. It will shut off
-                automatically when you are within 5 feet of your match.
+                and distinct enough in small crowd. It will shut off
+                automatically when you are within 5 feet of your match. This
+                setting can be altered to lower tones or pop in your headphones
+                to keep a low profile.
               </p>
 
               <img src={images.Tilt} alt="Screen layer" />
@@ -144,7 +122,7 @@ const Coo = () => {
                 Only one coo can be sent out every hour and matches will refresh
                 when the phone is shaken if you do not find anyone that you
                 click with. You will be able to shake your screen to refresh
-                once in a 24-hour period. Which will max out your matches to 6
+                once in a 24-hour period. Which will max out your matches to 10
                 people for the entire day in just your immediate area. So, save
                 your refreshes!
               </p>
@@ -158,55 +136,6 @@ const Coo = () => {
               <img src={images.ShakeIt} alt="Coo App shake refresh feature" />
             </div>
           </div>
-
-          <img
-            className={styles.fullWidth}
-            src={images.CooAB2}
-            alt="A/B Test: user prefer to see icons"
-          />
-
-          <div className={styles.cooAppDetails}>
-            <div>
-              <h3>Design Process</h3>
-
-              <p>
-                When designing Coo, I drew inspiration from birds and the
-                different ways that they attract and find a mate. Mating calls
-                were chosen because they are loud and destinct, so keep in mind
-                that this app is not for the easily embarrassed.
-              </p>
-
-              <p>
-                This video intro will give you a quick and basic walkthrough of
-                the entire application and a sample of a bird call that would be
-                used.
-              </p>
-            </div>
-            <div>
-              <h3>How It Works</h3>
-
-              <p>
-                A location-based dating app where the female user is given
-                control of the who, when, and where of every date. She will only
-                show up on a male user’s screen if she first sends out a coo; a
-                call that alerts a local male that she is interested in meeting
-                him in person. Male users will always be active and will only
-                see matches that have sent him a coo.
-              </p>
-
-              <p>
-                If you are interested in the same sex all potential matches will
-                be visible to both parties and both will have the option to send
-                a coo.
-              </p>
-            </div>
-          </div>
-
-          <img
-            className={styles.fullWidth}
-            src={images.Process}
-            alt="Diagram showing the Coo app design process"
-          />
 
           <div className={styles.cooAppFull}>
             <h2>Full App</h2>

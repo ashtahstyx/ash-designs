@@ -24,6 +24,8 @@ import LoliwareProcess from './pages/Loliware/LoliwareProcess';
   /* Coo */
 }
 import Coo from './pages/Coo/Coo';
+import CooBrand from './pages/Coo/CooBrand';
+import CooTesting from './pages/Coo/CooTesting';
 
 {
   /* GameHive */
@@ -39,8 +41,6 @@ const App: React.FC = () => {
           {/* Ash subpages */}
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
-          <Route path="coo" element={<Coo />} />
-          {/* <Route path="gardenparty" element={<GardenParty />} /> */}
 
           {/* Loliware subpages */}
           <Route path="info" element={<Loliware />} />
@@ -51,6 +51,11 @@ const App: React.FC = () => {
           {/* GameHive subpages */}
           <Route path="app" element={<GameHiveMain />} />
           {/* <Route path="info" element={<GameHiveInfo />} /> */}
+
+          {/* Coo subpages */}
+          <Route path="coo-about" element={<Coo />} />
+          <Route path="coo-brand" element={<CooBrand />} />
+          <Route path="coo-process" element={<CooTesting />} />
 
           {/* Fallback for bad page under valid brand */}
           <Route path="*" element={<Navigate to="." replace />} />

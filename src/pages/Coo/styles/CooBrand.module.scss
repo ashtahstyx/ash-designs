@@ -1,0 +1,151 @@
+@use '../../../styles/variables' as *;
+
+* .coo {
+  font-family: $font-family-coo;
+  position: relative;
+  overflow: hidden;
+
+  a:focus,
+  button:focus {
+    outline: 2px solid $coo-accent;
+    outline-offset: 2px;
+  }
+
+  h1,
+  h2,
+  h3,
+  p {
+    color: $coo-dark;
+  }
+
+  h2,
+  h3 {
+    margin-bottom: 1rem;
+  }
+
+  p {
+    line-height: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+
+    @media (min-width: $breakpoint-md) {
+      max-width: 75%;
+    }
+  }
+
+  section {
+    padding: 1rem;
+
+    @media (min-width: $breakpoint-md) {
+      padding: 3rem;
+    }
+  }
+
+  &ShapedDrk {
+    clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 100%);
+    background-color: $coo-dark;
+
+    @media (min-width: $breakpoint-md) {
+      clip-path: polygon(0 0, 100% 0%, 100% 70%, 0 100%);
+    }
+  }
+
+  &Brand {
+    h2 {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &Type {
+    margin-bottom: 3rem;
+
+    @media (min-width: $breakpoint-md) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    div {
+      align-content: end;
+      text-align: center;
+
+      img {
+        width: 60%;
+      }
+    }
+  }
+
+  &Color {
+    position: relative;
+    padding: 0;
+    width: 100%;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -2rem;
+      right: -3rem;
+      bottom: 0;
+      left: -3rem;
+      background: url('../../assets/images/coo/coo_map-background.jpg')
+        no-repeat center center fixed;
+      background-size: cover;
+      z-index: -1;
+    }
+
+    @media (min-width: $breakpoint-md) {
+      .colorSlant {
+        position: absolute;
+        top: 10rem;
+        width: 60%;
+      }
+    }
+
+    .cooPalette {
+      width: calc(100% + 2rem);
+      margin: 0 0 0 -1rem;
+
+      @media (min-width: $breakpoint-md) {
+        width: calc(100% + 6rem);
+        margin: -2rem 0 -2rem -3rem;
+      }
+    }
+  }
+
+  &Iconography {
+    background-color: $coo-dark;
+
+    h3,
+    p {
+      color: $coo-light;
+    }
+
+    .cooIcons {
+      margin-top: 1rem;
+      margin-right: -3rem;
+      margin-left: -3rem;
+
+      @media (min-width: $breakpoint-md) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &Map {
+    @media (min-width: $breakpoint-md) {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 5%;
+    }
+
+    img {
+      padding: 0.5rem;
+
+      width: 30%;
+    }
+  }
+}

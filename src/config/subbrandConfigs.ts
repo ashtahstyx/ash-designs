@@ -5,7 +5,7 @@ export const subbrandConfigs = {
       // { label: 'Garden Party', path: 'gardenparty' },
       { label: 'Loliware', path: '/loliware/web' },
       { label: 'Game Hive', path: '/gamehive/app' },
-      { label: 'Coo App', path: 'coo' },
+      { label: 'Coo App', path: '/coo/date' },
       { label: 'Meet Ash', path: 'about' },
     ],
   },
@@ -13,6 +13,15 @@ export const subbrandConfigs = {
     name: 'Game Hive',
     navItems: [
       { label: 'App', path: 'app' },
+      { label: 'Back', path: '/ah' },
+    ],
+  },
+  coo: {
+    name: 'Coo',
+    navItems: [
+      { label: 'About', path: 'coo-about' },
+      { label: 'Brand', path: 'coo-brand' },
+      { label: 'Process', path: 'coo-process' },
       { label: 'Back', path: '/ah' },
     ],
   },

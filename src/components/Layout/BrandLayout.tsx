@@ -11,6 +11,8 @@ import GameHiveHeader from '../Header/GameHive/Header';
 import GameHiveFooter from '../Footer/GameHive/Footer';
 import LoliwareHeader from '../Header/Loliware/Header';
 import LoliwareFooter from '../Footer/Loliware/Footer';
+import CooHeader from '../Header/Coo/Header';
+import CooFooter from '../Footer/Coo/Footer';
 
 const BrandLayout: React.FC = () => {
   const { subbrand } = useParams<{ subbrand: string }>();
@@ -30,6 +32,8 @@ const BrandLayout: React.FC = () => {
       ? GameHiveHeader
       : subbrand === 'loliware'
       ? LoliwareHeader
+      : subbrand === 'coo'
+      ? CooHeader
       : AshHeader;
 
   const FooterComponent =
@@ -37,6 +41,8 @@ const BrandLayout: React.FC = () => {
       ? GameHiveFooter
       : subbrand === 'loliware'
       ? LoliwareFooter
+      : subbrand === 'coo'
+      ? CooFooter
       : AshFooter;
 
   return (

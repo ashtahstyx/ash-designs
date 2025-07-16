@@ -1,0 +1,77 @@
+@use '../../../styles/variables' as *;
+
+.footer {
+  background-color: $coo-grey1;
+  font-family: $font-family-coo;
+  padding: 20px 0 0;
+  margin-top: auto;
+  width: 100%;
+  justify-items: center;
+  bottom: 0;
+
+  &Logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  &List {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: $spacing-lg;
+    font-weight: $font-weight-regular;
+    margin: 2rem;
+
+    @media (min-width: $breakpoint-md) {
+      flex-wrap: unset;
+    }
+
+    li {
+      font-family: $font-family-coo;
+      list-style: none;
+      text-align: center;
+
+      @media (min-width: $breakpoint-md) {
+        min-width: 120px;
+        text-align: center;
+      }
+
+      a {
+        text-decoration: none;
+        color: $coo-light;
+
+        @media (min-width: $breakpoint-lg) {
+          &:hover {
+            color: $coo-accent2;
+          }
+        }
+      }
+
+      &:last-child {
+        a {
+          color: $coo-grey2;
+        }
+        &::before {
+          content: '\279C';
+          color: $coo-grey2;
+          display: inline-block;
+          transform: rotate(180deg);
+          margin-right: $spacing-xs;
+        }
+      }
+    }
+  }
+
+  &Copyright {
+    background-color: $coo-accent;
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+    gap: 5px;
+    font-size: 12px;
+    color: $color-accent-light;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
