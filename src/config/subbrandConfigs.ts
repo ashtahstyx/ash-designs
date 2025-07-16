@@ -22,6 +22,7 @@ export const subbrandConfigs = {
       { label: 'Info', path: 'info' },
       { label: 'Website', path: 'web' },
       { label: 'Branding', path: 'brand' },
+      { label: 'Process', path: 'process' },
       { label: 'Back', path: '/ah' },
     ],
   },

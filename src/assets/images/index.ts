@@ -29,6 +29,7 @@ import LogoLoli from './loliware/loli-logo.jpg';
 import LogoLoliPNG from './loliware/loli-logo.png';
 import LogoLoli2 from './loliware/lw_logo.png';
 import LogoLoli3 from './loliware/lw_logo.jpg';
+import LogoType from './loliware/lw_typography.jpg';
 import LoliIcons from './loliware/lw_icon_system.png';
 import LoliPack1 from './loliware/lw_package-sm.jpg';
 import LoliPack2 from './loliware/lw_package-lg1.jpg';
@@ -70,6 +71,25 @@ import LoliGallery4 from './loliware/lw_gallery-4.jpg';
 import LoliGallery5 from './loliware/lw_gallery-5.jpg';
 import LoliGallery6 from './loliware/lw_gallery-6.jpg';
 import LoliGallery7 from './loliware/lw_gallery-7.jpg';
+import LoliBrandProcess from './loliware/lw_brand.jpg';
+import LoliBrandProcess1 from './loliware/lw_brand-process-1.jpeg';
+import LoliBrandProcess2 from './loliware/lw_brand-process-2.jpeg';
+import LoliBrandProcess3 from './loliware/lw_brand-process-3.jpeg';
+import LoliBrandProcess4 from './loliware/lw_brand-process-4.jpeg';
+import LoliBrandProcess5 from './loliware/lw_brand-process-5.jpeg';
+import LoliBrandProcess6 from './loliware/lw_brand-process-6.jpeg';
+import LoliBrandProcess7 from './loliware/lw_brand-process-7.jpeg';
+import LoliWireframe from './loliware/lw_wireframe.jpg';
+import LoliWireframeProcess1 from './loliware/lw_web-process-1.jpeg';
+import LoliWireframeProcess2 from './loliware/lw_web-process-2.jpeg';
+import LoliWireframeProcess3 from './loliware/lw_web-process-3.jpeg';
+import LoliWireframeD1 from './loliware/lw_d-wireframe1.jpg';
+import LoliWireframeD2 from './loliware/lw_d-wireframe2.jpg';
+import LoliWireframeM1 from './loliware/lw_m-wireframe1.jpg';
+import LoliWireframeM2 from './loliware/lw_m-wireframe2.jpg';
+import LoliWireframeM3 from './loliware/lw_m-wireframe3.jpg';
+import LoliMockup1 from './loliware/lw_d-mockup1.jpg';
+import LoliMockup2 from './loliware/lw_d-mockup2.jpg';
 
 export const images = {
   LogoWhite,
@@ -100,6 +120,7 @@ export const images = {
   LogoLoli,
   LogoLoli2,
   LogoLoli3,
+  LogoType,
   LoliIcons,
   LoliWeb,
   LoliPack1,
@@ -140,4 +161,23 @@ export const images = {
   LoliGallery5,
   LoliGallery6,
   LoliGallery7,
+  LoliBrandProcess,
+  LoliBrandProcess1,
+  LoliBrandProcess2,
+  LoliBrandProcess3,
+  LoliBrandProcess4,
+  LoliBrandProcess5,
+  LoliBrandProcess6,
+  LoliBrandProcess7,
+  LoliWireframe,
+  LoliWireframeProcess1,
+  LoliWireframeProcess2,
+  LoliWireframeProcess3,
+  LoliWireframeD1,
+  LoliWireframeD2,
+  LoliWireframeM1,
+  LoliWireframeM2,
+  LoliWireframeM3,
+  LoliMockup1,
+  LoliMockup2,
 };

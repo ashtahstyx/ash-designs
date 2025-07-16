@@ -50,13 +50,46 @@ const LoliwareBrand = () => {
             </p>
           </div>
         </section>
+        <section className={styles.loliwareType}>
+          <div className={styles.loliwareTypeExample}>
+            <img
+              src={images.LogoType}
+              alt="LOLIWARE quicksand typography examples"
+            />
+            <h3>Typography</h3>
+            <h4>font-family: "Quicksand", sans-serif;</h4>
+
+            <p>
+              The typography needed to match the playful energy of the rest of
+              the brand. I chose the Quicksand Google Font for several reason.
+            </p>
+            <p>
+              First, the typeface was universal. Meaning that I could utilize it
+              in print as well as a web-friendly typeface. While I would have
+              taken extra steps to import a custom typeface, I felt that it was
+              more work than was needed, why reinvent the wheel?
+            </p>
+            <p>
+              Second, the typeface pulls in the rest of the elements of the
+              brand. The brand is playful, simple and has an easy going
+              personality. While this is an eco-friendly product I didn't want
+              to go the expected route. The audience Loliware was originally
+              trying to reach was a social, stylish, mid 20's, eco-conscious
+              consumer. Therefore, the brand has to speak closer to this. I
+              wanted the brand to not be taken too serious with eco insignias
+              and shades of green. This is supposed to be a product you bust out
+              during a themed birthday party. The "fancy china" so to speak.
+            </p>
+          </div>
+        </section>
         <section className={styles.loliwareIcon}>
           <img src={images.LoliIcons} alt="LOLIWARE icon system" />
           <h3>Icon System</h3>
           <p>
             A small set of icons for organizing similar content and
             distinguishing small differences in recipes. Also cart and recipe
-            icons for navigation.
+            icons for navigation. These are kept simple, easy to read and can be
+            seen in all of the brand color combinations.
           </p>
         </section>
         <section className={styles.loliwarePack}>
@@ -64,11 +97,11 @@ const LoliwareBrand = () => {
             <h2>Sales Material</h2>
             <h3>Box</h3>
             <p>
-              Box The packaging will consist of completely biodegradable
-              materials and transform into covers or coasters for each cup. All
-              you have to do it tear along the perforated edges, fold and stick
-              together. The "Party Pack" includes two of each cup flavor plus
-              four signature LOLIWARE recipe cards.
+              The packaging will consist of completely biodegradable materials
+              and transform into covers or coasters for each cup. All you have
+              to do it tear along the perforated edges, fold and stick together.
+              The "Party Pack" includes two of each cup flavor plus four
+              signature LOLIWARE recipe cards.
             </p>
           </div>
           <div className={styles.loliwarePackGallery}>

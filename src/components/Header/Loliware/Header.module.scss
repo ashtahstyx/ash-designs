@@ -16,17 +16,21 @@
     }
 
     .headerList {
+      width: 100%;
       font-family: $font-family-secondary;
       display: flex;
-      gap: $spacing-xxl;
+      gap: $spacing-xl;
+      overflow: scroll;
+      justify-content: center;
       padding-inline-start: 0;
       padding-block-start: $spacing-sm;
       padding-block-end: $spacing-sm;
 
       @media (min-width: $breakpoint-md) {
-        display: block;
         display: flex;
+        gap: $spacing-xxl;
         font-weight: $font-weight-regular;
+        justify-content: end;
       }
 
       li {

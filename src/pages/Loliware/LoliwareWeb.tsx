@@ -119,7 +119,6 @@ const Loliware = () => {
                 <div
                   className={styles.recipeHeader}
                   onClick={() => {
-                    // If you want each to toggle individually, you might use a separate state per item.
                     handleToggle();
                   }}>
                   <span>Let's make a {recipe.title}</span>

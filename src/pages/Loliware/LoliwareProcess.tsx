@@ -12,81 +12,156 @@ const LoliwareProcess = () => {
     setIsOpen((prev) => !prev);
   };
 
-  const truckImages = [
-    images.LoliTruckMain1,
-    images.LoliTruckMain2,
-    images.LoliTruckMain3,
+  const brandImages = [
+    images.LoliBrandProcess1,
+    images.LoliBrandProcess2,
+    images.LoliBrandProcess3,
+    images.LoliBrandProcess4,
+    images.LoliBrandProcess5,
+    images.LoliBrandProcess6,
+    images.LoliBrandProcess7,
   ];
 
   return (
     <>
       <main className={styles.loliware}>
-        <section className={styles.loliwareIntro}>
-          <div>
-            <h2> LOLIWARE - Biodegr&#40;edible&#41; Cups and Straws</h2>
+        <section className={styles.fullWidth}>
+          <img src={images.LoliBrandProcess} alt="Brand header" />
+        </section>
+        <section className={styles.loliwareProcess}>
+          <h2>LoliWare Process</h2>
+
+          <div className={styles.loliwareProcessBrand}>
+            <h3>Brand Evolution</h3>
+            <p></p>
             <p>
-              Created by two Industrial Designers, LOLIWARE is considered “the
-              cup of the future” because it is the first fully edible and
-              biodegradable disposable cup and straws that are made primarily of
-              seaweed. LOLIWARE aims to rid the world of plastic waste by
-              replacing one-use cups and straws.
+              Below you will find some process work for the brand, iconography
+              as well as the website. The logo and icons have remained the same
+              for the project, I felt that they still fit the brand as well as
+              performed their appropriate function. While not all are unilized
+              in my current verion of the site, they can still be seen on some
+              of the other media.
             </p>
 
-            <a href="https://www.loliware.com/" target="_blank">
-              <button>Check out the real company!</button>
-            </a>
+            <div className={styles.loliwareBrandGallery}>
+              <LoliwareGallery images={brandImages} viewMode="thumbnails" />
+            </div>
           </div>
-          <img
-            className={styles.loliwareLogo}
-            src={images.LogoLoli}
-            alt="Rebrand for LOLIWARE"
-          />
         </section>
-        <section className={styles.loliwareBrand}>
-          <div className={styles.loliwareTruckGallery}>
-            <LoliwareGallery images={truckImages} viewMode="featured" />
-          </div>
+        <section className={styles.fullWidth}>
+          <img src={images.LoliWireframe} alt="Wireframe header" />
+        </section>
+        <section className={styles.loliwareProcess}>
+          <h2>LoliWare Process</h2>
 
-          <h2>LoliWare Brand</h2>
-          <div className={styles.loliLogos}>
-            <img src={images.LogoLoli2} alt="Rebrand for LOLIWARE Logo One" />
-            <img src={images.LogoLoli3} alt="Rebrand for LOLIWARE Logo Two" />
-            <img src={images.LogoLoli} alt="Rebrand for LOLIWARE Logo Three" />
-          </div>
-
-          <div className={styles.loliwareBrandExample}>
-            <h3>The Brand</h3>
+          <div className={styles.loliwareProcessWeb}>
+            <h3>Website Evolution</h3>
             <p>
-              The mark is simple and bright and mimics the shape and intent of
-              their star product, the LOLIWARE cup. Colors used across all
-              branding and products were inspired by their current bright color
-              palette with variations in intensity and shade.
+              Over the lifespan of the project the website has evolved to take
+              on some more modern touches. Since I started working on the
+              Loliware brand my skills as a designer and developer have evolved
+              so that I could make pages run smoother, look sleeker and also
+              function to best suit users.
             </p>
-            <a href="lw-website/index.html" target="_blank">
-              <button>Check it out!</button>
-            </a>
-          </div>
-        </section>
-        <section>
-          <Accordion className={styles.accordion}>
-            <AccordionItem
-              className={styles.accordionItem}
-              header={
-                <div className={styles.accordionHeader} onClick={handleToggle}>
-                  <span>What is Game Hive?</span>
-                  <FaChevronDown
-                    className={`${styles.accordionHeaderIcon} ${
-                      isOpen ? styles.rotate : ''
-                    }`}
+            <p>
+              Below you will find some process work for the brand, iconography
+              as well as the website. The logo and icons have remained the same
+              for the project, I felt that they still fit the brand as well as
+              performed their appropriate function. While not all are unilized
+              in my current verion of the site, they can still be seen on some
+              of the other media.
+            </p>
+
+            <Accordion className={styles.accordion}>
+              <AccordionItem
+                className={styles.accordionItem}
+                header={
+                  <div
+                    className={styles.accordionHeader}
+                    onClick={handleToggle}>
+                    <span>View Wireframe Sketches</span>
+                    <FaChevronDown
+                      className={`${styles.accordionHeaderIcon} ${
+                        isOpen ? styles.rotate : ''
+                      }`}
+                    />
+                  </div>
+                }>
+                <div className={styles.accordionContent}>
+                  <img
+                    src={images.LoliWireframeProcess1}
+                    alt="Wireframe set one"
+                  />
+                  <img
+                    src={images.LoliWireframeProcess2}
+                    alt="Wireframe set two"
+                  />
+                  <img
+                    src={images.LoliWireframeProcess3}
+                    alt="Wireframe set two"
                   />
                 </div>
-              }>
-              <div className={styles.accordionContent}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </div>
-            </AccordionItem>
-          </Accordion>
+              </AccordionItem>
+              <AccordionItem
+                className={styles.accordionItem}
+                header={
+                  <div
+                    className={styles.accordionHeader}
+                    onClick={handleToggle}>
+                    <span>View Desktop Wireframes</span>
+                    <FaChevronDown
+                      className={`${styles.accordionHeaderIcon} ${
+                        isOpen ? styles.rotate : ''
+                      }`}
+                    />
+                  </div>
+                }>
+                <div className={styles.accordionContent}>
+                  <img src={images.LoliWireframeD1} alt="Wireframe set one" />
+                  <img src={images.LoliWireframeD2} alt="Wireframe set two" />
+                </div>
+              </AccordionItem>
+              <AccordionItem
+                className={styles.accordionItem}
+                header={
+                  <div
+                    className={styles.accordionHeader}
+                    onClick={handleToggle}>
+                    <span>View Mobile Wireframes</span>
+                    <FaChevronDown
+                      className={`${styles.accordionHeaderIcon} ${
+                        isOpen ? styles.rotate : ''
+                      }`}
+                    />
+                  </div>
+                }>
+                <div className={styles.accordionContent}>
+                  <img src={images.LoliWireframeM1} alt="Wireframe set one" />
+                  <img src={images.LoliWireframeM2} alt="Wireframe set two" />
+                  <img src={images.LoliWireframeM3} alt="Wireframe set three" />
+                </div>
+              </AccordionItem>
+              <AccordionItem
+                className={styles.accordionItem}
+                header={
+                  <div
+                    className={styles.accordionHeader}
+                    onClick={handleToggle}>
+                    <span>View Mockups</span>
+                    <FaChevronDown
+                      className={`${styles.accordionHeaderIcon} ${
+                        isOpen ? styles.rotate : ''
+                      }`}
+                    />
+                  </div>
+                }>
+                <div className={styles.accordionContent}>
+                  <img src={images.LoliMockup1} alt="Mockup set one" />
+                  <img src={images.LoliMockup2} alt="Mockup set two" />
+                </div>
+              </AccordionItem>
+            </Accordion>
+          </div>
         </section>
       </main>
     </>
