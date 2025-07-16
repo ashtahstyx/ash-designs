@@ -28,7 +28,6 @@ export default function Player() {
         style={{
           width: '100%',
           height: '100%',
-          '--controls': 'none',
         }}></ReactPlayer>
       <MediaControlBar>
         <MediaPlayButton />
